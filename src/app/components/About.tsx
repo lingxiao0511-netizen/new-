@@ -40,12 +40,8 @@ const About: React.FC = () => {
             </div>
             <p className="text-light-text mb-6 leading-relaxed">
               {language === 'zh' ? 
-                '灵霄大师出身玄学世家，自幼研习易经、风水、命理等传统玄学，师承多位名师，融合各家之长，形成独特的预测体系。20年来，已为万余名客户提供专业咨询，帮助他们趋吉避凶，开启好运人生。
-                
-                大师秉承「道法自然，以人为本」的理念，坚持「诚心、专业、保密」的服务原则，以慈悲之心，智慧之眼，为每一位有缘人指引方向。' : 
-                'Master LingXiao comes from a mystical family, studying I Ching, feng shui, numerology and other traditional mysticism since childhood. He has learned from many famous masters, integrating the strengths of various schools to form a unique prediction system. Over the past 20 years, he has provided professional consultation to tens of thousands of clients, helping them avoid misfortune and start a lucky life.
-                
-                Adhering to the concept of "Tao follows nature, people-oriented", Master LingXiao insists on the service principle of "sincerity, professionalism, and confidentiality", guiding every destined person with a compassionate heart and wise eyes.'
+                '灵霄大师出身玄学世家，自幼研习易经、风水、命理等传统玄学，师承多位名师，融合各家之长，形成独特的预测体系。20年来，已为万余名客户提供专业咨询，帮助他们趋吉避凶，开启好运人生。\n\n大师秉承「道法自然，以人为本」的理念，坚持「诚心、专业、保密」的服务原则，以慈悲之心，智慧之眼，为每一位有缘人指引方向。' : 
+                'Master LingXiao comes from a mystical family, studying I Ching, feng shui, numerology and other traditional mysticism since childhood. He has learned from many famous masters, integrating the strengths of various schools to form a unique prediction system. Over the past 20 years, he has provided professional consultation to tens of thousands of clients, helping them avoid misfortune and start a lucky life.\n\nAdhering to the concept of "Tao follows nature, people-oriented", Master LingXiao insists on the service principle of "sincerity, professionalism, and confidentiality", guiding every destined person with a compassionate heart and wise eyes.'
               }
             </p>
             <div className="flex flex-wrap gap-4">

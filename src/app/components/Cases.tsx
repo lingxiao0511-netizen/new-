@@ -68,7 +68,7 @@ const Cases: React.FC = () => {
       image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=harmonious%20home%20interior%20with%20feng%20shui%20elements%2C%20plants%2C%20natural%20light%2C%20peaceful%20atmosphere&image_size=square',
       result: {
         zh: '家庭成员健康状况改善，财运增强，人际关系更加和谐。',
-        en: 'Family members' health improved, financial fortune strengthened, and relationships became more harmonious.'
+        en: 'Family members\' health improved, financial fortune strengthened, and relationships became more harmonious.'
       },
     },
     {
