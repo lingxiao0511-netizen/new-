@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 引入Google字体 */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+:root {
+  /* 新中式 (Ink & Gold) 配色方案 */
+  --primary: #8B4513; /* 深棕色 */
+  --secondary: #C5A059; /* 金色 */
+  --accent: #9370DB; /* 紫色点缀 */
+  --background: #F8F4E8; /* 宣纸色 */
+  --text: #333333; /* 深灰色文字 */
+  --light-text: #666666; /* 浅灰色文字 */
+  --border: rgba(197, 160, 89, 0.3); /* 金色边框 */
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: 'Inter', 'Noto Serif SC', sans-serif;
+  line-height: 1.6;
+}
+
+/* 字体设置 */
+.font-serif {
+  font-family: 'Playfair Display', 'Noto Serif SC', serif;
+}
+
+/* 新中式风格的自定义样式 */
+.oriental-border {
+  border: 1px solid var(--secondary);
+  box-shadow: 0 0 15px rgba(197, 160, 89, 0.4);
+  border-radius: 4px;
+}
+
+.oriental-gradient {
+  background: linear-gradient(135deg, rgba(139, 69, 19, 0.1), rgba(197, 160, 89, 0.1));
+}
+
+.oriental-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.oriental-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(139, 69, 19, 0.15);
+  border-color: var(--secondary);
+}
+
+/* 按钮样式增强 */
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(139, 69, 19, 0.3);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--primary);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid var(--primary);
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(139, 69, 19, 0.3);
+}
+
+/* 响应式设计调整 */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  body {
+    font-size: 16px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
+}
