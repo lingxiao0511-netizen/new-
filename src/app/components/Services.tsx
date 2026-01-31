@@ -96,7 +96,7 @@ const Services: React.FC = () => {
           '1 month free follow-up consultation'
         ]
       },
-      image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=feng%20shui%20consultation%20room%20with%20traditional%20chinese%20elements%2C%20compass%2C%20feng%20shui%20items%2C%20harmonious%20space%2C%20professional%20setting&image_size=square',
+      image: 'https://images.unsplash.com/photo-1600080972464-98643bb7d053?auto=format&fit=crop&q=80&w=400&h=400',
       price: '$99',
       duration: language === 'zh' ? '60-90分钟' : '60-90 minutes',
       popular: true
@@ -127,7 +127,7 @@ const Services: React.FC = () => {
           '3 months free consultation'
         ]
       },
-      image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=chinese%20astrology%20birth%20chart%2C%20eight%20characters%2C%20traditional%20chinese%20calendar%2C%20fortune%20telling%20tools%2C%20mystical%20atmosphere&image_size=square',
+      image: 'https://images.unsplash.com/photo-1541783203917-83f7f0a63f8c?auto=format&fit=crop&q=80&w=400&h=400',
       price: '$149',
       duration: language === 'zh' ? '90-120分钟' : '90-120 minutes'
     },
@@ -157,7 +157,7 @@ const Services: React.FC = () => {
           '1 month free consultation'
         ]
       },
-      image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=tarot%20card%20reading%20session%2C%20tarot%20cards%20spread%20on%20table%2C%20mystical%20lighting%2C%20oriental%20influences%2C%20professional%20setting&image_size=square',
+      image: 'https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&q=80&w=400&h=400',
       price: '$79',
       duration: language === 'zh' ? '60分钟' : '60 minutes'
     },
@@ -187,7 +187,7 @@ const Services: React.FC = () => {
           '2 months free consultation'
         ]
       },
-      image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=relationship%20compatibility%20analysis%2C%20two%20people%20silhouette%2C%20tarot%20cards%2C%20chinese%20astrology%20elements%2C%20harmonious%20atmosphere&image_size=square',
+      image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=400&h=400',
       price: '$129',
       duration: language === 'zh' ? '90分钟' : '90 minutes',
       popular: true
@@ -218,7 +218,7 @@ const Services: React.FC = () => {
           '1 month free follow-up'
         ]
       },
-      image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=crystal%20healing%20session%2C%20various%20crystals%20arranged%20on%20table%2C%20soft%20lighting%2C%20peaceful%20atmosphere%2C%20oriental%20elements&image_size=square',
+      image: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&q=80&w=400&h=400',
       price: '$89',
       duration: language === 'zh' ? '60分钟' : '60 minutes'
     },
@@ -248,7 +248,7 @@ const Services: React.FC = () => {
           'Lifetime valid plan'
         ]
       },
-      image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=chinese%20calendar%20with%20auspicious%20dates%2C%20traditional%20chinese%20elements%2C%20red%20envelopes%2C%20lucky%20symbols%2C%20joyful%20atmosphere&image_size=square',
+      image: 'https://images.unsplash.com/photo-1616744619440-e030a88b89d8?auto=format&fit=crop&q=80&w=400&h=400',
       price: '$49',
       duration: language === 'zh' ? '24小时内完成' : 'Completed within 24 hours'
     },
@@ -315,7 +315,7 @@ const Services: React.FC = () => {
             <div className="md:w-1/3">
               <div className="oriental-border rounded-lg overflow-hidden">
                 <img 
-                  src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=chinese%20fortune%20telling%20tools%2C%20traditional%20elements%2C%20mystical%20atmosphere%2C%20free%20reading%20concept&image_size=square" 
+                  src="https://images.unsplash.com/photo-1555421689-ca7b66d2c868?auto=format&fit=crop&q=80&w=400&h=400" 
                   alt={language === 'zh' ? '免费测算' : 'Free Reading'} 
                   className="w-full h-auto"
                 />

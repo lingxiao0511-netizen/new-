@@ -31,7 +31,7 @@ export const metadata = {
     url: 'https://www.lingxiao-mysticism.com',
     images: [
       {
-        url: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=oriental%20mystical%20logo%2C%20traditional%20chinese%20style%2C%20golden%20color%2C%20minimalist%20design&image_size=square',
+        url: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&q=80&w=400&h=400',
         width: 1200,
         height: 630,
         alt: '灵霄玄学 Logo'
@@ -43,7 +43,7 @@ export const metadata = {
     title: '灵霄玄学 | 专业的八字风水与塔罗咨询',
     description: '提供专业的八字算命、风水布局、塔罗占卜服务，结合千年智慧与现代需求，助您趋吉避凶，掌控人生方向。',
     images: [
-      'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=oriental%20mystical%20logo%2C%20traditional%20chinese%20style%2C%20golden%20color%2C%20minimalist%20design&image_size=square'
+      'https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&q=80&w=400&h=400'
     ]
   }
 };

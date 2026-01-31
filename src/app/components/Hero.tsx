@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black bg-opacity-20 z-10"></div>
         <img 
-          src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=traditional%20chinese%20ink%20painting%20style%2C%20mystical%20oriental%20scene%2C%20mountains%20and%20clouds%2C%20incense%20burning%2C%20tarot%20cards%20spread%2C%20soft%20golden%20light%2C%20ethereal%20atmosphere%2C%20high%20quality%20photography&image_size=landscape_16_9" 
+          src="https://images.unsplash.com/photo-1586899028614-4b1a79b1f3d0?auto=format&fit=crop&q=80&w=1920&h=1080" 
           alt="Oriental Mysticism" 
           className="w-full h-full object-cover"
         />
@@ -53,7 +53,7 @@ const Hero: React.FC = () => {
           <div className="md:w-1/2">
             <div className="oriental-border rounded-xl p-2 bg-white bg-opacity-90">
               <img 
-                src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=close%20up%20of%20tarot%20cards%20and%20crystals%20on%20traditional%20chinese%20scroll%20background%2C%20soft%20golden%20lighting%2C%20mystical%20atmosphere%2C%20high%20quality%20photography&image_size=landscape_16_9" 
+                src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&q=80&w=1920&h=1080" 
                 alt={language === 'zh' ? '东方玄学' : 'Oriental Mysticism'} 
                 className="w-full h-auto rounded-lg" 
               />

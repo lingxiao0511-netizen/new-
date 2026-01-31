@@ -22,7 +22,7 @@ const About: React.FC = () => {
           <div className="md:w-1/3">
             <div className="oriental-border rounded-xl overflow-hidden">
               <img 
-                src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20chinese%20mystic%20master%2C%20traditional%20chinese%20clothing%2C%20wise%20expression%2C%20soft%20golden%20lighting%2C%20professional%20portrait%2C%20high%20quality%20photography&image_size=square" 
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400&h=400" 
                 alt={language === 'zh' ? '灵霄大师' : 'Master LingXiao'}
                 className="w-full h-auto"
               />
@@ -64,7 +64,7 @@ const About: React.FC = () => {
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                   <img 
-                    src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=asian%20businessman%20portrait%2C%20professional%20headshot%2C%20confident%20expression&image_size=square" 
+                    src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=100&h=100" 
                     alt="Client 1"
                     className="w-full h-full object-cover"
                   />
@@ -96,7 +96,7 @@ const About: React.FC = () => {
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                   <img 
-                    src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=asian%20woman%20portrait%2C%20professional%20headshot%2C%20warm%20smile&image_size=square" 
+                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100&h=100" 
                     alt="Client 2"
                     className="w-full h-full object-cover"
                   />
@@ -128,7 +128,7 @@ const About: React.FC = () => {
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                   <img 
-                    src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=middle%20aged%20asian%20man%20portrait%2C%20professional%20headshot%2C%20serious%20expression&image_size=square" 
+                    src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=100&h=100" 
                     alt="Client 3"
                     className="w-full h-full object-cover"
                   />

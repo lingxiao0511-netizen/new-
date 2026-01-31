@@ -55,7 +55,7 @@ const Blog: React.FC = () => {
         zh: '了解风水的基本原理，学会观察住宅的气场状态，为自己和家人创造更和谐的居住环境。',
         en: 'Understand the basic principles of feng shui, learn to observe the energy state of your home, and create a more harmonious living environment for yourself and your family.'
       },
-      image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=feng%20shui%20basics%20concept%2C%20compass%2C%20energy%20flow%2C%20traditional%20chinese%20elements%2C%20educational%20atmosphere&image_size=square',
+      image: 'https://images.unsplash.com/photo-1600080972464-98643bb7d053?auto=format&fit=crop&q=80&w=400&h=400',
       date: '2026-01-15',
     },
     {
@@ -67,7 +67,7 @@ const Blog: React.FC = () => {
         zh: '探索生辰八字的构成和意义，了解如何通过命理分析获得人生指引。',
         en: 'Explore the composition and meaning of birth chart, and learn how to gain life guidance through numerology analysis.'
       },
-      image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=chinese%20astrology%20birth%20chart%2C%20eight%20characters%2C%20traditional%20chinese%20calendar%2C%20mystical%20atmosphere&image_size=square',
+      image: 'https://images.unsplash.com/photo-1541783203917-83f7f0a63f8c?auto=format&fit=crop&q=80&w=400&h=400',
       date: '2026-01-10',
     },
     {
@@ -79,7 +79,7 @@ const Blog: React.FC = () => {
         zh: '了解塔罗牌的基本原理，以及如何将其与东方玄学相结合，获得更全面的人生指引。',
         en: 'Understand the basic principles of tarot cards and how to combine them with oriental mysticism to gain more comprehensive life guidance.'
       },
-      image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=tarot%20cards%20with%20oriental%20elements%2C%20fusion%20of%20western%20and%20eastern%20mysticism%2C%20mystical%20atmosphere&image_size=square',
+      image: 'https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&q=80&w=400&h=400',
       date: '2026-01-05',
     },
     {
@@ -91,7 +91,7 @@ const Blog: React.FC = () => {
         zh: '探索水晶的物理特性和能量属性，了解如何利用水晶的能量改善生活。',
         en: 'Explore the physical properties and energy attributes of crystals, and learn how to use crystal energy to improve your life.'
       },
-      image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=crystals%20collection%2C%20energy%20vibration%2C%20scientific%20and%20mystical%20elements%2C%20educational%20atmosphere&image_size=square',
+      image: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&q=80&w=400&h=400',
       date: '2025-12-28',
     },
     {
@@ -103,7 +103,7 @@ const Blog: React.FC = () => {
         zh: '了解姓名学的基本原理，学会分析名字的吉凶，为自己和家人选择合适的名字。',
         en: 'Understand the basic principles of nameology, learn to analyze the auspiciousness of names, and choose appropriate names for yourself and your family.'
       },
-      image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=chinese%20calligraphy%20with%20name%20analysis%2C%20traditional%20characters%2C%20mystical%20atmosphere%2C%20educational%20setting&image_size=square',
+      image: 'https://images.unsplash.com/photo-1566450456744-2d3b13887c36?auto=format&fit=crop&q=80&w=400&h=400',
       date: '2025-12-20',
     },
     {
@@ -115,7 +115,7 @@ const Blog: React.FC = () => {
         zh: '了解择吉日的传统方法和现代科学解读，学会为重要事件选择合适的时间。',
         en: 'Understand the traditional methods and modern scientific interpretation of auspicious date selection, and learn to choose appropriate times for important events.'
       },
-      image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=chinese%20calendar%20with%20auspicious%20dates%2C%20traditional%20and%20modern%20elements%2C%20educational%20atmosphere&image_size=square',
+      image: 'https://images.unsplash.com/photo-1616744619440-e030a88b89d8?auto=format&fit=crop&q=80&w=400&h=400',
       date: '2025-12-15',
     },
   ];
