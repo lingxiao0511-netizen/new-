@@ -23,7 +23,7 @@ interface ServiceProps {
   popular?: boolean;
 }
 
-const ServiceCard: React.FC<ServiceProps> = ({ title, description, features, image, price, duration, popular }) => {
+const ServiceCard: React.FC<ServiceProps> = ({ id, title, description, features, image, price, duration, popular }) => {
   const { language } = useLanguage();
 
   return (
