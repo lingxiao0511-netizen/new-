@@ -113,7 +113,7 @@ const Cases: React.FC = () => {
       image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=person%20receiving%20crystal%20healing%2C%20crystals%20arranged%20around%2C%20peaceful%20atmosphere%2C%20soft%20lighting&image_size=square',
       result: {
         zh: '客户情绪逐渐稳定，自信心增强，生活态度更加积极乐观。',
-        en: 'The client's mood gradually stabilized, confidence increased, and life attitude became more positive and optimistic.'
+        en: 'The client\'s mood gradually stabilized, confidence increased, and life attitude became more positive and optimistic.'
       },
     },
     {
