@@ -206,22 +206,20 @@ export default function RootLayout({
         {/* Google 站长验证 (替换为实际代码) */}
         {/* <meta name="google-site-verification" content="your-google-code" /> */}
         
-        {/* Google Analytics 4 - 替换 G-XXXXXXXXXX 为实际 Measurement ID */}
-        {/* 
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+        {/* Google Analytics 4 */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-8TZ8XFFTXL"></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-XXXXXXXXXX', {
+              gtag('config', 'G-8TZ8XFFTXL', {
                 page_path: window.location.pathname,
               });
             `,
           }}
         />
-        */}
       </head>
       <body className="antialiased">
         <LanguageProvider>
