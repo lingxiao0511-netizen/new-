@@ -34,9 +34,12 @@ const CaseCard: React.FC<CaseProps> = ({ title, description, image, result }) =>
         <div className="relative">
           <img 
             src={image} 
-            alt={title[language]} 
+            alt={language === 'zh' ? `灵霄玄学${title.zh}成功案例 - ${result.zh.substring(0, 30)}...` : `${title.en} Success Case - ${result.en.substring(0, 30)}...`}
             className="w-full h-48 object-cover transition-all duration-700"
             style={{ filter: isHovered ? 'grayscale(0%) contrast(100%) brightness(100%)' : 'grayscale(100%) contrast(125%) brightness(90%)' }}
+            width={400}
+            height={400}
+            loading="lazy"
           />
           <div className={`absolute inset-0 bg-gradient-to-t from-black/70 to-transparent transition-opacity duration-500 ${isHovered ? 'opacity-100' : 'opacity-0'}`}></div>
         </div>

@@ -24,8 +24,11 @@ const About: React.FC = () => {
             <div className="glass-card rounded-2xl p-4 relative overflow-hidden floating">
               <img 
                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400&h=400" 
-                alt={language === 'zh' ? '灵霄大师' : 'Master LingXiao'}
+                alt={language === 'zh' ? '灵霄大师 - 20 年经验易经风水专家，祖传秘法传承人，已为万余名客户提供专业命理咨询' : 'Master LingXiao - 20 Years Experience I Ching Feng Shui Expert, Ancestral Secrets Inheritor, Provided Professional Consultation to Over 10,000 Clients'}
                 className="w-full h-auto rounded-xl object-cover grayscale contrast-125 brightness-90"
+                width={400}
+                height={400}
+                loading="lazy"
               />
             </div>
           </div>
@@ -76,8 +79,11 @@ const About: React.FC = () => {
                 <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                   <img 
                     src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=100&h=100" 
-                    alt="Client 1"
+                    alt="灵霄玄学客户见证 - 张先生企业高管五星好评"
                     className="w-full h-full object-cover grayscale"
+                    width={100}
+                    height={100}
+                    loading="lazy"
                   />
                 </div>
                 <div>
@@ -107,8 +113,11 @@ const About: React.FC = () => {
                 <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                   <img 
                     src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100&h=100" 
-                    alt="Client 2"
+                    alt="灵霄玄学客户见证 - 李女士市场营销专业五星好评"
                     className="w-full h-full object-cover grayscale"
+                    width={100}
+                    height={100}
+                    loading="lazy"
                   />
                 </div>
                 <div>
@@ -138,8 +147,11 @@ const About: React.FC = () => {
                 <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                   <img 
                     src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=100&h=100" 
-                    alt="Client 3"
+                    alt="灵霄玄学客户见证 - 王先生创业者五星好评推荐"
                     className="w-full h-full object-cover grayscale"
+                    width={100}
+                    height={100}
+                    loading="lazy"
                   />
                 </div>
                 <div>

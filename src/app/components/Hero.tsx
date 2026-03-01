@@ -62,8 +62,11 @@ const Hero: React.FC = () => {
             <div className="glass-card rounded-2xl p-4 relative overflow-hidden floating">
               <img 
                 src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&q=80&w=1920&h=1080" 
-                alt={language === 'zh' ? '东方玄学' : 'Oriental Mysticism'} 
+                alt={language === 'zh' ? '灵霄玄学 - 专业八字算命与风水布局咨询服务，20 年经验帮助客户趋吉避凶' : 'LingXiao Mysticism - Professional Bazi Numerology and Feng Shui Consultation Services, 20 Years Experience Helping Clients Avoid Misfortune'} 
                 className="w-full h-auto rounded-xl object-cover grayscale contrast-125 brightness-90"
+                width={1920}
+                height={1080}
+                loading="eager"
               />
               <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-[#7dd3fc] to-[#a78bfa] text-black px-6 py-3 rounded-full shadow-lg font-bold">
                 {language === 'zh' ? '专业认证' : 'Professional Certified'}

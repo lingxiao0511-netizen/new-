@@ -42,9 +42,12 @@ const ServiceCard: React.FC<ServiceProps> = ({ id, title, description, features,
         <div className="relative">
           <img 
             src={image} 
-            alt={title[language]} 
+            alt={language === 'zh' ? `灵霄玄学${title.zh}服务 - 专业${title.zh.replace('咨询', '').replace('分析', '')}，${price}起` : `${title.en} Service - Professional ${title.en.replace(' Consultation', '').replace(' Analysis', '')} from ${price}`}
             className="w-full h-56 object-cover transition-all duration-700 grayscale contrast-125 brightness-90"
             style={{ filter: isHovered ? 'grayscale(0%) contrast(100%) brightness(100%)' : 'grayscale(100%) contrast(125%) brightness(90%)' }}
+            width={400}
+            height={400}
+            loading="lazy"
           />
           <div className={`absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-opacity duration-500 ${isHovered ? 'opacity-100' : 'opacity-0'}`}></div>
         </div>
@@ -337,8 +340,11 @@ const Services: React.FC = () => {
               <div className="rounded-xl overflow-hidden shadow-xl transform transition-transform duration-500 hover:scale-105">
                 <img 
                   src="https://images.unsplash.com/photo-1555421689-ca7b66d2c868?auto=format&fit=crop&q=80&w=400&h=400" 
-                  alt={language === 'zh' ? '免费测算' : 'Free Reading'} 
+                  alt={language === 'zh' ? '灵霄玄学免费测算 - 输入出生日期获取五行分析和性格解读，了解基本运势特点' : 'LingXiao Mysticism Free Reading - Enter Birth Date to Get Five Elements Analysis and Personality Interpretation'} 
                   className="w-full h-auto grayscale contrast-125 brightness-90"
+                  width={400}
+                  height={400}
+                  loading="lazy"
                 />
               </div>
             </div>

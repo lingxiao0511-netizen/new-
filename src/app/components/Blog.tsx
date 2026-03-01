@@ -34,8 +34,11 @@ const BlogPost: React.FC<BlogPostProps> = ({ title, excerpt, image, date, catego
         <div className="relative">
           <img 
             src={image} 
-            alt={title[language]} 
+            alt={language === 'zh' ? `灵霄玄学${category.zh}文章：${title.zh} - ${excerpt.zh.substring(0, 40)}...` : `${category.en} Article: ${title.en} - ${excerpt.en.substring(0, 40)}...`}
             className="w-full h-52 object-cover"
+            width={400}
+            height={400}
+            loading="lazy"
           />
           <div className="absolute top-4 left-4">
             <span className="px-4 py-1 bg-gradient-to-r from-[#7dd3fc]/90 to-[#a78bfa]/90 text-black text-xs font-bold rounded-full backdrop-blur-sm">
