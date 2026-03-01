@@ -8,13 +8,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#8B4513',
-        secondary: '#C5A059',
-        accent: '#9370DB',
-        background: '#F8F4E8',
-        text: '#333333',
-        'light-text': '#666666',
-        border: 'rgba(197, 160, 89, 0.3)',
+        // 神秘治愈 (Deep Indigo & Teal) 配色方案
+        primary: '#7dd3fc', // 柔和青蓝色
+        secondary: '#1e1b4b', // 深靛紫
+        accent: '#a78bfa', // 淡紫
+        background: '#0c0a1a', // 深邃紫黑
+        surface: 'rgba(30, 27, 75, 0.6)', // 卡片表面
+        text: '#e0e7ff', // 柔和蓝白
+        'light-text': '#a5b4fc', // 浅紫蓝
+        border: 'rgba(125, 211, 252, 0.3)', // 青蓝边框
+        glow: 'rgba(125, 211, 252, 0.2)', // 青蓝光晕
+        'accent-glow': 'rgba(167, 139, 250, 0.25)', // 淡紫光晕
       },
       fontFamily: {
         sans: ['Inter', 'Noto Serif SC', 'sans-serif'],
@@ -29,6 +33,7 @@ export default {
         '4xl': '36px',
         '5xl': '48px',
         '6xl': '60px',
+        '7xl': '72px',
       },
       spacing: {
         '18': '4.5rem',
@@ -36,9 +41,24 @@ export default {
         '128': '32rem',
       },
       boxShadow: {
-        'oriental': '0 0 15px rgba(197, 160, 89, 0.4)',
-        'card': '0 4px 12px rgba(0, 0, 0, 0.08)',
-        'card-hover': '0 12px 24px rgba(139, 69, 19, 0.15)',
+        'oriental': '0 0 20px rgba(125, 211, 252, 0.3)',
+        'card': '0 4px 12px rgba(0, 0, 0, 0.1)',
+        'card-hover': '0 12px 24px rgba(125, 211, 252, 0.2)',
+        'glow': '0 0 20px rgba(125, 211, 252, 0.2)',
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'mystic-gradient': 'radial-gradient(circle at 50% 0%, rgba(125, 211, 252, 0.05) 0%, transparent 50%)',
+      },
+      animation: {
+        'float': 'float 6s ease-in-out infinite',
+        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
       },
     },
   },
