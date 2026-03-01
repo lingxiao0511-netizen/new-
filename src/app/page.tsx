@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
 import About from './components/About';
@@ -6,6 +7,7 @@ import Cases from './components/Cases';
 import Blog from './components/Blog';
 import Contact from './components/Contact';
 import DailyFortune from './components/DailyFortune';
+import Footer from './components/Footer';
 
 // 页面级 SEO 元数据
 export const metadata: Metadata = {
@@ -54,7 +56,7 @@ const homepageSchema = {
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f3460]">
+    <>
       {/* 页面级结构化数据 */}
       <script
         type="application/ld+json"
@@ -63,26 +65,35 @@ export default function HomePage() {
         }}
       />
       
-      {/* Hero Section */}
-      <Hero />
+      {/* Navigation */}
+      <Navbar />
       
-      {/* Services Section */}
-      <Services />
+      {/* Main Content */}
+      <main className="min-h-screen bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f3460]">
+        {/* Hero Section */}
+        <Hero />
+        
+        {/* Services Section */}
+        <Services />
+        
+        {/* Daily Fortune Section */}
+        <DailyFortune />
+        
+        {/* About Section */}
+        <About />
+        
+        {/* Cases Section */}
+        <Cases />
+        
+        {/* Blog Section */}
+        <Blog />
+        
+        {/* Contact Section */}
+        <Contact />
+      </main>
       
-      {/* Daily Fortune Section */}
-      <DailyFortune />
-      
-      {/* About Section */}
-      <About />
-      
-      {/* Cases Section */}
-      <Cases />
-      
-      {/* Blog Section */}
-      <Blog />
-      
-      {/* Contact Section */}
-      <Contact />
-    </main>
+      {/* Footer */}
+      <Footer />
+    </>
   );
 }
