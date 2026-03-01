@@ -1,32 +1,63 @@
-import React from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Services from './components/Services';
-import FreeReading from './components/FreeReading';
-import Cases from './components/Cases';
-import Blog from './components/Blog';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import DailyFortune from './components/DailyFortune';
+import type { Metadata } from 'next';
 
-const HomePage: React.FC = () => {
-  return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
-      <main>
-        <Hero />
-        <DailyFortune />
-        <About />
-        <Services />
-        <FreeReading />
-        <Cases />
-        <Blog />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
-  );
+// 页面级 SEO 元数据
+export const metadata: Metadata = {
+  title: '首页 - 专业八字算命与风水布局服务',
+  description: '灵霄玄学提供专业八字算命、风水布局、塔罗占卜服务。20 年经验，准确率 95%+，已帮助 10000+ 客户趋吉避凶。立即预约享 8 折优惠！',
+  keywords: [
+    '八字算命',
+    '风水布局',
+    '塔罗占卜',
+    '运势分析',
+    '命理咨询',
+    '北京算命大师',
+    '专业风水师',
+    '在线占卜',
+  ],
+  openGraph: {
+    title: '灵霄玄学 - 首页',
+    description: '专业八字算命、风水布局服务，20 年经验，准确率 95%+。',
+    type: 'website',
+    locale: 'zh_CN',
+    url: 'https://www.lingxiao-mysticism.com',
+    images: [
+      {
+        url: 'https://www.lingxiao-mysticism.com/og-home.jpg',
+        width: 1200,
+        height: 630,
+        alt: '灵霄玄学首页',
+      },
+    ],
+  },
 };
 
-export default HomePage;
+// 页面级结构化数据
+const homepageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: '灵霄玄学 - 首页',
+  description: '提供专业八字算命、风水布局、塔罗占卜服务',
+  url: 'https://www.lingxiao-mysticism.com',
+  mainEntity: {
+    '@type': 'Organization',
+    name: '灵霄玄学',
+    url: 'https://www.lingxiao-mysticism.com',
+  },
+};
+
+export default function HomePage() {
+  return (
+    <>
+      {/* 页面级结构化数据 */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(homepageSchema),
+        }}
+      />
+      
+      {/* 页面内容 */}
+      {/* ... existing code ... */}
+    </>
+  );
+}
