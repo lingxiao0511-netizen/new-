@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 
 interface BlogPostProps {
@@ -14,27 +14,49 @@ interface BlogPostProps {
   };
   image: string;
   date: string;
+  category: {
+    zh: string;
+    en: string;
+  };
 }
 
-const BlogPost: React.FC<BlogPostProps> = ({ title, excerpt, image, date }) => {
+const BlogPost: React.FC<BlogPostProps> = ({ title, excerpt, image, date, category }) => {
   const { language } = useLanguage();
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="oriental-card">
-      <div className="oriental-border rounded-lg overflow-hidden mb-4">
-        <img src={image} alt={title[language]} className="w-full h-48 object-cover" />
+    <div 
+      className="glass-card relative overflow-hidden transition-all duration-700"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div className="rounded-xl overflow-hidden mb-6">
+        <div className="relative">
+          <img 
+            src={image} 
+            alt={title[language]} 
+            className="w-full h-52 object-cover"
+          />
+          <div className="absolute top-4 left-4">
+            <span className="px-4 py-1 bg-gradient-to-r from-[#7dd3fc]/90 to-[#a78bfa]/90 text-black text-xs font-bold rounded-full backdrop-blur-sm">
+              {category[language]}
+            </span>
+          </div>
+        </div>
       </div>
-      <div className="flex items-center text-sm text-gray-500 mb-2">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <div className="flex items-center text-sm text-gray-500 mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-[#7dd3fc]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
         </svg>
         {date}
       </div>
-      <h3 className="text-xl font-serif font-bold text-primary mb-2">{title[language]}</h3>
-      <p className="text-text mb-4">{excerpt[language]}</p>
-      <a href="#" className="text-primary hover:text-secondary font-medium transition-colors flex items-center">
+      <h3 className="text-xl font-serif font-bold text-white mb-4">
+        {title[language]}
+      </h3>
+      <p className="text-gray-400 mb-6 line-clamp-3">{excerpt[language]}</p>
+      <a href="#" className="text-[#7dd3fc] hover:text-[#a78bfa] font-medium transition-colors flex items-center">
         {language === 'zh' ? '阅读更多' : 'Read More'}
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
         </svg>
       </a>
@@ -44,6 +66,11 @@ const BlogPost: React.FC<BlogPostProps> = ({ title, excerpt, image, date }) => {
 
 const Blog: React.FC = () => {
   const { language } = useLanguage();
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
   const blogPosts: BlogPostProps[] = [
     {
@@ -57,6 +84,10 @@ const Blog: React.FC = () => {
       },
       image: 'https://images.unsplash.com/photo-1600080972464-98643bb7d053?auto=format&fit=crop&q=80&w=400&h=400',
       date: '2026-01-15',
+      category: {
+        zh: '风水',
+        en: 'Feng Shui'
+      }
     },
     {
       title: {
@@ -69,6 +100,10 @@ const Blog: React.FC = () => {
       },
       image: 'https://images.unsplash.com/photo-1541783203917-83f7f0a63f8c?auto=format&fit=crop&q=80&w=400&h=400',
       date: '2026-01-10',
+      category: {
+        zh: '命理',
+        en: 'Numerology'
+      }
     },
     {
       title: {
@@ -81,6 +116,10 @@ const Blog: React.FC = () => {
       },
       image: 'https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&q=80&w=400&h=400',
       date: '2026-01-05',
+      category: {
+        zh: '塔罗',
+        en: 'Tarot'
+      }
     },
     {
       title: {
@@ -93,6 +132,10 @@ const Blog: React.FC = () => {
       },
       image: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&q=80&w=400&h=400',
       date: '2025-12-28',
+      category: {
+        zh: '水晶',
+        en: 'Crystals'
+      }
     },
     {
       title: {
@@ -105,6 +148,10 @@ const Blog: React.FC = () => {
       },
       image: 'https://images.unsplash.com/photo-1566450456744-2d3b13887c36?auto=format&fit=crop&q=80&w=400&h=400',
       date: '2025-12-20',
+      category: {
+        zh: '姓名学',
+        en: 'Nameology'
+      }
     },
     {
       title: {
@@ -117,27 +164,40 @@ const Blog: React.FC = () => {
       },
       image: 'https://images.unsplash.com/photo-1616744619440-e030a88b89d8?auto=format&fit=crop&q=80&w=400&h=400',
       date: '2025-12-15',
+      category: {
+        zh: '择日',
+        en: 'Date Selection'
+      }
     },
   ];
 
   return (
-    <section id="blog" className="py-20">
+    <section id="blog" className="py-24 relative z-10">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">{language === 'zh' ? '玄学科普' : 'Mysticism Science'}</h2>
-          <p className="text-lg text-text max-w-2xl mx-auto">
+        <div className="text-center mb-20">
+          <div className="inline-block mb-8">
+            <span className="px-6 py-2 bg-[#7dd3fc]/10 backdrop-blur-sm border border-[#7dd3fc]/30 rounded-full">
+              <span className="text-[#7dd3fc] text-xs tracking-widest uppercase">
+                {language === 'zh' ? '玄学科普 • 智慧分享' : 'Mysticism Insights • Wisdom Sharing'}
+              </span>
+            </span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">{language === 'zh' ? '玄学科普' : 'Mysticism Blog'}</h2>
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-12">
             {language === 'zh' ? '探索玄学的奥秘，了解传统智慧与现代生活的结合之道' : 'Explore the mysteries of mysticism and understand how traditional wisdom combines with modern life'}
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {blogPosts.map((post, index) => (
-            <BlogPost 
-              key={index} 
-              title={post.title} 
-              excerpt={post.excerpt} 
-              image={post.image} 
-              date={post.date} 
-            />
+            <div key={index}>
+              <BlogPost 
+                title={post.title} 
+                excerpt={post.excerpt} 
+                image={post.image} 
+                date={post.date}
+                category={post.category}
+              />
+            </div>
           ))}
         </div>
       </div>

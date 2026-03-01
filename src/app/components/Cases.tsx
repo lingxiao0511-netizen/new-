@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 
 interface CaseProps {
@@ -21,17 +21,38 @@ interface CaseProps {
 
 const CaseCard: React.FC<CaseProps> = ({ title, description, image, result }) => {
   const { language } = useLanguage();
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="oriental-card">
-      <div className="oriental-border rounded-lg overflow-hidden mb-4">
-        <img src={image} alt={title[language]} className="w-full h-48 object-cover" />
+    <div 
+      className="glass-card relative overflow-hidden transition-all duration-700"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      style={{ transform: isHovered ? 'translateY(-10px)' : 'translateY(0)', boxShadow: isHovered ? '0 25px 50px -12px rgba(229, 193, 133, 0.25)' : '0 1px 3px 0 rgba(0, 0, 0, 0.1)' }}
+    >
+      <div className="rounded-xl overflow-hidden mb-6 transform transition-all duration-700">
+        <div className="relative">
+          <img 
+            src={image} 
+            alt={title[language]} 
+            className="w-full h-48 object-cover transition-all duration-700"
+            style={{ filter: isHovered ? 'grayscale(0%) contrast(100%) brightness(100%)' : 'grayscale(100%) contrast(125%) brightness(90%)' }}
+          />
+          <div className={`absolute inset-0 bg-gradient-to-t from-black/70 to-transparent transition-opacity duration-500 ${isHovered ? 'opacity-100' : 'opacity-0'}`}></div>
+        </div>
       </div>
-      <h3 className="text-xl font-serif font-bold text-primary mb-2">{title[language]}</h3>
-      <p className="text-text mb-4">{description[language]}</p>
-      <div className="bg-secondary bg-opacity-10 p-3 rounded-lg">
-        <h4 className="font-bold text-secondary mb-1">{language === 'zh' ? '调理结果：' : 'Results:'}</h4>
-        <p className="text-text">{result[language]}</p>
+      <h3 className="text-xl font-serif font-bold text-white mb-3 transition-colors duration-300" style={{ color: isHovered ? '#7dd3fc' : '#ffffff' }}>
+        {title[language]}
+      </h3>
+      <p className="text-gray-400 mb-6">{description[language]}</p>
+      <div className="bg-gradient-to-br from-[#7dd3fc]/10 to-[#a78bfa]/5 p-6 rounded-xl border border-[#7dd3fc]/20 transition-all duration-300" style={{ borderColor: isHovered ? 'rgba(125, 211, 252, 0.4)' : 'rgba(125, 211, 252, 0.2)' }}>
+        <h4 className="font-bold text-[#7dd3fc] mb-3 flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          {language === 'zh' ? '调理结果：' : 'Results:'}
+        </h4>
+        <p className="text-gray-300">{result[language]}</p>
       </div>
     </div>
   );
@@ -39,6 +60,11 @@ const CaseCard: React.FC<CaseProps> = ({ title, description, image, result }) =>
 
 const Cases: React.FC = () => {
   const { language } = useLanguage();
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
   const cases: CaseProps[] = [
     {
@@ -134,28 +160,34 @@ const Cases: React.FC = () => {
   ];
 
   return (
-    <section id="cases" className="py-20 oriental-gradient">
+    <section id="cases" className="py-24 relative z-10">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">
-            {language === 'zh' ? '成功案例' : 'Success Cases'}
-          </h2>
-          <p className="text-lg text-text max-w-2xl mx-auto">
+        <div className={`text-center mb-20 transition-all duration-1000 ease-out ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          <div className="inline-block mb-8">
+            <span className="px-6 py-2 bg-[#7dd3fc]/10 backdrop-blur-sm border border-[#7dd3fc]/30 rounded-full">
+              <span className="text-[#7dd3fc] text-xs tracking-widest uppercase">
+                {language === 'zh' ? '真实见证 • 成功案例' : 'Real Testimonials • Success Stories'}
+              </span>
+            </span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">{language === 'zh' ? '成功案例' : 'Success Cases'}</h2>
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-12">
             {language === 'zh' ? 
               '真实客户案例，展示玄学服务如何帮助人们改善生活和运势' : 
               'Real customer cases showing how mysticism services help people improve their lives and fortune'
             }
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 transition-all duration-1000 ease-out ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           {cases.map((caseItem, index) => (
-            <CaseCard 
-              key={index} 
-              title={caseItem.title} 
-              description={caseItem.description} 
-              image={caseItem.image} 
-              result={caseItem.result} 
-            />
+            <div key={index} className={`transition-all duration-500`} style={{ transitionDelay: `${index * 100}ms` }}>
+              <CaseCard 
+                title={caseItem.title} 
+                description={caseItem.description} 
+                image={caseItem.image} 
+                result={caseItem.result} 
+              />
+            </div>
           ))}
         </div>
       </div>

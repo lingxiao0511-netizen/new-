@@ -8,6 +8,7 @@ import Cases from './components/Cases';
 import Blog from './components/Blog';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import DailyFortune from './components/DailyFortune';
 
 const HomePage: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const HomePage: React.FC = () => {
       <Navbar />
       <main>
         <Hero />
+        <DailyFortune />
         <About />
         <Services />
         <FreeReading />

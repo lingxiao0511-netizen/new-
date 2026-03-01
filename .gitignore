@@ -6,10 +6,15 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# Build outputs
-dist/
+# Next.js build outputs
+.next/
 out/
 build/
+dist/
+
+# Next.js specific files
+next-env.d.ts
+*.tsbuildinfo
 
 # Environment variables
 .env
@@ -33,3 +38,10 @@ Thumbs.db
 .Spotlight-V100
 .Trashes
 ehthumbs.db
+
+# Logs
+logs/
+*.log
+
+# Cache
+.cache/

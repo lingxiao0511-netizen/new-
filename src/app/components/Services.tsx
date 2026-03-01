@@ -28,50 +28,60 @@ const ServiceCard: React.FC<ServiceProps> = ({ id, title, description, features,
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className={`oriental-card relative overflow-hidden transition-all duration-500 hover:shadow-2xl ${popular ? 'ring-2 ring-secondary ring-offset-2 ring-offset-background' : ''}`} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+    <div 
+      className={`glass-card relative overflow-hidden transition-all duration-700 ${popular ? 'border-t-2 border-t-[#7dd3fc]' : ''} ${isHovered ? 'shadow-2xl shadow-[#7dd3fc]/20 scale-[1.02]' : 'shadow-lg'}`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       {popular && (
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-secondary text-white text-sm font-medium px-6 py-1 rounded-full shadow-lg z-10">
+        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-[#7dd3fc] to-[#a78bfa] text-black text-sm font-bold px-6 py-1 rounded-full shadow-lg z-10 breathing">
           {language === 'zh' ? '热门推荐' : 'Popular'}
         </div>
       )}
-      <div className="oriental-border rounded-xl overflow-hidden mb-6 transform transition-transform duration-500 hover:scale-105">
-        <img 
-          src={image} 
-          alt={title[language]} 
-          className="w-full h-56 object-cover transition-transform duration-700 hover:scale-110"
-        />
+      <div className={`rounded-xl overflow-hidden mb-6 transform transition-all duration-700 ${isHovered ? 'scale-105' : ''}`}>
+        <div className="relative">
+          <img 
+            src={image} 
+            alt={title[language]} 
+            className="w-full h-56 object-cover transition-all duration-700 grayscale contrast-125 brightness-90"
+            style={{ filter: isHovered ? 'grayscale(0%) contrast(100%) brightness(100%)' : 'grayscale(100%) contrast(125%) brightness(90%)' }}
+          />
+          <div className={`absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-opacity duration-500 ${isHovered ? 'opacity-100' : 'opacity-0'}`}></div>
+        </div>
       </div>
-      <h3 className="text-xl md:text-2xl font-serif font-bold text-primary mb-3">{title[language]}</h3>
-      <p className="text-light-text mb-6 line-clamp-3">{description[language]}</p>
+      <h3 className="text-xl md:text-2xl font-serif font-bold text-white mb-3 transition-colors duration-300" style={{ color: isHovered ? '#7dd3fc' : '#ffffff' }}>
+        {title[language]}
+      </h3>
+      <p className="text-gray-400 mb-6 line-clamp-3">{description[language]}</p>
       <div className="mb-6">
-        <h4 className="font-medium text-primary mb-3 flex items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-secondary mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <h4 className="font-medium text-[#7dd3fc] mb-3 flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
           {language === 'zh' ? '服务内容：' : 'Service Includes:'}
         </h4>
         <ul className="space-y-3">
           {features[language].map((feature, index) => (
-            <li key={index} className="flex items-start">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-secondary mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <li key={index} className="flex items-start transform transition-all duration-300" style={{ transform: isHovered ? 'translateX(5px)' : 'translateX(0)' }}>
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-[#7dd3fc] mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
-              <span className="text-light-text text-sm">{feature}</span>
+              <span className="text-gray-400 text-sm">{feature}</span>
             </li>
           ))}
         </ul>
       </div>
       <div className="flex flex-col space-y-4 mb-6">
-        <div className="flex justify-between items-center p-3 bg-secondary/5 rounded-lg">
-          <span className="text-sm text-light-text">{language === 'zh' ? '服务时长：' : 'Duration:'}</span>
-          <span className="font-medium text-primary">{duration}</span>
+        <div className="flex justify-between items-center p-3 bg-[#7dd3fc]/5 rounded-lg border border-[#7dd3fc]/10">
+          <span className="text-sm text-gray-400">{language === 'zh' ? '服务时长：' : 'Duration:'}</span>
+          <span className="font-medium text-white">{duration}</span>
         </div>
-        <div className="flex justify-between items-center p-3 bg-secondary/5 rounded-lg">
-          <span className="text-sm text-light-text">{language === 'zh' ? '价格：' : 'Price:'}</span>
-          <span className="text-2xl font-bold text-secondary">{price}</span>
+        <div className="flex justify-between items-center p-3 bg-[#7dd3fc]/10 rounded-lg border border-[#7dd3fc]/20">
+          <span className="text-sm text-gray-400">{language === 'zh' ? '价格：' : 'Price:'}</span>
+          <span className="text-2xl font-bold text-[#7dd3fc]">{price}</span>
         </div>
       </div>
-      <button className={`w-full py-3 px-6 rounded-lg transition-all duration-300 font-medium transform hover:-translate-y-1 ${popular ? 'bg-secondary hover:bg-secondary/90 text-white shadow-lg hover:shadow-xl' : 'bg-primary hover:bg-secondary text-white shadow-lg hover:shadow-xl'}`}>
+      <button className={`w-full py-3 px-6 rounded transition-all duration-300 font-medium transform ${isHovered ? '-translate-y-1' : ''} ${popular ? 'btn-primary shadow-lg hover:shadow-xl' : 'btn-secondary'}`}>
         {language === 'zh' ? '立即预约' : 'Book Now'}
       </button>
     </div>
@@ -270,28 +280,24 @@ const Services: React.FC = () => {
   }, [language]);
 
   return (
-    <section id="services" className="py-24 oriental-gradient">
+    <section id="services" className="py-24 relative z-10">
       <div className="container mx-auto px-4">
         <div className={`text-center mb-20 transition-all duration-1000 ease-out ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <div className="inline-block mb-8">
-            <span className="px-6 py-2 bg-secondary bg-opacity-20 text-secondary rounded-full text-sm font-medium backdrop-blur-sm">
-              {language === 'zh' ? '专业服务 • 精准预测' : 'Professional Services • Accurate Prediction'}
+            <span className="px-6 py-2 bg-[#7dd3fc]/10 backdrop-blur-sm border border-[#7dd3fc]/30 rounded-full">
+              <span className="text-[#7dd3fc] text-xs tracking-widest uppercase">
+                {language === 'zh' ? '专业服务 • 精准预测' : 'Professional Services • Accurate Prediction'}
+              </span>
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">{language === 'zh' ? '我们的服务' : 'Our Services'}</h2>
-          <p className="text-xl text-light-text max-w-3xl mx-auto mb-12">
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">{language === 'zh' ? '我们的服务' : 'Our Services'}</h2>
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-12">
             {language === 'zh' ? '提供专业的玄学服务，帮助您在各个方面获得指引和支持' : 'Provide professional mysticism services to help you gain guidance and support in all aspects'}
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-primary text-white px-8 py-3 rounded-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">{language === 'zh' ? '全部服务' : 'All Services'}</button>
-            <button className="bg-transparent border border-primary/30 text-primary px-8 py-3 rounded-lg font-medium hover:bg-primary hover:text-white transition-all duration-300">{language === 'zh' ? '热门推荐' : 'Popular'}</button>
-            <button className="bg-transparent border border-primary/30 text-primary px-8 py-3 rounded-lg font-medium hover:bg-primary hover:text-white transition-all duration-300">{language === 'zh' ? '情感咨询' : 'Relationship'}</button>
-            <button className="bg-transparent border border-primary/30 text-primary px-8 py-3 rounded-lg font-medium hover:bg-primary hover:text-white transition-all duration-300">{language === 'zh' ? '事业财运' : 'Career & Wealth'}</button>
-          </div>
         </div>
         <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 transition-all duration-1000 ease-out ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           {services.map((service, index) => (
-            <div key={service.id} className={`transition-all duration-500 delay-${index * 100} hover:translate-y-[-10px]`}>
+            <div key={service.id} className={`transition-all duration-500`}>
               <ServiceCard 
                 id={service.id} 
                 title={service.title} 
@@ -306,12 +312,11 @@ const Services: React.FC = () => {
           ))}
         </div>
         
-        {/* 免费测算 */}
-        <div className={`mt-24 oriental-border rounded-2xl p-10 bg-white bg-opacity-95 shadow-2xl transition-all duration-1000 ease-out ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+        <div className={`mt-24 glass-card rounded-2xl p-8 md:p-12 transition-all duration-1000 ease-out ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
             <div className="lg:w-2/3">
-              <h3 className="text-3xl font-serif font-bold text-primary mb-6">{language === 'zh' ? '免费测算' : 'Free Reading'}</h3>
-              <p className="text-lg text-light-text mb-8 max-w-xl">
+              <h3 className="text-3xl font-serif font-bold text-white mb-6">{language === 'zh' ? '免费测算' : 'Free Reading'}</h3>
+              <p className="text-lg text-gray-400 mb-8 max-w-xl">
                 {language === 'zh' ? 
                   '输入您的出生日期，获取免费的五行分析和性格解读，了解您的基本运势特点。' : 
                   'Enter your birth date to get free five elements analysis and personality interpretation, and understand your basic fortune characteristics.'
@@ -320,20 +325,20 @@ const Services: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-5">
                 <input 
                   type="date" 
-                  className="px-6 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent flex-grow text-lg"
+                  className="px-6 py-3 bg-black/30 border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-[#7dd3fc] focus:border-transparent flex-grow text-lg text-white"
                   placeholder={language === 'zh' ? '选择出生日期' : 'Select birth date'}
                 />
-                <button className="bg-secondary hover:bg-secondary/90 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:-translate-y-1 shadow-lg whitespace-nowrap">
+                <button className="btn-primary whitespace-nowrap">
                   {language === 'zh' ? '立即测算' : 'Calculate Now'}
                 </button>
               </div>
             </div>
             <div className="lg:w-1/3">
-              <div className="oriental-border rounded-xl overflow-hidden shadow-xl transform transition-transform duration-500 hover:scale-105">
+              <div className="rounded-xl overflow-hidden shadow-xl transform transition-transform duration-500 hover:scale-105">
                 <img 
                   src="https://images.unsplash.com/photo-1555421689-ca7b66d2c868?auto=format&fit=crop&q=80&w=400&h=400" 
                   alt={language === 'zh' ? '免费测算' : 'Free Reading'} 
-                  className="w-full h-auto"
+                  className="w-full h-auto grayscale contrast-125 brightness-90"
                 />
               </div>
             </div>

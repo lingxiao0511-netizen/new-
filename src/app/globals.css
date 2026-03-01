@@ -6,21 +6,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 :root {
-  /* 新中式 (Ink & Gold) 配色方案 */
-  --primary: #8B4513; /* 深棕色 */
-  --secondary: #C5A059; /* 金色 */
-  --accent: #9370DB; /* 紫色点缀 */
-  --background: #F8F4E8; /* 宣纸色 */
-  --text: #333333; /* 深灰色文字 */
-  --light-text: #666666; /* 浅灰色文字 */
-  --border: rgba(197, 160, 89, 0.3); /* 金色边框 */
+  /* 神秘治愈 (Deep Indigo & Teal) 配色方案 */
+  --primary: #7dd3fc; /* 柔和青蓝色 */
+  --secondary: #1e1b4b; /* 深靛紫 */
+  --accent: #a78bfa; /* 淡紫 */
+  --background: #0c0a1a; /* 深邃紫黑 */
+  --surface: rgba(30, 27, 75, 0.6); /* 卡片表面 */
+  --text: #e0e7ff; /* 柔和蓝白 */
+  --light-text: #a5b4fc; /* 浅紫蓝 */
+  --border: rgba(125, 211, 252, 0.3); /* 青蓝边框 */
+  --glow: rgba(125, 211, 252, 0.2); /* 青蓝光晕 */
+  --accent-glow: rgba(167, 139, 250, 0.25); /* 淡紫光晕 */
 }
 
 body {
-  background-color: var(--background);
+  background: radial-gradient(circle at 50% 0%, #312e81 0%, #1e1b4b 50%, #0c0a1a 100%);
   color: var(--text);
   font-family: 'Inter', 'Noto Serif SC', sans-serif;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 /* 字体设置 */
@@ -28,48 +32,51 @@ body {
   font-family: 'Playfair Display', 'Noto Serif SC', serif;
 }
 
-/* 新中式风格的自定义样式 */
+/* 神秘治愈风格的自定义样式 */
 .oriental-border {
-  border: 1px solid var(--secondary);
-  box-shadow: 0 0 15px rgba(197, 160, 89, 0.4);
-  border-radius: 4px;
+  border: 1px solid var(--primary);
+  box-shadow: 0 0 20px var(--glow);
+  border-radius: 8px;
 }
 
 .oriental-gradient {
-  background: linear-gradient(135deg, rgba(139, 69, 19, 0.1), rgba(197, 160, 89, 0.1));
+  background: radial-gradient(circle at 50% 0%, rgba(125, 211, 252, 0.05) 0%, transparent 50%);
 }
 
-.oriental-card {
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 8px;
+.glass-card {
+  background: var(--surface);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
   padding: 1.5rem;
-  transition: all 0.3s ease;
-  border: 1px solid var(--border);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
-.oriental-card:hover {
+.glass-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(139, 69, 19, 0.15);
-  border-color: var(--secondary);
+  background: rgba(49, 46, 129, 0.7);
+  border-color: var(--border);
+  box-shadow: 0 20px 40px rgba(125, 211, 252, 0.15);
 }
 
 /* 按钮样式增强 */
 .btn-primary {
-  background-color: var(--primary);
-  color: white;
+  background: linear-gradient(135deg, #7dd3fc 0%, #a78bfa 100%);
+  color: #0c0a1a;
   padding: 0.75rem 1.5rem;
   border-radius: 4px;
-  font-weight: 500;
+  font-weight: 600;
   transition: all 0.3s ease;
   border: none;
   cursor: pointer;
+  box-shadow: 0 0 20px rgba(125, 211, 252, 0.3);
 }
 
 .btn-primary:hover {
-  background-color: var(--secondary);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(139, 69, 19, 0.3);
+  background: linear-gradient(135deg, #a78bfa 0%, #7dd3fc 100%);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 0 30px rgba(167, 139, 250, 0.5);
 }
 
 .btn-secondary {
@@ -85,9 +92,9 @@ body {
 
 .btn-secondary:hover {
   background-color: var(--primary);
-  color: white;
+  color: #0c0a1a;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(139, 69, 19, 0.3);
+  box-shadow: 0 0 25px var(--glow);
 }
 
 /* 响应式设计调整 */
@@ -119,10 +126,55 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--primary);
+  background: linear-gradient(to bottom, #7dd3fc, #a78bfa);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--secondary);
+  background: linear-gradient(to bottom, #a78bfa, #7dd3fc);
+}
+
+/* 呼吸灯效果 */
+.breathing {
+  animation: breathe 3s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
+
+/* 淡入动画 */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 悬浮效果 */
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* 青蓝紫渐变文字 */
+.text-gold-gradient {
+  background: linear-gradient(to bottom right, #7dd3fc, #a78bfa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* 背景网格 */
+.bg-grid {
+  background-image: linear-gradient(rgba(125, 211, 252, 0.03) 1px, transparent 1px), 
+                    linear-gradient(90deg, rgba(167, 139, 250, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
 }

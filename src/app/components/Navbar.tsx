@@ -19,21 +19,24 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <header className={`sticky top-0 z-50 transition-all duration-500 ${scrolled ? 'bg-background/98 backdrop-blur-md shadow-lg' : 'bg-background/95 backdrop-blur-sm'} oriental-gradient border-b border-secondary/20`}>
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex justify-between items-center">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3 group">
-            <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:bg-secondary">
-              <span className="text-white font-serif font-bold text-xl">灵</span>
+    <nav className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? 'bg-[#090a0f]/80 backdrop-blur-xl shadow-lg' : 'bg-transparent'} border-b border-gray-800/50`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 border border-white/20 rotate-45 flex items-center justify-center">
+              <div className="w-4 h-4 bg-gradient-to-r from-[#7dd3fc] to-[#a78bfa] rotate-45"></div>
             </div>
-            <span className="text-2xl md:text-3xl font-serif font-bold text-primary transition-colors duration-300 group-hover:text-secondary">{language === 'zh' ? '灵霄玄学' : 'LingXiao Mysticism'}</span>
-          </Link>
+            <span className="text-xl font-bold text-white tracking-widest font-serif">
+              {language === 'zh' ? '灵霄玄学' : 'LingXiao Mysticism'}
+              <span className="text-[#7dd3fc] text-xs align-top ml-1">
+                {language === 'zh' ? 'LX' : 'LX'}
+              </span>
+            </span>
+          </div>
           
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-10">
+          <div className="hidden md:flex items-center space-x-8">
             {[
-              { href: '/', label: language === 'zh' ? '首页' : 'Home' },
+              { href: '#home', label: language === 'zh' ? '首页' : 'Home' },
               { href: '#services', label: language === 'zh' ? '服务' : 'Services' },
               { href: '#cases', label: language === 'zh' ? '案例' : 'Cases' },
               { href: '#blog', label: language === 'zh' ? '科普' : 'Blog' },
@@ -42,100 +45,84 @@ const Navbar: React.FC = () => {
               <Link 
                 key={item.href}
                 href={item.href} 
-                className="text-primary hover:text-secondary transition-all duration-300 font-medium relative group"
+                className="text-gray-300 hover:text-white transition-colors text-sm relative group"
               >
                 {item.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#7dd3fc] transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
             
-            {/* Language Switcher */}
-            <button 
-              onClick={toggleLanguage}
-              className="flex items-center space-x-2 border border-primary/30 text-primary hover:bg-primary hover:text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 transform hover:-translate-y-1 mr-4"
-            >
-              <span>{language === 'zh' ? '中文' : 'English'}</span>
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            
-            {/* CTA Button */}
+            <div className="relative group cursor-pointer py-4">
+              <button 
+                onClick={toggleLanguage}
+                className="flex items-center gap-1 text-gray-300 hover:text-white text-sm border border-gray-700 rounded-full px-3 py-1 transition-all"
+              >
+                <span>🌐 {language === 'zh' ? '中文' : 'English'}</span>
+                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+            </div>
+
             <Link 
               href="#contact" 
-              className="btn-primary transform hover:-translate-y-1 transition-all duration-300 shadow-lg"
+              className="bg-gradient-to-r from-[#7dd3fc] to-[#a78bfa] text-black px-5 py-2 rounded text-sm font-bold hover:from-[#a78bfa] hover:to-[#7dd3fc] transition-all transform hover:scale-105 shadow-[0_0_15px_rgba(125,211,252,0.3)]"
             >
-              {language === 'zh' ? '免费测算' : 'Free Reading'}
+              {language === 'zh' ? '预约咨询' : 'Book Consultation'}
             </Link>
-          </nav>
-          
-          {/* Mobile Menu Button */}
-          <div className="flex items-center space-x-4">
-            {/* Mobile Language Switcher */}
+          </div>
+
+          <div className="-mr-2 flex md:hidden">
             <button 
-              onClick={toggleLanguage}
-              className="md:hidden text-primary hover:text-secondary transition-colors duration-300"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-            </button>
-            <button 
-              className="md:hidden text-primary hover:text-secondary transition-colors duration-300"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+              className="text-gray-300 hover:text-white"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                 {isMenuOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
                 ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 )}
               </svg>
             </button>
           </div>
         </div>
-        
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <nav className="md:hidden mt-6 py-6 oriental-border rounded-xl bg-white/95 backdrop-blur-md shadow-xl animate-fade-in">
-            <div className="flex flex-col space-y-5 px-5">
-              {[
-                { href: '/', label: language === 'zh' ? '首页' : 'Home' },
-                { href: '#services', label: language === 'zh' ? '服务' : 'Services' },
-                { href: '#cases', label: language === 'zh' ? '案例' : 'Cases' },
-                { href: '#blog', label: language === 'zh' ? '科普' : 'Blog' },
-                { href: '#contact', label: language === 'zh' ? '咨询' : 'Contact' }
-              ].map((item) => (
-                <Link 
-                  key={item.href}
-                  href={item.href} 
-                  className="text-primary hover:text-secondary transition-colors duration-300 font-medium py-3 border-b border-secondary/10"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              ))}
+      </div>
+      
+      {isMenuOpen && (
+        <div className="md:hidden bg-[#090a0f] border-b border-gray-800">
+          <div className="px-4 pt-4 pb-6 space-y-3">
+            {[
+              { href: '#home', label: language === 'zh' ? '首页' : 'Home' },
+              { href: '#services', label: language === 'zh' ? '服务' : 'Services' },
+              { href: '#cases', label: language === 'zh' ? '案例' : 'Cases' },
+              { href: '#blog', label: language === 'zh' ? '科普' : 'Blog' },
+              { href: '#contact', label: language === 'zh' ? '咨询' : 'Contact' }
+            ].map((item) => (
               <Link 
-                href="#contact" 
-                className="btn-primary text-center mt-4"
+                key={item.href}
+                href={item.href} 
+                className="block text-gray-300 hover:text-white py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                {language === 'zh' ? '免费测算' : 'Free Reading'}
+                {item.label}
               </Link>
-              <div className="flex items-center justify-center mt-6">
-                <button 
-                  onClick={toggleLanguage}
-                  className="flex items-center space-x-2 border border-primary/30 text-primary hover:bg-primary hover:text-white font-medium py-2 px-6 rounded-lg transition-all duration-300"
-                >
-                  <span>{language === 'zh' ? '切换到英文' : 'Switch to Chinese'}</span>
-                </button>
-              </div>
+            ))}
+            <div className="flex items-center gap-2 pt-2 border-t border-gray-800 mt-2">
+              <span className="text-xs text-gray-500">
+                {language === 'zh' ? '语言:' : 'Language:'}
+              </span>
+              <button 
+                onClick={toggleLanguage}
+                className="text-xs text-[#7dd3fc] border border-[#7dd3fc] px-2 py-0.5 rounded"
+              >
+                {language === 'zh' ? '中文' : 'English'}
+              </button>
             </div>
-          </nav>
-        )}
-      </div>
-    </header>
+          </div>
+        </div>
+      )}
+    </nav>
   );
 };
 
