@@ -38,7 +38,9 @@ const Navbar: React.FC = () => {
             {[
               { href: '#home', label: language === 'zh' ? '首页' : 'Home' },
               { href: '#services', label: language === 'zh' ? '服务' : 'Services' },
+              { href: '#pricing', label: language === 'zh' ? '定价' : 'Pricing' },
               { href: '#cases', label: language === 'zh' ? '案例' : 'Cases' },
+              { href: '#faq', label: language === 'zh' ? 'FAQ' : 'FAQ' },
               { href: '#blog', label: language === 'zh' ? '科普' : 'Blog' },
               { href: '#contact', label: language === 'zh' ? '咨询' : 'Contact' }
             ].map((item) => (
@@ -95,7 +97,9 @@ const Navbar: React.FC = () => {
             {[
               { href: '#home', label: language === 'zh' ? '首页' : 'Home' },
               { href: '#services', label: language === 'zh' ? '服务' : 'Services' },
+              { href: '#pricing', label: language === 'zh' ? '定价' : 'Pricing' },
               { href: '#cases', label: language === 'zh' ? '案例' : 'Cases' },
+              { href: '#faq', label: language === 'zh' ? '常见问题' : 'FAQ' },
               { href: '#blog', label: language === 'zh' ? '科普' : 'Blog' },
               { href: '#contact', label: language === 'zh' ? '咨询' : 'Contact' }
             ].map((item) => (
