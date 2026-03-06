@@ -85,7 +85,7 @@ const Blog: React.FC = () => {
         zh: '了解风水的基本原理，学会观察住宅的气场状态，为自己和家人创造更和谐的居住环境。',
         en: 'Understand the basic principles of feng shui, learn to observe the energy state of your home, and create a more harmonious living environment for yourself and your family.'
       },
-      image: 'https://images.unsplash.com/photo-1600080972464-98643bb7d053?auto=format&fit=crop&q=80&w=400&h=400',
+      image: 'https://images.pexels.com/photos/8100495/pexels-photo-8100495.jpeg?auto=format&fit=crop&q=80&w=400&h=400',
       date: '2026-01-15',
       category: {
         zh: '风水',
@@ -101,7 +101,7 @@ const Blog: React.FC = () => {
         zh: '探索生辰八字的构成和意义，了解如何通过命理分析获得人生指引。',
         en: 'Explore the composition and meaning of birth chart, and learn how to gain life guidance through numerology analysis.'
       },
-      image: 'https://images.unsplash.com/photo-1541783203917-83f7f0a63f8c?auto=format&fit=crop&q=80&w=400&h=400',
+      image: 'https://images.pexels.com/photos/3569284/pexels-photo-3569284.jpeg?auto=format&fit=crop&q=80&w=400&h=400',
       date: '2026-01-10',
       category: {
         zh: '命理',
@@ -117,7 +117,7 @@ const Blog: React.FC = () => {
         zh: '了解塔罗牌的基本原理，以及如何将其与东方玄学相结合，获得更全面的人生指引。',
         en: 'Understand the basic principles of tarot cards and how to combine them with oriental mysticism to gain more comprehensive life guidance.'
       },
-      image: 'https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&q=80&w=400&h=400',
+      image: 'https://images.pexels.com/photos/2537652/pexels-photo-2537652.jpeg?auto=format&fit=crop&q=80&w=400&h=400',
       date: '2026-01-05',
       category: {
         zh: '塔罗',
@@ -133,7 +133,7 @@ const Blog: React.FC = () => {
         zh: '探索水晶的物理特性和能量属性，了解如何利用水晶的能量改善生活。',
         en: 'Explore the physical properties and energy attributes of crystals, and learn how to use crystal energy to improve your life.'
       },
-      image: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&q=80&w=400&h=400',
+      image: 'https://images.pexels.com/photos/5639377/pexels-photo-5639377.jpeg?auto=format&fit=crop&q=80&w=400&h=400',
       date: '2025-12-28',
       category: {
         zh: '水晶',
@@ -149,7 +149,7 @@ const Blog: React.FC = () => {
         zh: '了解姓名学的基本原理，学会分析名字的吉凶，为自己和家人选择合适的名字。',
         en: 'Understand the basic principles of nameology, learn to analyze the auspiciousness of names, and choose appropriate names for yourself and your family.'
       },
-      image: 'https://images.unsplash.com/photo-1566450456744-2d3b13887c36?auto=format&fit=crop&q=80&w=400&h=400',
+      image: 'https://images.pexels.com/photos/1601076/pexels-photo-1601076.jpeg?auto=format&fit=crop&q=80&w=400&h=400',
       date: '2025-12-20',
       category: {
         zh: '姓名学',
@@ -165,7 +165,7 @@ const Blog: React.FC = () => {
         zh: '了解择吉日的传统方法和现代科学解读，学会为重要事件选择合适的时间。',
         en: 'Understand the traditional methods and modern scientific interpretation of auspicious date selection, and learn to choose appropriate times for important events.'
       },
-      image: 'https://images.unsplash.com/photo-1616744619440-e030a88b89d8?auto=format&fit=crop&q=80&w=400&h=400',
+      image: 'https://images.pexels.com/photos/1287508/pexels-photo-1287508.jpeg?auto=format&fit=crop&q=80&w=400&h=400',
       date: '2025-12-15',
       category: {
         zh: '择日',

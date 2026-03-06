@@ -199,7 +199,7 @@ const FreeReading: React.FC = () => {
             <div>
               <div className="oriental-border rounded-xl overflow-hidden mb-8">
                 <img 
-                  src="https://images.unsplash.com/photo-1555421689-ca7b66d2c868?auto=format&fit=crop&q=80&w=600&h=400" 
+                  src="https://images.pexels.com/photos/3569284/pexels-photo-3569284.jpeg?auto=format&fit=crop&q=80&w=600&h=400" 
                   alt={language === 'zh' ? '八字测算' : 'Birth Chart Reading'} 
                   className="w-full h-auto"
                 />

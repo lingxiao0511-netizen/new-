@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React, { useEffect, useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
@@ -91,7 +91,7 @@ const Hero: React.FC = () => {
               
               <div className="glass-card rounded-2xl p-4 relative overflow-hidden floating">
                 <img 
-                  src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&q=80&w=1920&h=1080" 
+                  src="https://images.pexels.com/photos/3569284/pexels-photo-3569284.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" 
                   alt={language === 'zh' ? '灵霄玄学 - 专业八字算命与风水布局咨询服务，20 年经验帮助客户趋吉避凶' : 'LingXiao Mysticism - Professional Bazi Numerology and Feng Shui Consultation Services, 20 Years Experience Helping Clients Avoid Misfortune'} 
                   className="w-full h-auto rounded-xl object-cover grayscale contrast-125 brightness-90 transition-all duration-700 hover:grayscale-0 hover:contrast-100 hover:brightness-100"
                   width={1920}

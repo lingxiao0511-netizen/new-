@@ -123,7 +123,7 @@ const Services: React.FC = () => {
             '1 month free follow-up consultation'
           ]
         },
-        image: 'https://images.unsplash.com/photo-1600080972464-98643bb7d053?auto=format&fit=crop&q=80&w=400&h=400',
+        image: 'https://images.pexels.com/photos/8100495/pexels-photo-8100495.jpeg?auto=format&fit=crop&q=80&w=400&h=400',
         price: '$99',
         duration: language === 'zh' ? '60-90分钟' : '60-90 minutes',
         popular: true
@@ -154,7 +154,7 @@ const Services: React.FC = () => {
             '3 months free consultation'
           ]
         },
-        image: 'https://images.unsplash.com/photo-1541783203917-83f7f0a63f8c?auto=format&fit=crop&q=80&w=400&h=400',
+        image: 'https://images.pexels.com/photos/3569284/pexels-photo-3569284.jpeg?auto=format&fit=crop&q=80&w=400&h=400',
         price: '$149',
         duration: language === 'zh' ? '90-120分钟' : '90-120 minutes'
       },
@@ -184,7 +184,7 @@ const Services: React.FC = () => {
             '1 month free consultation'
           ]
         },
-        image: 'https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&q=80&w=400&h=400',
+        image: 'https://images.pexels.com/photos/2537652/pexels-photo-2537652.jpeg?auto=format&fit=crop&q=80&w=400&h=400',
         price: '$79',
         duration: language === 'zh' ? '60分钟' : '60 minutes'
       },
@@ -214,7 +214,7 @@ const Services: React.FC = () => {
             '2 months free consultation'
           ]
         },
-        image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=400&h=400',
+        image: 'https://images.pexels.com/photos/1601076/pexels-photo-1601076.jpeg?auto=format&fit=crop&q=80&w=400&h=400',
         price: '$129',
         duration: language === 'zh' ? '90分钟' : '90 minutes',
         popular: true
@@ -245,7 +245,7 @@ const Services: React.FC = () => {
             '1 month free follow-up'
           ]
         },
-        image: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&q=80&w=400&h=400',
+        image: 'https://images.pexels.com/photos/5639377/pexels-photo-5639377.jpeg?auto=format&fit=crop&q=80&w=400&h=400',
         price: '$89',
         duration: language === 'zh' ? '60分钟' : '60 minutes'
       },
@@ -275,7 +275,7 @@ const Services: React.FC = () => {
             'Lifetime valid plan'
           ]
         },
-        image: 'https://images.unsplash.com/photo-1616744619440-e030a88b89d8?auto=format&fit=crop&q=80&w=400&h=400',
+        image: 'https://images.pexels.com/photos/1287508/pexels-photo-1287508.jpeg?auto=format&fit=crop&q=80&w=400&h=400',
         price: '$49',
         duration: language === 'zh' ? '24小时内完成' : 'Completed within 24 hours'
       },
@@ -339,7 +339,7 @@ const Services: React.FC = () => {
             <div className="lg:w-1/3">
               <div className="rounded-xl overflow-hidden shadow-xl transform transition-transform duration-500 hover:scale-105">
                 <img 
-                  src="https://images.unsplash.com/photo-1555421689-ca7b66d2c868?auto=format&fit=crop&q=80&w=400&h=400" 
+                  src="https://images.pexels.com/photos/3569284/pexels-photo-3569284.jpeg?auto=format&fit=crop&q=80&w=400&h=400" 
                   alt={language === 'zh' ? '灵霄玄学免费测算 - 输入出生日期获取五行分析和性格解读，了解基本运势特点' : 'LingXiao Mysticism Free Reading - Enter Birth Date to Get Five Elements Analysis and Personality Interpretation'} 
                   className="w-full h-auto grayscale contrast-125 brightness-90"
                   width={400}
