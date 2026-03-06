@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import FreeFortune from './components/FreeFortune';
 import Services from './components/Services';
 import Pricing from './components/Pricing';
 import FAQ from './components/FAQ';
@@ -76,6 +77,9 @@ export default function HomePage() {
       <main className="min-h-screen bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f3460]">
         {/* Hero Section */}
         <Hero />
+        
+        {/* Free Fortune Section */}
+        <FreeFortune />
         
         {/* Services Section */}
         <Services />

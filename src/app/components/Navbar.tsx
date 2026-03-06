@@ -37,6 +37,7 @@ const Navbar: React.FC = () => {
           <div className="hidden md:flex items-center space-x-8">
             {[
               { href: '#home', label: language === 'zh' ? '首页' : 'Home' },
+              { href: '#free-reading', label: language === 'zh' ? '免费测算' : 'Free Reading' },
               { href: '#services', label: language === 'zh' ? '服务' : 'Services' },
               { href: '#pricing', label: language === 'zh' ? '定价' : 'Pricing' },
               { href: '#cases', label: language === 'zh' ? '案例' : 'Cases' },
@@ -96,6 +97,7 @@ const Navbar: React.FC = () => {
           <div className="px-4 pt-4 pb-6 space-y-3">
             {[
               { href: '#home', label: language === 'zh' ? '首页' : 'Home' },
+              { href: '#free-reading', label: language === 'zh' ? '免费测算' : 'Free Reading' },
               { href: '#services', label: language === 'zh' ? '服务' : 'Services' },
               { href: '#pricing', label: language === 'zh' ? '定价' : 'Pricing' },
               { href: '#cases', label: language === 'zh' ? '案例' : 'Cases' },
