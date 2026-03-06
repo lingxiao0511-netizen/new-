@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import ParticleStars from './ParticleStars';
 
 const Hero: React.FC = () => {
   const { language } = useLanguage();
@@ -13,13 +14,33 @@ const Hero: React.FC = () => {
 
   return (
     <section id="home" className="relative min-h-[100vh] flex items-center justify-center overflow-hidden">
-      <div className="fixed inset-0 z-0 bg-grid opacity-30"></div>
+      {/* 粒子星空背景 */}
+      <ParticleStars />
       
+      {/* 网格背景 */}
+      <div className="fixed inset-0 z-0 bg-grid opacity-20"></div>
+      
+      {/* 顶部光晕 */}
       <div className="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-blue-900 rounded-full blur-[120px] opacity-20 pointer-events-none z-0"></div>
+      
+      {/* 底部光晕 */}
+      <div className="fixed bottom-0 left-1/4 -translate-x-1/2 w-[600px] h-[400px] bg-purple-900 rounded-full blur-[100px] opacity-15 pointer-events-none z-0"></div>
+      
+      {/* 右侧光晕 */}
+      <div className="fixed top-1/2 right-0 w-[500px] h-[500px] bg-cyan-900 rounded-full blur-[100px] opacity-10 pointer-events-none z-0"></div>
       
       <div className="container mx-auto px-4 relative z-20 py-20">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           <div className={`lg:w-1/2 text-center lg:text-left transition-all duration-1000 ease-out ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+            {/* 旋转法阵装饰 */}
+            <div className="absolute top-20 left-10 w-32 h-32 border border-[#7dd3fc]/10 rounded-full animate-spin-slow pointer-events-none z-10 hidden lg:block">
+              <div className="absolute inset-4 border border-[#a78bfa]/10 rounded-full"></div>
+              <div className="absolute inset-8 border border-[#7dd3fc]/10 rounded-full"></div>
+            </div>
+            <div className="absolute bottom-20 right-10 w-24 h-24 border border-[#a78bfa]/10 rounded-full animate-spin-slow-reverse pointer-events-none z-10 hidden lg:block">
+              <div className="absolute inset-3 border border-[#7dd3fc]/10 rounded-full"></div>
+            </div>
+            
             <div className="inline-block mb-8 px-6 py-2 bg-[#7dd3fc]/10 backdrop-blur-sm border border-[#7dd3fc]/30 rounded-full">
               <span className="text-[#7dd3fc] text-xs tracking-widest uppercase">
                 {language === 'zh' ? '千年智慧 • 现代指引' : 'Ancient Wisdom • Modern Guidance'}
@@ -59,17 +80,31 @@ const Hero: React.FC = () => {
           </div>
           
           <div className={`lg:w-1/2 transition-all duration-1000 ease-out delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            <div className="glass-card rounded-2xl p-4 relative overflow-hidden floating">
-              <img 
-                src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&q=80&w=1920&h=1080" 
-                alt={language === 'zh' ? '灵霄玄学 - 专业八字算命与风水布局咨询服务，20 年经验帮助客户趋吉避凶' : 'LingXiao Mysticism - Professional Bazi Numerology and Feng Shui Consultation Services, 20 Years Experience Helping Clients Avoid Misfortune'} 
-                className="w-full h-auto rounded-xl object-cover grayscale contrast-125 brightness-90"
-                width={1920}
-                height={1080}
-                loading="eager"
-              />
-              <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-[#7dd3fc] to-[#a78bfa] text-black px-6 py-3 rounded-full shadow-lg font-bold">
-                {language === 'zh' ? '专业认证' : 'Professional Certified'}
+            <div className="relative">
+              {/* 外层旋转光环 */}
+              <div className="absolute inset-0 -m-8 border border-[#7dd3fc]/20 rounded-full animate-spin-slow pointer-events-none"></div>
+              <div className="absolute inset-0 -m-12 border border-[#a78bfa]/10 rounded-full animate-spin-slow-reverse pointer-events-none"></div>
+              
+              {/* 八卦装饰 */}
+              <div className="absolute -top-6 -left-6 w-16 h-16 bg-gradient-to-br from-[#7dd3fc]/20 to-[#a78bfa]/20 rounded-full blur-xl animate-pulse pointer-events-none"></div>
+              <div className="absolute -bottom-6 -right-6 w-20 h-20 bg-gradient-to-br from-[#a78bfa]/20 to-[#7dd3fc]/20 rounded-full blur-xl animate-pulse pointer-events-none" style={{ animationDelay: '1s' }}></div>
+              
+              <div className="glass-card rounded-2xl p-4 relative overflow-hidden floating">
+                <img 
+                  src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&q=80&w=1920&h=1080" 
+                  alt={language === 'zh' ? '灵霄玄学 - 专业八字算命与风水布局咨询服务，20 年经验帮助客户趋吉避凶' : 'LingXiao Mysticism - Professional Bazi Numerology and Feng Shui Consultation Services, 20 Years Experience Helping Clients Avoid Misfortune'} 
+                  className="w-full h-auto rounded-xl object-cover grayscale contrast-125 brightness-90 transition-all duration-700 hover:grayscale-0 hover:contrast-100 hover:brightness-100"
+                  width={1920}
+                  height={1080}
+                  loading="eager"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+                <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-[#7dd3fc] to-[#a78bfa] text-black px-6 py-3 rounded-full shadow-lg font-bold z-10">
+                  {language === 'zh' ? '专业认证' : 'Professional Certified'}
+                </div>
+                <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm z-10">
+                  {language === 'zh' ? '20 年经验' : '20 Years Experience'}
+                </div>
               </div>
             </div>
           </div>
