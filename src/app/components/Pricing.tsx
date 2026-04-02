@@ -12,8 +12,8 @@ const Pricing: React.FC = () => {
       price: '$19',
       desc:
         language === 'zh'
-          ? '用于验证付费意愿的轻量报告。'
-          : 'A low-ticket report designed to validate willingness to pay.',
+          ? '适合第一次想更系统了解自己图表的读者。'
+          : 'A good starting point for readers who want a more structured introduction to their chart.',
       features:
         language === 'zh'
           ? ['BaZi 核心结构摘要', '五行平衡解读', '基础个性与建议']
@@ -24,8 +24,8 @@ const Pricing: React.FC = () => {
       price: '$29',
       desc:
         language === 'zh'
-          ? '适合传播与分享，也是最自然的升级产品之一。'
-          : 'Shareable, interactive, and one of the most natural upgrade products.',
+          ? '适合想从两个人关系角度来理解图表的人。'
+          : 'A useful option when your question centers on two people and their relationship patterns.',
       features:
         language === 'zh'
           ? ['双人结构匹配', '强项与摩擦点', '关系趋势参考']
@@ -36,8 +36,8 @@ const Pricing: React.FC = () => {
       price: '$49–$79',
       desc:
         language === 'zh'
-          ? '中价深度产品，最有希望成为核心利润层。'
-          : 'A mid-tier deep product likely to become the main profit layer.',
+          ? '适合希望获得更完整、更深入说明的读者。'
+          : 'Designed for readers who want a broader and more detailed interpretation.',
       features:
         language === 'zh'
           ? ['完整 BaZi Insight', 'Career / relationship / timing focus', '更完整解释与行动建议']
@@ -52,17 +52,17 @@ const Pricing: React.FC = () => {
           <div className="inline-block mb-8">
             <span className="px-6 py-2 bg-[#7dd3fc]/10 backdrop-blur-sm border border-[#7dd3fc]/30 rounded-full">
               <span className="text-[#7dd3fc] text-xs tracking-widest uppercase">
-                {language === 'zh' ? '付费产品 • 验证变现' : 'Paid Products • Monetization Layer'}
+                {language === 'zh' ? '详细报告' : 'Detailed Reports'}
               </span>
             </span>
           </div>
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">
-            {language === 'zh' ? '第一版报告产品' : 'Phase-One Reports'}
+            {language === 'zh' ? '选择适合你的报告' : 'Choose the report that fits you'}
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-12">
             {language === 'zh'
-              ? '不建议一开始做太复杂套餐。先用 3 个产品验证点击、下单和复购。'
-              : 'Do not overbuild pricing at the start. Use three focused products to validate clicks, purchases, and repeat demand.'}
+              ? '如果你已经了解基础内容，这里可以帮助你选择更适合自己问题的解读方式。'
+              : 'If you already understand the basics, this section can help you choose the type of reading that fits your question best.'}
           </p>
         </div>
 

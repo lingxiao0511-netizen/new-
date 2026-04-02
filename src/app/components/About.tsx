@@ -11,7 +11,7 @@ const About: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-4">
-            {language === 'zh' ? 'Method, Trust & Positioning' : 'Method, Trust & Positioning'}
+            {language === 'zh' ? 'Clarity, Trust & Boundaries' : 'Clarity, Trust & Boundaries'}
           </h2>
           <div className="w-12 h-0.5 bg-[#7dd3fc] mx-auto opacity-50"></div>
           <p className="text-lg text-gray-400 max-w-3xl mx-auto mt-4">
@@ -55,7 +55,7 @@ const About: React.FC = () => {
 
         <div className="glass-card rounded-2xl p-8 md:p-10">
           <h3 className="text-2xl font-serif font-bold text-white mb-6">
-            {language === 'zh' ? '建议补齐的信任页面' : 'Trust Pages You Should Add Next'}
+            {language === 'zh' ? '帮助你继续了解的页面' : 'Pages that help you learn more'}
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {['About', 'Methodology', 'FAQ', 'Disclaimer', 'Privacy Policy', 'Terms'].map((item) => (

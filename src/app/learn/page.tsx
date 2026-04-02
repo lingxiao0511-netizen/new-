@@ -105,9 +105,9 @@ export default function LearnPage() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="max-w-3xl mb-14">
           <p className="text-[#7dd3fc] uppercase tracking-[0.3em] text-xs">Learn</p>
-          <h1 className="text-5xl font-serif font-bold mt-4">A Clear Knowledge Center, Not a Content Dump</h1>
+          <h1 className="text-5xl font-serif font-bold mt-4">Learn the Basics with Clarity</h1>
           <p className="text-gray-400 text-lg mt-6 leading-relaxed">
-            This section is designed to help first-time readers understand Chinese metaphysics without getting lost. Instead of forcing people through an endless list of articles, the goal is to guide them from curiosity into clarity, then into tools and reports only when it makes sense.
+            This section brings together clear introductions, common questions, and practical explanations for readers who want to understand Chinese metaphysics step by step.
           </p>
         </div>
 
@@ -167,18 +167,18 @@ export default function LearnPage() {
         </div>
 
         <div className="glass-card rounded-2xl p-8 md:p-10">
-          <h2 className="text-3xl font-serif font-bold">From learning to action</h2>
+          <h2 className="text-3xl font-serif font-bold">When you are ready to go further</h2>
           <p className="text-gray-400 mt-4 max-w-3xl leading-relaxed">
-            Educational content should reduce confusion, not trap the reader in endless reading. Once the basics feel clear, the next step should be either trying a structured tool or reading how the report layer works.
+            Some readers want to keep learning, while others prefer to explore their own chart right away. When you feel ready, you can continue with a free tool or explore more detailed report options.
           </p>
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-300">
-            <div className="rounded-xl border border-white/10 bg-white/5 p-4">Step 1: Read one clear article that answers your actual question.</div>
-            <div className="rounded-xl border border-white/10 bg-white/5 p-4">Step 2: Try a free tool to turn curiosity into interaction.</div>
-            <div className="rounded-xl border border-white/10 bg-white/5 p-4">Step 3: Use a report when you want a deeper, structured interpretation.</div>
+            <div className="rounded-xl border border-white/10 bg-white/5 p-4">Read a guide that answers the question you care about most.</div>
+            <div className="rounded-xl border border-white/10 bg-white/5 p-4">Try a free tool if you want a more hands-on starting point.</div>
+            <div className="rounded-xl border border-white/10 bg-white/5 p-4">Explore reports if you want a more detailed reading.</div>
           </div>
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
-            <a href="/tools" className="btn-primary inline-block text-center">Go to tools</a>
-            <a href="/reports" className="btn-secondary inline-block text-center">See reports</a>
+            <a href="/tools" className="btn-primary inline-block text-center">Try tools</a>
+            <a href="/reports" className="btn-secondary inline-block text-center">Explore reports</a>
           </div>
         </div>
       </div>

@@ -41,12 +41,12 @@ export default function UnknownBirthTimePage() {
 
           <h2 className="text-3xl font-serif font-bold text-white">What is the best user experience?</h2>
           <p>
-            The best experience is honest and layered. If the user knows the time, the tool can offer a fuller chart. If they do not, the tool can still provide an educational overview, explain what remains stable, and show where uncertainty enters the reading.
+            The best experience is honest and clear. If you know the time, the tool can offer a fuller chart. If you do not, it can still provide an educational overview, explain what remains stable, and show where uncertainty enters the reading.
           </p>
 
-          <h2 className="text-3xl font-serif font-bold text-white">A useful rule for public launch</h2>
+          <h2 className="text-3xl font-serif font-bold text-white">A good principle to keep in mind</h2>
           <p>
-            Sites that want to feel trustworthy should treat incomplete birth data as a transparency opportunity. Instead of forcing false precision, explain the trade-off. That is better for credibility and better for conversion over the long term.
+            A trustworthy site should treat incomplete birth data as an opportunity for honesty. Instead of forcing false precision, explain the trade-off clearly. That helps readers understand both the value and the limits of the reading.
           </p>
         </div>
 

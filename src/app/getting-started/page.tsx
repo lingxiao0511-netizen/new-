@@ -24,12 +24,12 @@ const steps = [
   },
   {
     title: 'Try the free tools',
-    text: 'Use the tools layer as an interactive entry point before considering a deeper report.',
+    text: 'Try the tools if you want a more hands-on introduction before choosing a deeper reading.',
     link: '/tools',
   },
   {
     title: 'Use reports when you want depth',
-    text: 'Paid reports should feel like a structured upgrade, not the first step.',
+    text: 'Reports are often most useful after you already understand the basics and know what you want to explore.',
     link: '/reports',
   },
 ];
@@ -41,7 +41,7 @@ export default function GettingStartedPage() {
         <div className="max-w-3xl mb-14">
           <p className="text-[#7dd3fc] uppercase tracking-[0.3em] text-xs">Getting Started</p>
           <h1 className="text-5xl font-serif font-bold mt-4">New Here? Start Here.</h1>
-          <p className="text-gray-400 text-lg mt-6 leading-relaxed">If you are new to Chinese metaphysics, the goal is not to learn everything at once. Start with the foundations, understand what your birth data affects, and then move into tools or reports with the right expectations.</p>
+          <p className="text-gray-400 text-lg mt-6 leading-relaxed">If you are new to Chinese metaphysics, there is no need to learn everything at once. Start with the foundations, understand what your birth data affects, and then continue into tools or reports when you feel ready.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
           {steps.map((step) => (

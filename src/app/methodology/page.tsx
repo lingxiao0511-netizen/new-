@@ -1,33 +1,33 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Methodology',
+  title: 'Our Approach',
   description:
-    'Understand how LingXiao Metaphysics approaches chart calculation, AI-assisted explanation, educational content, and interpretive boundaries.',
+    'Learn how LingXiao Metaphysics presents Chinese metaphysics in a clear, respectful, and modern way for international readers.',
   openGraph: {
-    title: 'Methodology | LingXiao Metaphysics',
+    title: 'Our Approach | LingXiao Metaphysics',
     description:
-      'Learn how this site approaches chart logic, AI assistance, educational content, and responsible interpretation.',
+      'Understand how this site explains Chinese metaphysics with clarity, respect, and responsible boundaries.',
     type: 'website',
   },
 };
 
-const principles = [
+const values = [
   {
-    title: 'Rules first, explanation second',
-    body: 'The strongest product structure is to calculate the chart using explicit rules, then use AI or editorial language to make the output understandable. This reduces hallucination risk and improves consistency.',
+    title: 'Clarity before mystique',
+    body: 'This site is designed to make Chinese metaphysics easier to understand. The goal is not to overwhelm readers with jargon, but to explain unfamiliar ideas in a structured and readable way.',
   },
   {
-    title: 'Education before monetization',
-    body: 'The site should help readers understand the system before asking for a purchase. Good educational content builds trust more effectively than exaggerated claims.',
+    title: 'Respect for tradition',
+    body: 'BaZi, Five Elements, and related systems come from long cultural traditions. We present them with respect for their history while also writing for modern international readers.',
   },
   {
-    title: 'Interpretation is not certainty',
-    body: 'Chinese metaphysics is treated here as a symbolic and interpretive framework. The site does not position readings as guaranteed outcomes or fixed fate control.',
+    title: 'Responsible boundaries',
+    body: 'Readings and educational content on this site are intended for reflection and interpretation. They are not presented as guarantees, fixed destiny, or substitutes for professional advice.',
   },
   {
-    title: 'Transparency about incomplete data',
-    body: 'When users do not know their full birth details, the site should explain what remains interpretable and what becomes less certain.',
+    title: 'A better user experience',
+    body: 'We believe people should be able to learn first, try tools second, and only go deeper when they actually want a more detailed reading.',
   },
 ];
 
@@ -36,15 +36,15 @@ export default function MethodologyPage() {
     <main className="min-h-screen bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f3460] text-white pt-32 pb-20">
       <div className="max-w-5xl mx-auto px-4">
         <div className="max-w-3xl mb-14">
-          <p className="text-[#7dd3fc] uppercase tracking-[0.3em] text-xs">Methodology</p>
-          <h1 className="text-5xl font-serif font-bold mt-4">How This Site Approaches Chinese Metaphysics</h1>
+          <p className="text-[#7dd3fc] uppercase tracking-[0.3em] text-xs">Our Approach</p>
+          <h1 className="text-5xl font-serif font-bold mt-4">How We Present Chinese Metaphysics</h1>
           <p className="text-gray-400 text-lg mt-6 leading-relaxed">
-            A public-facing metaphysics site needs more than beautiful design. It needs a method users can understand. This page explains the working principles behind the educational content, tools, and report products presented on LingXiao Metaphysics.
+            LingXiao Metaphysics is built for readers who want a calmer, clearer introduction to Chinese metaphysics. Instead of dramatic claims or vague mystical language, the site focuses on explanation, structure, and a more thoughtful user experience.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-          {principles.map((item) => (
+          {values.map((item) => (
             <div key={item.title} className="glass-card rounded-2xl p-8">
               <h2 className="text-2xl font-serif font-bold">{item.title}</h2>
               <p className="text-gray-400 mt-4 leading-relaxed">{item.body}</p>
@@ -53,23 +53,23 @@ export default function MethodologyPage() {
         </div>
 
         <div className="glass-card rounded-2xl p-8 md:p-10 mb-16">
-          <h2 className="text-3xl font-serif font-bold">What the tools layer should do</h2>
+          <h2 className="text-3xl font-serif font-bold">What you can expect here</h2>
           <div className="mt-6 space-y-4 text-gray-300 leading-relaxed">
-            <p>• Help users convert birth data into a readable structure.</p>
-            <p>• Explain technical concepts without pretending to replace all expert judgment.</p>
-            <p>• Clearly distinguish educational output from premium interpretive products.</p>
-            <p>• Avoid dramatic certainty language that undermines trust.</p>
+            <p>• Beginner-friendly guides that explain terminology step by step</p>
+            <p>• Practical tools that help readers explore charts and symbolic patterns</p>
+            <p>• Deeper reports for people who want a more structured interpretation</p>
+            <p>• Clear boundaries around what this site does and does not claim</p>
           </div>
         </div>
 
         <div className="glass-card rounded-2xl p-8 md:p-10">
-          <h2 className="text-3xl font-serif font-bold">Public source and editorial position</h2>
+          <h2 className="text-3xl font-serif font-bold">Why this matters</h2>
           <div className="mt-6 space-y-4 text-gray-300 leading-relaxed">
             <p>
-              Educational articles on this site are original explanatory writing informed by publicly available historical and reference material. The goal is not to reproduce source texts, but to make the subject understandable for international readers.
+              Many people discover Chinese metaphysics through fragmented social posts, overconfident promises, or oversimplified personality content. This site aims to offer a more grounded alternative: one that helps people learn, explore, and decide for themselves what feels meaningful.
             </p>
             <p>
-              This site aims to present Chinese metaphysics respectfully, with attention to context, terminology, and the difference between symbolic interpretation and guarantee-based prediction.
+              That means building trust through clarity, not trying to impress readers with secrecy or exaggerated certainty.
             </p>
           </div>
         </div>

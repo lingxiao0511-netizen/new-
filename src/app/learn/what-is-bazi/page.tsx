@@ -53,7 +53,7 @@ export default function WhatIsBaziPage() {
 
           <h2 className="text-3xl font-serif font-bold text-white pt-4">Why BaZi still matters online</h2>
           <p>
-            BaZi remains relevant because it gives people a structured language for identity, timing, work, relationships, and life cycles. Online tools can help calculate the chart and explain the basics, while deeper reports can offer layered interpretation. The best modern products use clear rules for calculation first, then use language models or human explanation to make the output understandable.
+            BaZi remains relevant because it gives people a structured language for identity, timing, work, relationships, and life cycles. Online tools can help calculate the chart and explain the basics, while deeper reports can offer more detailed interpretation. The best modern reading experiences calculate the chart clearly first and then use plain language or guided explanation to make the output understandable.
           </p>
         </div>
 
@@ -61,7 +61,7 @@ export default function WhatIsBaziPage() {
           <h2 className="text-3xl font-serif font-bold">Where to go next</h2>
           <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-300">
             <Link href="/learn/five-elements-explained" className="rounded-xl border border-white/10 bg-white/5 p-4 hover:border-[#7dd3fc]/30 transition-colors">Read next: Five Elements explained</Link>
-            <Link href="/tools" className="rounded-xl border border-white/10 bg-white/5 p-4 hover:border-[#7dd3fc]/30 transition-colors">Try the tools layer</Link>
+            <Link href="/tools" className="rounded-xl border border-white/10 bg-white/5 p-4 hover:border-[#7dd3fc]/30 transition-colors">Try free tools</Link>
             <Link href="/reports" className="rounded-xl border border-white/10 bg-white/5 p-4 hover:border-[#7dd3fc]/30 transition-colors">Explore personalized reports</Link>
           </div>
         </div>

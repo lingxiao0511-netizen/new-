@@ -12,15 +12,15 @@ const FAQ: React.FC = () => {
       q: language === 'zh' ? '这个站是算命站，还是内容平台？' : 'Is this a fortune telling site or a content platform?',
       a:
         language === 'zh'
-          ? '更准确地说，它是一个 Chinese Metaphysics 平台：用内容建立认知，用工具建立体验，用报告完成变现。'
-          : 'More accurately, it is a Chinese metaphysics platform: content builds understanding, tools create engagement, and reports create monetization.',
+          ? '更准确地说，它是一个 Chinese Metaphysics 平台：你可以在这里学习基础知识、试用工具，并在需要时查看更深入的解读。'
+          : 'More accurately, it is a Chinese metaphysics platform where you can learn the basics, try practical tools, and explore deeper readings when you want more detail.',
     },
     {
       q: language === 'zh' ? 'AI 是直接算出来的吗？' : 'Does AI generate the reading directly?',
       a:
         language === 'zh'
-          ? '不建议这样做。正确结构是规则引擎先计算，再由 AI 负责解释与语言表达。'
-          : 'It should not work that way. The recommended model is: rules engine first, AI explanation second.',
+          ? '不建议让 AI 直接凭空生成结论。更稳妥的方式是先把图表结构算清楚，再用 AI 帮助解释。'
+          : 'Ideally, AI should not invent the chart from scratch. A more reliable approach is to calculate the structure clearly first and then use AI to help explain it.',
     },
     {
       q: language === 'zh' ? '第一阶段最该先做什么？' : 'What should be built first?',

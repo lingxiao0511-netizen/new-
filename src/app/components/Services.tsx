@@ -11,8 +11,8 @@ const Services: React.FC = () => {
       title: language === 'zh' ? 'Learn / Blog' : 'Learn / Blog',
       desc:
         language === 'zh'
-          ? '用内容拿搜索流量、建立信任，并把用户自然导向工具和报告。'
-          : 'Use educational content to capture search traffic, build trust, and guide visitors into tools and paid reports.',
+          ? '从基础知识、常见问题和对比文章开始，帮助你更自然地理解这个系统。'
+          : 'Start with foundational guides, common questions, and comparison articles that make the system easier to understand.',
       points:
         language === 'zh'
           ? ['What is Bazi?', 'Five Elements explained', 'Bazi vs Western astrology']
@@ -22,8 +22,8 @@ const Services: React.FC = () => {
       title: language === 'zh' ? 'Tools' : 'Tools',
       desc:
         language === 'zh'
-          ? '让用户先获得可感知价值，再升级到更完整的结构化解读。'
-          : 'Let users get immediate value first, then upgrade to deeper structured interpretation.',
+          ? '先从实用工具开始，快速看到自己的图表与核心结构。'
+          : 'Begin with practical tools that make it easier to see your chart and core symbolic patterns.',
       points:
         language === 'zh'
           ? ['Free Bazi Chart', 'Five Elements Profile', 'Compatibility Checker']
@@ -33,8 +33,8 @@ const Services: React.FC = () => {
       title: language === 'zh' ? 'Premium Reports' : 'Premium Reports',
       desc:
         language === 'zh'
-          ? '低价报告验证付费意愿，中价深度报告形成核心利润层。'
-          : 'Use low-ticket reports to validate demand and mid-tier reports as the core profit layer.',
+          ? '如果你想要更完整的解读，可以进一步查看详细报告。'
+          : 'If you want more than a quick overview, you can continue into more detailed reports.',
       points:
         language === 'zh'
           ? ['$19 Basic Report', '$29 Compatibility Report', '$49–$79 Deep Readings']
@@ -49,17 +49,17 @@ const Services: React.FC = () => {
           <div className="inline-block mb-8">
             <span className="px-6 py-2 bg-[#7dd3fc]/10 backdrop-blur-sm border border-[#7dd3fc]/30 rounded-full">
               <span className="text-[#7dd3fc] text-xs tracking-widest uppercase">
-                {language === 'zh' ? '网站结构 • 商业闭环' : 'Site Architecture • Business Model'}
+                {language === 'zh' ? '学习 • 工具 • 解读' : 'Learn • Tools • Readings'}
               </span>
             </span>
           </div>
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">
-            {language === 'zh' ? '这个站应该怎么搭' : 'How This Site Should Be Built'}
+            {language === 'zh' ? '你可以从哪里开始' : 'Different ways to explore'}
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-12">
             {language === 'zh'
-              ? '不是单页接单站，而是“内容资产 + 工具产品 + 付费服务”的组合。'
-              : 'Not a single-page consultation site, but a combination of content assets, practical tools, and paid services.'}
+              ? '你可以先学习基础，再试用工具，最后在需要时查看更深入的个性化解读。'
+              : 'You can begin with learning, continue with tools, and explore more detailed readings whenever you want to go deeper.'}
           </p>
         </div>
 
@@ -87,25 +87,25 @@ const Services: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             <div>
               <h3 className="text-2xl font-serif font-bold text-white mb-6">
-                {language === 'zh' ? '最关键的产品逻辑' : 'The Core Product Logic'}
+                {language === 'zh' ? '为什么这样安排' : 'Why this approach helps'}
               </h3>
               <div className="space-y-4 text-gray-300 leading-relaxed">
                 <p>
                   {language === 'zh'
-                    ? '不要让大模型直接自由发挥“算命”。正确做法是：规则引擎先算结构，AI 再负责解释。'
-                    : 'Do not let the language model improvise the reading. The correct approach is: a rules engine calculates structure first, then AI explains it.'}
+                    ? '复杂的命理概念如果表达得太随意，会让人更困惑。更好的做法是先把结构算清楚，再用更容易理解的语言解释它。'
+                    : 'Chinese metaphysics can feel difficult if it is explained too loosely. A better experience begins with clear structure and then makes that structure easier to understand.'}
                 </p>
                 <p>
                   {language === 'zh'
-                    ? '这样结果才会稳定、一致、可控，也更容易建立国际用户信任。'
-                    : 'That keeps the experience stable, consistent, controllable, and much more trustworthy for global users.'}
+                    ? '这样读者会更容易理解，也更容易知道哪些内容适合作为参考、哪些地方需要保留弹性。'
+                    : 'That makes the experience easier to follow and helps readers understand where interpretation can be useful without turning everything into certainty.'}
                 </p>
               </div>
             </div>
 
             <div className="rounded-2xl border border-white/10 bg-black/20 p-6">
               <p className="text-sm uppercase tracking-widest text-[#7dd3fc] mb-4">
-                {language === 'zh' ? '推荐技术栈' : 'Recommended Stack'}
+                {language === 'zh' ? '平台体验' : 'Platform Experience'}
               </p>
               <div className="grid grid-cols-2 gap-4 text-sm">
                 {[

@@ -39,8 +39,8 @@ const FreeFortune: React.FC = () => {
         mainElement: language === 'zh' ? zhElements[idx] : elements[idx],
         summary:
           language === 'zh'
-            ? '这是一个用于 MVP 展示的免费入口：先给用户结构化结果和基础解释，再引导升级到更完整的报告。'
-            : 'This free result is designed as an MVP entry point: a structured summary first, followed by an upgrade path to deeper reports.',
+            ? '这是一个简化的免费结果，用来帮助你先理解基础结构，再决定是否继续深入查看。'
+            : 'This free result is a simplified starting point designed to help you understand the basics before deciding whether you want to go deeper.',
         traits:
           language === 'zh'
             ? ['基础五行倾向', '简化性格标签', '轻量解释与建议']
@@ -59,7 +59,7 @@ const FreeFortune: React.FC = () => {
           <div className="inline-block mb-6">
             <span className="px-6 py-2 bg-[#7dd3fc]/10 backdrop-blur-sm border border-[#7dd3fc]/30 rounded-full">
               <span className="text-[#7dd3fc] text-xs tracking-widest uppercase">
-                {language === 'zh' ? '免费工具 • 转化入口' : 'Free Tools • Conversion Layer'}
+                {language === 'zh' ? '免费工具' : 'Free Tools'}
               </span>
             </span>
           </div>
@@ -68,8 +68,8 @@ const FreeFortune: React.FC = () => {
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             {language === 'zh'
-              ? '第一期先做 3 个最值得上的工具：BaZi Chart、Five Elements Profile、Compatibility Checker。当前先用一个首页工具入口承接。'
-              : 'Phase one should focus on three practical tools: a BaZi chart, a Five Elements profile, and a compatibility checker. This section is the homepage entry point.'}
+              ? '你可以先从 3 类最容易理解的工具开始：BaZi Chart、Five Elements Profile 和 Compatibility Checker。当前这里展示的是一个简化起点。'
+              : 'A practical place to begin is with three easy entry points: a BaZi chart, a Five Elements profile, and a compatibility checker. This homepage section shows a simplified starting version.'}
           </p>
         </div>
 
@@ -167,7 +167,7 @@ const FreeFortune: React.FC = () => {
                     <p className="text-sm text-gray-400 mt-1">
                       {language === 'zh'
                         ? '下一步可以升级到完整报告、年度运势或关系匹配。'
-                        : 'Upgrade next into a full report, annual reading, or compatibility analysis.'}
+                        : 'If you would like more depth, you can continue with a fuller report, an annual reading, or a compatibility analysis.'}
                     </p>
                   </div>
                   <a href="/reports" className="btn-primary inline-block text-center">
@@ -182,7 +182,7 @@ const FreeFortune: React.FC = () => {
             {[
               {
                 title: language === 'zh' ? 'Free BaZi Chart' : 'Free BaZi Chart',
-                desc: language === 'zh' ? '核心命盘入口，适合作为第一转化点。' : 'The main entry tool and best first conversion point.',
+                desc: language === 'zh' ? '适合先从自己的命盘结构开始了解。' : 'A good place to begin if you want to start with your own chart.',
               },
               {
                 title: language === 'zh' ? 'Five Elements Profile' : 'Five Elements Profile',
@@ -190,7 +190,7 @@ const FreeFortune: React.FC = () => {
               },
               {
                 title: language === 'zh' ? 'Compatibility Checker' : 'Compatibility Checker',
-                desc: language === 'zh' ? '适合双人互动和分享，是后续重点转化工具。' : 'Good for pair-based interaction and a strong future conversion tool.',
+                desc: language === 'zh' ? '适合从两个人的关系模式来切入。' : 'A good option when you want to explore relationship patterns between two people.',
               },
             ].map((tool) => (
               <div key={tool.title} className="glass-card">

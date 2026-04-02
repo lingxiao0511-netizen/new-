@@ -22,17 +22,17 @@ const Blog: React.FC = () => {
           <div className="inline-block mb-8">
             <span className="px-6 py-2 bg-[#7dd3fc]/10 backdrop-blur-sm border border-[#7dd3fc]/30 rounded-full">
               <span className="text-[#7dd3fc] text-xs tracking-widest uppercase">
-                {language === 'zh' ? 'SEO 内容层' : 'SEO Content Layer'}
+                {language === 'zh' ? '学习内容' : 'Learning Guides'}
               </span>
             </span>
           </div>
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">
-            {language === 'zh' ? '内容中心应该先写什么' : 'What the Content Hub Should Cover'}
+            {language === 'zh' ? '从这些主题开始了解' : 'A few good places to begin'}
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-12">
             {language === 'zh'
-              ? '首页先展示你第一阶段最值得写的内容方向：解释概念、回答问题、把搜索流量导向工具。'
-              : 'The homepage should preview your most important early content: explain core concepts, answer trust questions, and guide traffic into tools.'}
+              ? '如果你想先通过阅读来了解这个体系，这些主题会是很自然的起点。'
+              : 'If you prefer to start by reading, these topics are a natural way to become familiar with the system.'}
           </p>
         </div>
 
@@ -45,8 +45,8 @@ const Blog: React.FC = () => {
               <h3 className="text-xl font-serif font-bold text-white mb-4">{title}</h3>
               <p className="text-gray-400 text-sm leading-relaxed">
                 {language === 'zh'
-                  ? '这类文章适合承接搜索流量，并把读者导向 Free Chart、Five Elements 或 Compatibility Tool。'
-                  : 'This type of article is ideal for search traffic and for guiding readers into the free chart, the Five Elements profile, or the compatibility tool.'}
+                  ? '如果某个主题正好是你关心的问题，可以从这里读起，再决定是否继续看工具或更深入的解读。'
+                  : 'If one of these topics matches what you are curious about, it can be a natural place to begin before moving into tools or more detailed readings.'}
               </p>
             </a>
           ))}

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Can AI Read BaZi Correctly? | LingXiao Metaphysics',
     description:
-      'Understand how rules engines, structured calculation, and AI explanations work together in a modern BaZi product.',
+      'Understand how structured calculation and AI-assisted explanation can work together in a modern BaZi reading experience.',
     type: 'article',
   },
 };
@@ -17,10 +17,10 @@ export default function CanAiReadBaziPage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f3460] text-white pt-32 pb-20">
       <article className="max-w-4xl mx-auto px-4">
-        <p className="text-[#7dd3fc] uppercase tracking-[0.3em] text-xs">Trust & Product</p>
+        <p className="text-[#7dd3fc] uppercase tracking-[0.3em] text-xs">Trust & Clarity</p>
         <h1 className="text-5xl font-serif font-bold mt-4">Can AI Read BaZi Correctly?</h1>
         <p className="text-gray-400 text-lg mt-6 leading-relaxed">
-          This is one of the most important questions for a modern metaphysics product. The honest answer is: AI can help, but only if the product is designed carefully. If the system relies on vague text generation alone, trust breaks quickly. If calculation is structured first and explanation is layered second, the experience becomes much stronger.
+          This is one of the most important questions for any modern metaphysics website. The honest answer is that AI can help, but only when it is used carefully. If a site relies on vague text generation alone, trust breaks quickly. If calculation is handled clearly first and explanation comes after, the experience becomes much stronger.
         </p>
 
         <div className="glass-card rounded-2xl p-8 md:p-10 mt-10 space-y-6 text-gray-300 leading-relaxed">
@@ -31,12 +31,12 @@ export default function CanAiReadBaziPage() {
 
           <h2 className="text-3xl font-serif font-bold text-white">What AI is not good at on its own</h2>
           <p>
-            AI is not reliable if it is asked to invent the chart logic from scratch. Without a structured rules layer, the model may sound fluent while being inconsistent, overly general, or simply wrong about technical details.
+            AI is not reliable if it is asked to invent the chart logic from scratch. Without a clear calculation method behind it, the model may sound fluent while being inconsistent, overly general, or simply wrong about technical details.
           </p>
 
-          <h2 className="text-3xl font-serif font-bold text-white">The stronger product architecture</h2>
+          <h2 className="text-3xl font-serif font-bold text-white">A more reliable way to do it</h2>
           <p>
-            A trustworthy product usually works in two layers. First, a rules-based system calculates the chart and organizes the technical signals. Second, AI translates those signals into readable guidance. This makes the product easier to explain, easier to refine, and much more credible to users.
+            A trustworthy experience usually works in two steps. First, a clear calculation method determines the chart and organizes the technical signals. Second, AI helps translate those signals into readable guidance. This makes the reading easier to understand and more credible to users.
           </p>
 
           <h2 className="text-3xl font-serif font-bold text-white">Where human judgment still matters</h2>
@@ -44,9 +44,9 @@ export default function CanAiReadBaziPage() {
             Human review still matters for advanced readings, unusual charts, cultural nuance, and sensitive user questions. AI can support interpretation, but it should not automatically claim expert authority in every case.
           </p>
 
-          <h2 className="text-3xl font-serif font-bold text-white">Why this article matters for launch</h2>
+          <h2 className="text-3xl font-serif font-bold text-white">Why transparency matters</h2>
           <p>
-            Public users are already skeptical of low-quality “AI fortune telling” sites. A transparent article like this helps differentiate a serious platform from a gimmick. It also supports conversion by showing that the product has a real logic behind it.
+            Many readers are already skeptical of low-quality “AI fortune telling” sites. A transparent article like this helps show the difference between a thoughtful reading experience and a gimmick. It gives readers a clearer sense of what the site is actually trying to do.
           </p>
         </div>
 

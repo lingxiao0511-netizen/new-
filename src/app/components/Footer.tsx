@@ -17,8 +17,8 @@ const Footer: React.FC = () => {
             </h3>
             <p className="text-gray-400 mb-4 leading-relaxed">
               {language === 'zh'
-                ? '一个面向国际用户的中国命理平台：用内容建立认知，用工具建立体验，用报告完成变现。'
-                : 'A global Chinese metaphysics platform where content builds understanding, tools create engagement, and reports create monetization.'}
+                ? '一个面向国际用户的中国命理平台，帮助你通过内容、工具与更深入的解读来理解 Chinese Metaphysics。'
+                : 'A global Chinese metaphysics platform for learning through guides, practical tools, and more detailed readings.'}
             </p>
           </div>
 
@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
               <li><Link href="/learn" className="hover:text-[#7dd3fc] transition-colors">Learn</Link></li>
               <li><Link href="/getting-started" className="hover:text-[#7dd3fc] transition-colors">Getting Started</Link></li>
               <li><Link href="/reports" className="hover:text-[#7dd3fc] transition-colors">Reports</Link></li>
-              <li><Link href="/methodology" className="hover:text-[#7dd3fc] transition-colors">Methodology</Link></li>
+              <li><Link href="/methodology" className="hover:text-[#7dd3fc] transition-colors">Our Approach</Link></li>
               <li><Link href="/editorial-policy" className="hover:text-[#7dd3fc] transition-colors">Editorial Policy</Link></li>
               <li><Link href="/sources" className="hover:text-[#7dd3fc] transition-colors">Sources</Link></li>
             </ul>
@@ -51,12 +51,12 @@ const Footer: React.FC = () => {
 
           <div>
             <h4 className="text-lg font-serif font-bold text-white mb-4">
-              {language === 'zh' ? '当前上线建议' : 'Launch Notes'}
+              {language === 'zh' ? '使用说明' : 'Helpful Notes'}
             </h4>
             <div className="space-y-3 text-gray-400 text-sm leading-relaxed">
-              <p>{language === 'zh' ? '先上线内容 + 工具 + 报告三层结构。' : 'Launch the content + tools + reports structure first.'}</p>
-              <p>{language === 'zh' ? '避免 100% 准确、保证预测等表述。' : 'Avoid guarantee language such as 100% accuracy.'}</p>
-              <p>{language === 'zh' ? '法务页上线前应补成正式版本。' : 'Legal pages should be finalized before a broader launch.'}</p>
+              <p>{language === 'zh' ? '如果你是新读者，可以先从 Learn 或 Tools 开始。' : 'If you are new here, it often helps to begin with Learn or Tools.'}</p>
+              <p>{language === 'zh' ? '这里提供的是象征性解读与参考，不是保证式预测。' : 'The site offers symbolic interpretation and guidance, not guarantee-based prediction.'}</p>
+              <p>{language === 'zh' ? '在提供出生信息前，你也可以先阅读隐私与说明页面。' : 'You can also review the privacy and trust pages before sharing birth information.'}</p>
             </div>
           </div>
         </div>

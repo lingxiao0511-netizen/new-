@@ -79,10 +79,10 @@ const Hero: React.FC = () => {
                   <div className="flex items-center justify-between border-b border-white/10 pb-4">
                     <div>
                       <p className="text-sm text-[#7dd3fc] uppercase tracking-widest">
-                        {language === 'zh' ? 'MVP 结构' : 'MVP Structure'}
+                        {language === 'zh' ? '如何开始' : 'How to Begin'}
                       </p>
                       <h3 className="text-2xl font-serif text-white mt-2">
-                        {language === 'zh' ? '内容驱动的工具型站点' : 'A Content-Led Tool Platform'}
+                        {language === 'zh' ? '从学习、工具或深度解读开始' : 'Start with learning, tools, or deeper readings'}
                       </h3>
                     </div>
                     <div className="text-right">
@@ -94,20 +94,20 @@ const Hero: React.FC = () => {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {[
                       {
-                        title: language === 'zh' ? 'Learn / Blog' : 'Learn / Blog',
-                        desc: language === 'zh' ? 'SEO、教育、建立信任' : 'SEO, education, trust building',
+                        title: language === 'zh' ? 'Learn' : 'Learn',
+                        desc: language === 'zh' ? '先理解基础概念与常见问题' : 'Understand the basics and common questions first',
                       },
                       {
                         title: language === 'zh' ? 'Tools' : 'Tools',
-                        desc: language === 'zh' ? 'BaZi、五行、匹配' : 'BaZi, elements, compatibility',
+                        desc: language === 'zh' ? '探索排盘、五行与关系匹配' : 'Explore charts, Five Elements, and compatibility',
                       },
                       {
                         title: language === 'zh' ? 'Reports' : 'Reports',
-                        desc: language === 'zh' ? '轻付费与深度报告' : 'Low-ticket and deep reports',
+                        desc: language === 'zh' ? '获得更完整的个性化解读' : 'Go deeper with more detailed readings',
                       },
                       {
-                        title: language === 'zh' ? 'Method' : 'Method',
-                        desc: language === 'zh' ? '规则引擎 + AI 表达层' : 'Rules engine + AI explanation layer',
+                        title: language === 'zh' ? 'Approach' : 'Approach',
+                        desc: language === 'zh' ? '以清晰、尊重与边界感来呈现' : 'Presented with clarity, respect, and clear boundaries',
                       },
                     ].map((card) => (
                       <div key={card.title} className="rounded-xl border border-white/10 bg-black/20 p-4">
