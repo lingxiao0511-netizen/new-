@@ -43,6 +43,15 @@ export default function ToolsPage() {
           </p>
         </div>
 
+        <div className="glass-card rounded-2xl p-8 md:p-10 mb-10">
+          <h2 className="text-3xl font-serif font-bold">Which tool should a new visitor start with?</h2>
+          <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-300">
+            <div className="rounded-xl border border-white/10 bg-white/5 p-4"><span className="text-white">Choose Free BaZi Chart</span> if you want the strongest first-touch product and the clearest path into reports.</div>
+            <div className="rounded-xl border border-white/10 bg-white/5 p-4"><span className="text-white">Choose Five Elements Profile</span> if you want a lighter and faster beginner entry point.</div>
+            <div className="rounded-xl border border-white/10 bg-white/5 p-4"><span className="text-white">Choose Compatibility Checker</span> if you want higher interaction and stronger emotional conversion potential.</div>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {tools.map((tool) => (
             <div key={tool.title} className="glass-card rounded-2xl">
@@ -59,9 +68,29 @@ export default function ToolsPage() {
               <div className="mt-6 space-y-2 text-sm text-gray-400">
                 <p><span className="text-white">Input:</span> Birth date, optional time, optional gender</p>
                 <p><span className="text-white">Output:</span> Instant symbolic summary with upgrade path</p>
+                <p><span className="text-white">Best for:</span> Early trust, onboarding, and next-step conversion</p>
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+          <div className="glass-card rounded-2xl p-8">
+            <h2 className="text-2xl font-serif font-bold">Before a user tries a tool</h2>
+            <div className="mt-4 space-y-3 text-gray-300 leading-relaxed text-sm">
+              <p>• Make sure the user understands what birth data matters.</p>
+              <p>• Explain what happens if birth time is missing.</p>
+              <p>• Keep the output useful, but not so exhaustive that reports lose their value.</p>
+            </div>
+          </div>
+          <div className="glass-card rounded-2xl p-8">
+            <h2 className="text-2xl font-serif font-bold">Good supporting pages for the tools layer</h2>
+            <div className="mt-4 space-y-3 text-gray-300 leading-relaxed text-sm">
+              <p>• <a href="/getting-started" className="text-white hover:text-[#7dd3fc]">Getting Started</a></p>
+              <p>• <a href="/learn/unknown-birth-time" className="text-white hover:text-[#7dd3fc]">Unknown birth time</a></p>
+              <p>• <a href="/learn/how-we-use-ai" className="text-white hover:text-[#7dd3fc]">How we use AI</a></p>
+            </div>
+          </div>
         </div>
 
         <div className="glass-card rounded-2xl p-8 md:p-10">

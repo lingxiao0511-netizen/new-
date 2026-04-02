@@ -69,6 +69,33 @@ export default function HomePage() {
 
       <main className="min-h-screen bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f3460]">
         <Hero />
+
+        <section className="px-4 pb-8">
+          <div className="max-w-6xl mx-auto glass-card rounded-2xl p-8 md:p-10 text-white">
+            <div className="max-w-3xl">
+              <p className="text-[#7dd3fc] uppercase tracking-[0.3em] text-xs">Start here</p>
+              <h2 className="text-4xl font-serif font-bold mt-4">Three clear ways to use this site</h2>
+              <p className="text-gray-400 mt-4 text-lg leading-relaxed">
+                The goal is not to overwhelm people with mystical language or too many pages. A better experience gives visitors a clear path based on what they want right now.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 text-sm text-gray-300">
+              <a href="/getting-started" className="rounded-2xl border border-white/10 bg-white/5 p-6 hover:border-[#7dd3fc]/30 transition-colors">
+                <h3 className="text-white text-xl font-serif font-bold">I am new</h3>
+                <p className="mt-3 leading-relaxed">Start with the beginner guide and foundational explanations before using tools.</p>
+              </a>
+              <a href="/tools" className="rounded-2xl border border-white/10 bg-white/5 p-6 hover:border-[#7dd3fc]/30 transition-colors">
+                <h3 className="text-white text-xl font-serif font-bold">I want to try something</h3>
+                <p className="mt-3 leading-relaxed">Use a free tool if you want practical interaction and a low-friction first experience.</p>
+              </a>
+              <a href="/reports" className="rounded-2xl border border-white/10 bg-white/5 p-6 hover:border-[#7dd3fc]/30 transition-colors">
+                <h3 className="text-white text-xl font-serif font-bold">I want depth</h3>
+                <p className="mt-3 leading-relaxed">Explore the report layer if you already understand the basics and want a deeper reading.</p>
+              </a>
+            </div>
+          </div>
+        </section>
+
         <FreeFortune />
         <Services />
         <Pricing />

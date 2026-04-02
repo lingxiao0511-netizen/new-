@@ -46,6 +46,15 @@ export default function ReportsPage() {
           </p>
         </div>
 
+        <div className="glass-card rounded-2xl p-8 md:p-10 mb-10">
+          <h2 className="text-3xl font-serif font-bold">How visitors should move into paid reports</h2>
+          <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-300">
+            <div className="rounded-xl border border-white/10 bg-white/5 p-4">1. Read enough educational content to understand the system and its limits.</div>
+            <div className="rounded-xl border border-white/10 bg-white/5 p-4">2. Try a free tool to confirm interest and reduce hesitation.</div>
+            <div className="rounded-xl border border-white/10 bg-white/5 p-4">3. Upgrade into a report when the user wants depth, not just curiosity-level output.</div>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {reports.map((report) => (
             <div key={report.title} className="glass-card rounded-2xl">
@@ -62,9 +71,29 @@ export default function ReportsPage() {
                 <p><span className="text-white">Delivery:</span> Digital report delivered online</p>
                 <p><span className="text-white">Turnaround:</span> To be finalized before public launch</p>
                 <p><span className="text-white">Best fit:</span> Users who already explored a free tool</p>
+                <p><span className="text-white">Good pre-read:</span> What the report includes + methodology</p>
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+          <div className="glass-card rounded-2xl p-8">
+            <h2 className="text-2xl font-serif font-bold">Pages that support report conversion</h2>
+            <div className="mt-4 space-y-3 text-gray-300 leading-relaxed text-sm">
+              <p>• <a href="/learn/what-does-a-bazi-report-include" className="text-white hover:text-[#7dd3fc]">What does a BaZi report include?</a></p>
+              <p>• <a href="/methodology" className="text-white hover:text-[#7dd3fc]">Methodology</a></p>
+              <p>• <a href="/editorial-policy" className="text-white hover:text-[#7dd3fc]">Editorial Policy</a></p>
+            </div>
+          </div>
+          <div className="glass-card rounded-2xl p-8">
+            <h2 className="text-2xl font-serif font-bold">What should happen before launch</h2>
+            <div className="mt-4 space-y-3 text-gray-300 leading-relaxed text-sm">
+              <p>• Finalize turnaround and delivery language.</p>
+              <p>• Decide revision and refund policy.</p>
+              <p>• Make sure tool outputs and paid report scope do not overlap too much.</p>
+            </div>
+          </div>
         </div>
 
         <div className="glass-card rounded-2xl p-8 md:p-10">
