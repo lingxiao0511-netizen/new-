@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React, { useEffect, useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
@@ -14,96 +14,116 @@ const Hero: React.FC = () => {
 
   return (
     <section id="home" className="relative min-h-[100vh] flex items-center justify-center overflow-hidden">
-      {/* 粒子星空背景 */}
       <ParticleStars />
-      
-      {/* 网格背景 */}
       <div className="fixed inset-0 z-0 bg-grid opacity-20"></div>
-      
-      {/* 顶部光晕 */}
       <div className="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-blue-900 rounded-full blur-[120px] opacity-20 pointer-events-none z-0"></div>
-      
-      {/* 底部光晕 */}
       <div className="fixed bottom-0 left-1/4 -translate-x-1/2 w-[600px] h-[400px] bg-purple-900 rounded-full blur-[100px] opacity-15 pointer-events-none z-0"></div>
-      
-      {/* 右侧光晕 */}
       <div className="fixed top-1/2 right-0 w-[500px] h-[500px] bg-cyan-900 rounded-full blur-[100px] opacity-10 pointer-events-none z-0"></div>
-      
+
       <div className="container mx-auto px-4 relative z-20 py-20">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           <div className={`lg:w-1/2 text-center lg:text-left transition-all duration-1000 ease-out ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            {/* 旋转法阵装饰 */}
-            <div className="absolute top-20 left-10 w-32 h-32 border border-[#7dd3fc]/10 rounded-full animate-spin-slow pointer-events-none z-10 hidden lg:block">
-              <div className="absolute inset-4 border border-[#a78bfa]/10 rounded-full"></div>
-              <div className="absolute inset-8 border border-[#7dd3fc]/10 rounded-full"></div>
-            </div>
-            <div className="absolute bottom-20 right-10 w-24 h-24 border border-[#a78bfa]/10 rounded-full animate-spin-slow-reverse pointer-events-none z-10 hidden lg:block">
-              <div className="absolute inset-3 border border-[#7dd3fc]/10 rounded-full"></div>
-            </div>
-            
             <div className="inline-block mb-8 px-6 py-2 bg-[#7dd3fc]/10 backdrop-blur-sm border border-[#7dd3fc]/30 rounded-full">
               <span className="text-[#7dd3fc] text-xs tracking-widest uppercase">
-                {language === 'zh' ? '千年智慧 • 现代指引' : 'Ancient Wisdom • Modern Guidance'}
+                {language === 'zh' ? '内容 + 工具 + 个性化解读' : 'Content + Tools + Personalized Insights'}
               </span>
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold mb-8 leading-tight tracking-tight text-white">
-              {language === 'zh' ? '你的命运' : 'Your Destiny'}
+              {language === 'zh' ? '用现代方式' : 'Explore Chinese'}
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7dd3fc] to-[#a78bfa]">
-                {language === 'zh' ? '是一张精密的星图' : 'Is a Precise Star Chart'}
+                {language === 'zh' ? '理解中国命理' : 'Metaphysics, Clearly'}
               </span>
             </h1>
             <p className="mt-4 max-w-2xl mx-auto lg:mx-0 text-lg text-gray-400 font-light leading-relaxed">
-              {language === 'zh' ? 
-                '结合传统玄学智慧与现代生活需求，为您提供专业的命理咨询、风水布局和心灵指引，助您趋吉避凶，掌控人生方向。' : 
-                'Combining traditional mystical wisdom with modern life needs, we provide professional numerology consultation, feng shui layout and spiritual guidance to help you avoid misfortune and control your life direction.'
-              }
+              {language === 'zh'
+                ? '这是一个面向全球用户的中国命理平台。你可以从免费 BaZi 排盘、五行分析和关系匹配开始，再逐步理解八字、紫微斗数与中国象数思维。'
+                : 'A global platform for learning and exploring Chinese metaphysics through educational content, practical tools, and AI-assisted personalized insights.'}
             </p>
-            
+
             <div className="mt-12 flex flex-col sm:flex-row justify-center lg:justify-start gap-5">
-              <a 
-                href="#services" 
+              <a
+                href="/tools"
+                className="px-8 py-3 bg-gradient-to-r from-[#7dd3fc] to-[#a78bfa] text-black font-bold tracking-widest hover:from-[#a78bfa] hover:to-[#7dd3fc] transition-all shadow-[0_0_20px_rgba(125,211,252,0.3)]"
+              >
+                {language === 'zh' ? '免费试用工具' : 'Try Free Tools'}
+              </a>
+              <a
+                href="/learn"
                 className="group relative px-8 py-3 overflow-hidden rounded-none border border-white/20 hover:border-[#7dd3fc] transition-all duration-300"
               >
                 <div className="absolute inset-0 w-3 bg-[#7dd3fc] transition-all duration-[250ms] ease-out group-hover:w-full opacity-10"></div>
                 <span className="relative text-white group-hover:text-[#7dd3fc] font-medium tracking-widest">
-                  {language === 'zh' ? '探索服务' : 'Explore Services'}
+                  {language === 'zh' ? '学习基础知识' : 'Learn the Basics'}
                 </span>
               </a>
-              <a 
-                href="#contact" 
-                className="px-8 py-3 bg-gradient-to-r from-[#7dd3fc] to-[#a78bfa] text-black font-bold tracking-widest hover:from-[#a78bfa] hover:to-[#7dd3fc] transition-all shadow-[0_0_20px_rgba(125,211,252,0.3)]"
-              >
-                {language === 'zh' ? '预约详解' : 'Book Consultation'}
-              </a>
+            </div>
+
+            <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
+              {[
+                language === 'zh' ? '免费 BaZi 排盘' : 'Free BaZi Chart',
+                language === 'zh' ? '五行人格分析' : 'Five Elements Profile',
+                language === 'zh' ? '关系匹配解读' : 'Compatibility Insights',
+              ].map((item) => (
+                <div key={item} className="glass-card p-4">
+                  <p className="text-sm text-white">{item}</p>
+                </div>
+              ))}
             </div>
           </div>
-          
+
           <div className={`lg:w-1/2 transition-all duration-1000 ease-out delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <div className="relative">
-              {/* 外层旋转光环 */}
-              <div className="absolute inset-0 -m-8 border border-[#7dd3fc]/20 rounded-full animate-spin-slow pointer-events-none"></div>
-              <div className="absolute inset-0 -m-12 border border-[#a78bfa]/10 rounded-full animate-spin-slow-reverse pointer-events-none"></div>
-              
-              {/* 八卦装饰 */}
-              <div className="absolute -top-6 -left-6 w-16 h-16 bg-gradient-to-br from-[#7dd3fc]/20 to-[#a78bfa]/20 rounded-full blur-xl animate-pulse pointer-events-none"></div>
-              <div className="absolute -bottom-6 -right-6 w-20 h-20 bg-gradient-to-br from-[#a78bfa]/20 to-[#7dd3fc]/20 rounded-full blur-xl animate-pulse pointer-events-none" style={{ animationDelay: '1s' }}></div>
-              
-              <div className="glass-card rounded-2xl p-4 relative overflow-hidden floating">
-                <img 
-                  src="https://images.pexels.com/photos/3569284/pexels-photo-3569284.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" 
-                  alt={language === 'zh' ? '灵霄玄学 - 专业八字算命与风水布局咨询服务，20 年经验帮助客户趋吉避凶' : 'LingXiao Mysticism - Professional Bazi Numerology and Feng Shui Consultation Services, 20 Years Experience Helping Clients Avoid Misfortune'} 
-                  className="w-full h-auto rounded-xl object-cover grayscale contrast-125 brightness-90 transition-all duration-700 hover:grayscale-0 hover:contrast-100 hover:brightness-100"
-                  width={1920}
-                  height={1080}
-                  loading="eager"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
-                <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-[#7dd3fc] to-[#a78bfa] text-black px-6 py-3 rounded-full shadow-lg font-bold z-10">
-                  {language === 'zh' ? '专业认证' : 'Professional Certified'}
-                </div>
-                <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm z-10">
-                  {language === 'zh' ? '20 年经验' : '20 Years Experience'}
+              <div className="glass-card rounded-2xl p-6 relative overflow-hidden">
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between border-b border-white/10 pb-4">
+                    <div>
+                      <p className="text-sm text-[#7dd3fc] uppercase tracking-widest">
+                        {language === 'zh' ? 'MVP 结构' : 'MVP Structure'}
+                      </p>
+                      <h3 className="text-2xl font-serif text-white mt-2">
+                        {language === 'zh' ? '内容驱动的工具型站点' : 'A Content-Led Tool Platform'}
+                      </h3>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-xs text-gray-400">{language === 'zh' ? '优先系统' : 'Core System'}</p>
+                      <p className="text-lg text-white">BaZi</p>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {[
+                      {
+                        title: language === 'zh' ? 'Learn / Blog' : 'Learn / Blog',
+                        desc: language === 'zh' ? 'SEO、教育、建立信任' : 'SEO, education, trust building',
+                      },
+                      {
+                        title: language === 'zh' ? 'Tools' : 'Tools',
+                        desc: language === 'zh' ? 'BaZi、五行、匹配' : 'BaZi, elements, compatibility',
+                      },
+                      {
+                        title: language === 'zh' ? 'Reports' : 'Reports',
+                        desc: language === 'zh' ? '轻付费与深度报告' : 'Low-ticket and deep reports',
+                      },
+                      {
+                        title: language === 'zh' ? 'Method' : 'Method',
+                        desc: language === 'zh' ? '规则引擎 + AI 表达层' : 'Rules engine + AI explanation layer',
+                      },
+                    ].map((card) => (
+                      <div key={card.title} className="rounded-xl border border-white/10 bg-black/20 p-4">
+                        <p className="text-white font-medium">{card.title}</p>
+                        <p className="text-sm text-gray-400 mt-2">{card.desc}</p>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="rounded-xl border border-[#7dd3fc]/20 bg-[#7dd3fc]/5 p-4">
+                    <p className="text-sm text-gray-300 leading-relaxed">
+                      {language === 'zh'
+                        ? '定位不是“保证预测未来”的算命页，而是一个帮助用户理解中国命理结构、获得个性化参考与文化洞察的平台。'
+                        : 'This is not a certainty-based fortune telling page. It is a structured platform for cultural learning, self-reflection, and personalized interpretation.'}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

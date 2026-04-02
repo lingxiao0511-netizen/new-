@@ -7,174 +7,62 @@ const About: React.FC = () => {
   const { language } = useLanguage();
 
   return (
-    <section id="about" className="py-24 relative z-10">
+    <section id="method" className="py-24 relative z-10">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-4">
-            {language === 'zh' ? '关于灵霄玄学' : 'About LingXiao Mysticism'}
+            {language === 'zh' ? 'Method, Trust & Positioning' : 'Method, Trust & Positioning'}
           </h2>
           <div className="w-12 h-0.5 bg-[#7dd3fc] mx-auto opacity-50"></div>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto mt-4">
-            {language === 'zh' ? '传承千年智慧，融合现代需求，为您提供专业、精准的玄学咨询服务' : 'Inheriting ancient wisdom, integrating modern needs, providing professional and accurate mystical consultation services'}
+          <p className="text-lg text-gray-400 max-w-3xl mx-auto mt-4">
+            {language === 'zh'
+              ? '要让国际用户愿意继续用，核心不是神秘感，而是结构感、边界感和可信表达。'
+              : 'For global users, trust comes less from mystique and more from structure, boundaries, and clear explanation.'}
           </p>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center gap-12 mb-20">
-          <div className="md:w-1/3">
-            <div className="glass-card rounded-2xl p-4 relative overflow-hidden floating">
-              <img 
-                src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=format&fit=crop&q=80&w=400&h=400" 
-                alt={language === 'zh' ? '灵霄大师 - 20 年经验易经风水专家，祖传秘法传承人，已为万余名客户提供专业命理咨询' : 'Master LingXiao - 20 Years Experience I Ching Feng Shui Expert, Ancestral Secrets Inheritor, Provided Professional Consultation to Over 10,000 Clients'}
-                className="w-full h-auto rounded-xl object-cover grayscale contrast-125 brightness-90"
-                width={400}
-                height={400}
-                loading="lazy"
-              />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16">
+          <div className="glass-card rounded-2xl p-8">
+            <h3 className="text-2xl font-serif font-bold text-white mb-6">
+              {language === 'zh' ? '这个站应该怎么介绍自己' : 'How the Site Should Present Itself'}
+            </h3>
+            <div className="space-y-4 text-gray-300 leading-relaxed">
+              <p>
+                {language === 'zh'
+                  ? '不是 “AI fortune telling website”。更好的定义是：面向国际用户的 Chinese Metaphysics content + tools + personalized insights platform。'
+                  : 'It should not position itself as an “AI fortune telling website.” A better definition is: a global Chinese metaphysics platform built from content, tools, and personalized insights.'}
+              </p>
+              <p>
+                {language === 'zh'
+                  ? '这样用户会把它理解为一个学习与探索的平台，而不是只会随机生成神秘文案的页面。'
+                  : 'This makes users see it as a platform for learning and exploration, not a page that generates random mystical copy.'}
+              </p>
             </div>
           </div>
-          <div className="md:w-2/3">
-            <h3 className="text-2xl font-serif font-bold text-white mb-4">
-              {language === 'zh' ? '灵霄大师 | Master LingXiao' : 'Master LingXiao'}
+
+          <div className="glass-card rounded-2xl p-8">
+            <h3 className="text-2xl font-serif font-bold text-white mb-6">
+              {language === 'zh' ? '必须明确的边界' : 'Boundaries That Must Be Clear'}
             </h3>
-            <div className="mb-6">
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="px-3 py-1 bg-[#7dd3fc]/20 text-[#7dd3fc] rounded-full text-sm border border-[#7dd3fc]/30">
-                  {language === 'zh' ? '20年经验' : '20 Years Experience'}
-                </span>
-                <span className="px-3 py-1 bg-[#7dd3fc]/20 text-[#7dd3fc] rounded-full text-sm border border-[#7dd3fc]/30">
-                  {language === 'zh' ? '祖传秘法' : 'Ancestral Secrets'}
-                </span>
-                <span className="px-3 py-1 bg-[#7dd3fc]/20 text-[#7dd3fc] rounded-full text-sm border border-[#7dd3fc]/30">
-                  {language === 'zh' ? '易经大师' : 'I Ching Master'}
-                </span>
-                <span className="px-3 py-1 bg-[#7dd3fc]/20 text-[#7dd3fc] rounded-full text-sm border border-[#7dd3fc]/30">
-                  {language === 'zh' ? '风水专家' : 'Feng Shui Expert'}
-                </span>
-              </div>
-            </div>
-            <p className="text-gray-400 mb-6 leading-relaxed whitespace-pre-line">
-              {language === 'zh' ? 
-                '灵霄大师出身玄学世家，自幼研习易经、风水、命理等传统玄学，师承多位名师，融合各家之长，形成独特的预测体系。20年来，已为万余名客户提供专业咨询，帮助他们趋吉避凶，开启好运人生。\n\n大师秉承「道法自然，以人为本」的理念，坚持「诚心、专业、保密」的服务原则，以慈悲之心，智慧之眼，为每一位有缘人指引方向。' : 
-                'Master LingXiao comes from a mystical family, studying I Ching, feng shui, numerology and other traditional mysticism since childhood. He has learned from many famous masters, integrating the strengths of various schools to form a unique prediction system. Over the past 20 years, he has provided professional consultation to tens of thousands of clients, helping them avoid misfortune and start a lucky life.\n\nAdhering to the concept of "Tao follows nature, people-oriented", Master LingXiao insists on the service principle of "sincerity, professionalism, and confidentiality", guiding every destined person with a compassionate heart and wise eyes.'
-              }
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <a href="#contact" className="btn-primary flex items-center">
-                {language === 'zh' ? '预约咨询' : 'Book Consultation'}
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </a>
-            </div>
+            <ul className="space-y-3 text-gray-300 text-sm leading-relaxed">
+              <li><span className="text-[#7dd3fc] mr-2">✦</span>{language === 'zh' ? '不承诺 guaranteed prediction / 100% accuracy' : 'No guaranteed prediction or 100% accuracy claims'}</li>
+              <li><span className="text-[#7dd3fc] mr-2">✦</span>{language === 'zh' ? '不输出医疗、法律、投资等高风险建议' : 'No medical, legal, or investment advice'}</li>
+              <li><span className="text-[#7dd3fc] mr-2">✦</span>{language === 'zh' ? '明确出生数据如何使用、是否存储、能否删除' : 'Clearly explain how birth data is used, stored, and deleted'}</li>
+              <li><span className="text-[#7dd3fc] mr-2">✦</span>{language === 'zh' ? '把系统表述成 reflection / guidance / interpretation' : 'Frame the product as reflection, guidance, and interpretation'}</li>
+            </ul>
           </div>
         </div>
 
-        <div>
-          <h3 className="text-2xl font-serif font-bold text-white mb-8 text-center">
-            {language === 'zh' ? '客户见证' : 'Client Testimonials'}
+        <div className="glass-card rounded-2xl p-8 md:p-10">
+          <h3 className="text-2xl font-serif font-bold text-white mb-6">
+            {language === 'zh' ? '建议补齐的信任页面' : 'Trust Pages You Should Add Next'}
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="glass-card">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
-                  <img 
-                    src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=format&fit=crop&q=80&w=100&h=100" 
-                    alt="灵霄玄学客户见证 - 张先生企业高管五星好评"
-                    className="w-full h-full object-cover grayscale"
-                    width={100}
-                    height={100}
-                    loading="lazy"
-                  />
-                </div>
-                <div>
-                  <h4 className="font-bold text-white">张先生</h4>
-                  <p className="text-sm text-gray-400">{language === 'zh' ? '企业高管' : 'Business Executive'}</p>
-                </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {['About', 'Methodology', 'FAQ', 'Disclaimer', 'Privacy Policy', 'Terms'].map((item) => (
+              <div key={item} className="rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-gray-200 text-sm">
+                {item}
               </div>
-              <div className="mb-4">
-                <div className="flex text-[#7dd3fc]">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-              </div>
-              <p className="text-gray-400 italic">
-                {language === 'zh' ? 
-                  '大师的风水布局建议非常专业，调整办公室布局后，公司业绩在三个月内提升了30%，团队氛围也变得更加和谐。非常感谢！' : 
-                  "Master's feng shui layout suggestions are very professional. After adjusting the office layout, the company's performance increased by 30% within three months, and the team atmosphere became more harmonious. Thank you very much!"
-                }
-              </p>
-            </div>
-
-            <div className="glass-card">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
-                  <img 
-                    src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=format&fit=crop&q=80&w=100&h=100" 
-                    alt="灵霄玄学客户见证 - 李女士市场营销专业五星好评"
-                    className="w-full h-full object-cover grayscale"
-                    width={100}
-                    height={100}
-                    loading="lazy"
-                  />
-                </div>
-                <div>
-                  <h4 className="font-bold text-white">李女士</h4>
-                  <p className="text-sm text-gray-400">{language === 'zh' ? '市场营销' : 'Marketing Professional'}</p>
-                </div>
-              </div>
-              <div className="mb-4">
-                <div className="flex text-[#7dd3fc]">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-              </div>
-              <p className="text-gray-400 italic">
-                {language === 'zh' ? 
-                  '感情一直不顺，经朋友介绍找到灵霄大师。大师的命理分析非常准确，指出了问题所在，并给出了针对性建议。现在我已经找到了合适的伴侣，感情生活很幸福。' : 
-                  "I've always had bad luck in relationships. A friend introduced me to Master LingXiao. The master's numerology analysis was very accurate, pointing out the problem and giving targeted suggestions. Now I've found the right partner and my relationship life is very happy."
-                }
-              </p>
-            </div>
-
-            <div className="glass-card">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
-                  <img 
-                    src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=format&fit=crop&q=80&w=100&h=100" 
-                    alt="灵霄玄学客户见证 - 王先生创业者五星好评推荐"
-                    className="w-full h-full object-cover grayscale"
-                    width={100}
-                    height={100}
-                    loading="lazy"
-                  />
-                </div>
-                <div>
-                  <h4 className="font-bold text-white">王先生</h4>
-                  <p className="text-sm text-gray-400">{language === 'zh' ? '创业者' : 'Entrepreneur'}</p>
-                </div>
-              </div>
-              <div className="mb-4">
-                <div className="flex text-[#7dd3fc]">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-              </div>
-              <p className="text-gray-400 italic">
-                {language === 'zh' ? 
-                  '开店前找大师看了风水，选了吉日。开业后生意一直很兴隆，不到半年就收回了成本。大师的建议非常灵验，推荐给所有想创业的朋友！' : 
-                  "I consulted the master about feng shui and chose an auspicious date before opening my store. Business has been booming since opening, and I recovered my costs in less than half a year. The master's advice is very effective, recommended to all friends who want to start a business!"
-                }
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </div>

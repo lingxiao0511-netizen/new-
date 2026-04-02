@@ -23,7 +23,7 @@ interface LanguageProviderProps {
 }
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
-  const [language, setLanguage] = useState<'zh' | 'en'>('zh');
+  const [language, setLanguage] = useState<'zh' | 'en'>('en');
 
   const toggleLanguage = () => {
     setLanguage(language === 'zh' ? 'en' : 'zh');
