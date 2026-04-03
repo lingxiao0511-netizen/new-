@@ -27,11 +27,11 @@ const Blog: React.FC = () => {
             </span>
           </div>
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">
-            {language === 'zh' ? '从这些主题开始了�? : 'A few good places to begin'}
+            {language === 'zh' ? '从这些主题开始了解' : 'A few good places to begin'}
           </h2>
           <p className="text-xl text-[#c8c0b6] max-w-3xl mx-auto mb-12">
             {language === 'zh'
-              ? '如果你想先通过阅读来了解这个体系，这些主题会是很自然的起点�?
+              ? '如果你想先通过阅读来了解这个体系，这些主题会是很自然的起点。'
               : 'If you prefer to start by reading, these topics are a natural way to become familiar with the system.'}
           </p>
         </div>
@@ -45,7 +45,7 @@ const Blog: React.FC = () => {
               <h3 className="text-xl font-serif font-bold text-white mb-4">{title}</h3>
               <p className="text-[#c8c0b6] text-sm leading-relaxed">
                 {language === 'zh'
-                  ? '如果某个主题正好是你关心的问题，可以从这里读起，再决定是否继续看工具或更深入的解读�?
+                  ? '如果某个主题正好是你关心的问题，可以从这里读起，再决定是否继续看工具或更深入的解读。'
                   : 'If one of these topics matches what you are curious about, it can be a natural place to begin before moving into tools or more detailed readings.'}
               </p>
             </a>

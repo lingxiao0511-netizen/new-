@@ -32,18 +32,18 @@ const FreeFortune: React.FC = () => {
       const date = new Date(birthDate);
       const day = date.getDate();
       const elements = ['Wood', 'Fire', 'Earth', 'Metal', 'Water'];
-      const zhElements = ['�?, '�?, '�?, '�?, '�?];
+      const zhElements = ['木', '火', '土', '金', '水'];
       const idx = day % 5;
 
       setResult({
         mainElement: language === 'zh' ? zhElements[idx] : elements[idx],
         summary:
           language === 'zh'
-            ? '这是一个简化的免费结果，用来帮助你先理解基础结构，再决定是否继续深入查看�?
+            ? '这是一个简化的免费结果，用来帮助你先理解基础结构，再决定是否继续深入查看。'
             : 'This free result is a simplified starting point designed to help you understand the basics before deciding whether you want to go deeper.',
         traits:
           language === 'zh'
-            ? ['基础五行倾向', '简化性格标签', '轻量解释与建�?]
+            ? ['基础五行倾向', '简化性格标签', '轻量解释与建议']
             : ['Core element tendency', 'Light personality tags', 'Introductory interpretation and advice'],
         upgradeTitle:
           language === 'zh' ? '解锁完整 BaZi Insight Report' : 'Unlock the full BaZi Insight Report',
@@ -64,11 +64,11 @@ const FreeFortune: React.FC = () => {
             </span>
           </div>
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">
-            {language === 'zh' ? '先从免费工具开�? : 'Start with Free Tools'}
+            {language === 'zh' ? '先从免费工具开始' : 'Start with Free Tools'}
           </h2>
           <p className="text-xl text-[#c8c0b6] max-w-3xl mx-auto">
             {language === 'zh'
-              ? '你可以先�?3 类最容易理解的工具开始：BaZi Chart、Five Elements Profile �?Compatibility Checker。当前这里展示的是一个简化起点�?
+              ? '你可以从 3 类最容易理解的工具开始：BaZi Chart、Five Elements Profile 和 Compatibility Checker。当前这里展示的是一个简化起点。'
               : 'A practical place to begin is with three easy entry points: a BaZi chart, a Five Elements profile, and a compatibility checker. This homepage section shows a simplified starting version.'}
           </p>
         </div>
@@ -110,8 +110,8 @@ const FreeFortune: React.FC = () => {
                 </label>
                 <div className="flex gap-4">
                   {[
-                    { labelZh: '�?, labelEn: 'Male', value: 'male' },
-                    { labelZh: '�?, labelEn: 'Female', value: 'female' },
+                    { labelZh: '男', labelEn: 'Male', value: 'male' },
+                    { labelZh: '女', labelEn: 'Female', value: 'female' },
                     { labelZh: '其他', labelEn: 'Other', value: 'other' },
                   ].map((item) => (
                     <button
@@ -136,7 +136,7 @@ const FreeFortune: React.FC = () => {
             >
               {isCalculating
                 ? language === 'zh'
-                  ? '生成�?..'
+                  ? '生成中...'
                   : 'Generating...'
                 : language === 'zh'
                 ? '生成免费结果'
@@ -147,7 +147,7 @@ const FreeFortune: React.FC = () => {
               <div className="mt-8 rounded-2xl border border-white/10 bg-black/20 p-6">
                 <div className="flex items-center justify-between flex-wrap gap-4">
                   <div>
-                    <p className="text-sm text-[#c8c0b6]">{language === 'zh' ? '主元�? : 'Main Element'}</p>
+                    <p className="text-sm text-[#c8c0b6]">{language === 'zh' ? '主元素' : 'Main Element'}</p>
                     <p className="text-3xl text-[#5ba4a4] font-bold mt-1">{result.mainElement}</p>
                   </div>
                   <div className="text-sm text-[#c8c0b6] max-w-md">{result.summary}</div>
@@ -166,7 +166,7 @@ const FreeFortune: React.FC = () => {
                     <p className="text-white font-medium">{result.upgradeTitle}</p>
                     <p className="text-sm text-[#c8c0b6] mt-1">
                       {language === 'zh'
-                        ? '下一步可以升级到完整报告、年度运势或关系匹配�?
+                        ? '下一步可以升级到完整报告、年度运势或关系匹配。'
                         : 'If you would like more depth, you can continue with a fuller report, an annual reading, or a compatibility analysis.'}
                     </p>
                   </div>
@@ -182,15 +182,15 @@ const FreeFortune: React.FC = () => {
             {[
               {
                 title: language === 'zh' ? 'Free BaZi Chart' : 'Free BaZi Chart',
-                desc: language === 'zh' ? '适合先从自己的命盘结构开始了解�? : 'A good place to begin if you want to start with your own chart.',
+                desc: language === 'zh' ? '适合先从自己的命盘结构开始了解。' : 'A good place to begin if you want to start with your own chart.',
               },
               {
                 title: language === 'zh' ? 'Five Elements Profile' : 'Five Elements Profile',
-                desc: language === 'zh' ? '更轻量、更好理解，也更适合社媒传播�? : 'Lighter, easier to understand, and better for social sharing.',
+                desc: language === 'zh' ? '更轻量、更好理解，也更适合社媒传播。' : 'Lighter, easier to understand, and better for social sharing.',
               },
               {
                 title: language === 'zh' ? 'Compatibility Checker' : 'Compatibility Checker',
-                desc: language === 'zh' ? '适合从两个人的关系模式来切入�? : 'A good option when you want to explore relationship patterns between two people.',
+                desc: language === 'zh' ? '适合从两个人的关系模式来切入。' : 'A good option when you want to explore relationship patterns between two people.',
               },
             ].map((tool) => (
               <div key={tool.title} className="organics">
