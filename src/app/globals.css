@@ -6,24 +6,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 :root {
-  /* 神秘治愈 (Deep Indigo & Teal) 配色方案 */
-  --primary: #7dd3fc; /* 柔和青蓝色 */
-  --secondary: #1e1b4b; /* 深靛紫 */
-  --accent: #a78bfa; /* 淡紫 */
-  --background: #0c0a1a; /* 深邃紫黑 */
-  --surface: rgba(30, 27, 75, 0.6); /* 卡片表面 */
-  --text: #e0e7ff; /* 柔和蓝白 */
-  --light-text: #a5b4fc; /* 浅紫蓝 */
-  --border: rgba(125, 211, 252, 0.3); /* 青蓝边框 */
-  --glow: rgba(125, 211, 252, 0.2); /* 青蓝光晕 */
-  --accent-glow: rgba(167, 139, 250, 0.25); /* 淡紫光晕 */
+  /* 自然治愈 (Natural Healing) 配色方案 */
+  /* 灵感来源：大地、阳光、森林、温暖 */
+  --primary: #5ba4a4;        /* 柔和松石绿 - 宁静治愈 */
+  --primary-light: #8bc5c5;  /* 浅松石 - hover */
+  --primary-dark: #3d8080;   /* 深松石 - 强调 */
+  --secondary: #c2704e;      /* 温暖陶土红 - 大地 */
+  --secondary-light: #d9896a;/* 浅陶土 */
+  --accent: #d4a853;         /* 温暖琥珀金 - 阳光 */
+  --accent-light: #e8c47a;   /* 浅金 */
+  --background: #1c1b1e;     /* 深暖炭黑 */
+  --background-warm: #2c2624;/* 深暖棕 */
+  --surface: rgba(44, 38, 36, 0.65); /* 温暖半透明卡片 */
+  --text: #f0ebe4;           /* 温暖奶油白 */
+  --light-text: #c8c0b6;     /* 柔和沙色 */
+  --muted-text: #8a8279;     /* 暗淡砂岩 */
+  --border: rgba(91, 164, 164, 0.25);    /* 松石边框 */
+  --border-warm: rgba(194, 112, 78, 0.2);/* 陶土边框 */
+  --glow: rgba(91, 164, 164, 0.15);      /* 松石光晕 */
+  --accent-glow: rgba(212, 168, 83, 0.2);/* 金色光晕 */
+  --warm-glow: rgba(194, 112, 78, 0.15); /* 陶土光晕 */
 }
 
 body {
-  background: radial-gradient(circle at 50% 0%, #312e81 0%, #1e1b4b 50%, #0c0a1a 100%);
+  background: radial-gradient(circle at 30% 0%, rgba(91, 164, 164, 0.08) 0%, rgba(28, 27, 30, 1) 60%);
   color: var(--text);
   font-family: 'Inter', 'Noto Serif SC', sans-serif;
-  line-height: 1.6;
+  line-height: 1.7;
   overflow-x: hidden;
 }
 
@@ -32,69 +41,118 @@ body {
   font-family: 'Playfair Display', 'Noto Serif SC', serif;
 }
 
-/* 神秘治愈风格的自定义样式 */
-.oriental-border {
-  border: 1px solid var(--primary);
-  box-shadow: 0 0 20px var(--glow);
-  border-radius: 8px;
-}
-
-.oriental-gradient {
-  background: radial-gradient(circle at 50% 0%, rgba(125, 211, 252, 0.05) 0%, transparent 50%);
-}
-
-.glass-card {
+/* ========== 自然治愈风格 - 有机卡片 ========== */
+.organics {
   background: var(--surface);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
-  padding: 1.5rem;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 1.75rem;
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  position: relative;
+  overflow: hidden;
 }
 
-.glass-card:hover {
-  transform: translateY(-5px);
-  background: rgba(49, 46, 129, 0.7);
+.organics::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(91, 164, 164, 0.2), transparent);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.organics:hover {
+  transform: translateY(-4px);
+  background: rgba(58, 50, 48, 0.7);
   border-color: var(--border);
-  box-shadow: 0 20px 40px rgba(125, 211, 252, 0.15);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25), 0 0 30px rgba(91, 164, 164, 0.1);
 }
 
-/* 按钮样式增强 */
+.organics:hover::before {
+  opacity: 1;
+}
+
+/* 旧 glass-card 兼容 */
+.glass-card {
+  comsposes: organics;
+}
+
+/* ========== 自然治愈风格 - 有机按钮 ========== */
 .btn-primary {
-  background: linear-gradient(135deg, #7dd3fc 0%, #a78bfa 100%);
-  color: #0c0a1a;
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  color: #1c1b1e;
+  padding: 0.8rem 1.75rem;
+  border-radius: 8px;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   border: none;
   cursor: pointer;
-  box-shadow: 0 0 20px rgba(125, 211, 252, 0.3);
+  box-shadow: 0 4px 16px rgba(91, 164, 164, 0.2), 0 0 1px rgba(91, 164, 164, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.2) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #a78bfa 0%, #7dd3fc 100%);
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 0 30px rgba(167, 139, 250, 0.5);
+  background: linear-gradient(135deg, var(--primary-light) 0%, var(--accent-light) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(91, 164, 164, 0.3), 0 0 2px rgba(91, 164, 164, 0.4);
+}
+
+.btn-primary:hover::after {
+  opacity: 1;
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(91, 164, 164, 0.2);
 }
 
 .btn-secondary {
-  background-color: transparent;
+  background: transparent;
   color: var(--primary);
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
+  padding: 0.8rem 1.75rem;
+  border-radius: 8px;
   font-weight: 500;
-  transition: all 0.3s ease;
-  border: 1px solid var(--primary);
+  transition: all 0.4s ease;
+  border: 1px solid var(--border);
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-secondary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+  z-index: -1;
 }
 
 .btn-secondary:hover {
-  background-color: var(--primary);
-  color: #0c0a1a;
-  transform: translateY(-2px);
-  box-shadow: 0 0 25px var(--glow);
+  color: #1c1b1e;
+  border-color: var(--primary);
+  box-shadow: 0 4px 16px rgba(91, 164, 164, 0.2);
+}
+
+.btn-secondary:hover::before {
+  transform: scaleX(1);
 }
 
 /* 响应式设计调整 */
@@ -116,7 +174,7 @@ body {
   }
 }
 
-/* 滚动条样式 */
+/* ========== 滚动条 - 自然风格 ========== */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -126,57 +184,57 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #7dd3fc, #a78bfa);
-  border-radius: 4px;
+  background: linear-gradient(to bottom, var(--primary), var(--accent));
+  border-radius: 12px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #a78bfa, #7dd3fc);
+  background: linear-gradient(to bottom, var(--primary-light), var(--accent-light));
 }
 
-/* 呼吸灯效果 */
+/* ========== 呼吸灯效果 ========== */
 .breathing {
-  animation: breathe 3s ease-in-out infinite;
+  animation: breathe 4s ease-in-out infinite;
 }
 
 @keyframes breathe {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 0.8; }
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.9; }
 }
 
 /* 淡入动画 */
 .animate-fade-in {
-  animation: fadeIn 0.5s ease-out;
+  animation: fadeIn 0.6s ease-out;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
+  from { opacity: 0; transform: translateY(12px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* 悬浮效果 */
+/* 悬浮效果 - 更自然 */
 .floating {
-  animation: floating 3s ease-in-out infinite;
+  animation: floating 4s ease-in-out infinite;
 }
 
 @keyframes floating {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+  50% { transform: translateY(-12px); }
 }
 
-/* 青蓝紫渐变文字 */
+/* 自然渐变文字 - 松石到琥珀金 */
 .text-gold-gradient {
-  background: linear-gradient(to bottom right, #7dd3fc, #a78bfa);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
-/* 背景网格 */
+/* 背景网格 - 温暖版本 */
 .bg-grid {
-  background-image: linear-gradient(rgba(125, 211, 252, 0.03) 1px, transparent 1px), 
-                    linear-gradient(90deg, rgba(167, 139, 250, 0.03) 1px, transparent 1px);
-  background-size: 50px 50px;
+  background-image: linear-gradient(rgba(91, 164, 164, 0.04) 1px, transparent 1px), 
+                    linear-gradient(90deg, rgba(194, 112, 78, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
 }
 
 /* 缓慢旋转动画 */
@@ -186,7 +244,7 @@ body {
 }
 
 .animate-spin-slow {
-  animation: spin-slow 20s linear infinite;
+  animation: spin-slow 30s linear infinite;
 }
 
 @keyframes spin-slow-reverse {
@@ -195,49 +253,86 @@ body {
 }
 
 .animate-spin-slow-reverse {
-  animation: spin-slow-reverse 25s linear infinite;
+  animation: spin-slow-reverse 35s linear infinite;
 }
 
-/* 神秘光晕浮动 */
-@keyframes glow-float {
+/* 温暖光晕浮动 - 自然版本 */
+@keyframes warm-float {
   0%, 100% { 
     transform: translate(0, 0) scale(1);
-    opacity: 0.1;
+    opacity: 0.08;
   }
   33% { 
-    transform: translate(30px, -30px) scale(1.1);
-    opacity: 0.2;
+    transform: translate(25px, -20px) scale(1.05);
+    opacity: 0.12;
   }
   66% { 
-    transform: translate(-20px, 20px) scale(0.9);
-    opacity: 0.15;
+    transform: translate(-15px, 15px) scale(0.95);
+    opacity: 0.1;
   }
 }
 
-.animate-glow-float {
-  animation: glow-float 8s ease-in-out infinite;
+.animate-warm-float {
+  animation: warm-float 10s ease-in-out infinite;
 }
 
-/* 星辰闪烁 */
-@keyframes twinkle {
+/* 星辰闪烁 - 温暖的星光 */
+@keyframes warm-twinkle {
   0%, 100% { opacity: 0.3; }
   50% { opacity: 1; }
 }
 
-.animate-twinkle {
-  animation: twinkle 2s ease-in-out infinite;
+.animate-warm-twinkle {
+  animation: warm-twinkle 3s ease-in-out infinite;
 }
 
-/* 神秘脉冲 */
-@keyframes mystic-pulse {
+/* 自然脉冲 - 温暖的呼吸感 */
+@keyframes nature-pulse {
   0%, 100% { 
-    box-shadow: 0 0 20px rgba(125, 211, 252, 0.2);
+    box-shadow: 0 0 20px rgba(91, 164, 164, 0.1);
   }
   50% { 
-    box-shadow: 0 0 40px rgba(167, 139, 250, 0.4);
+    box-shadow: 0 0 40px rgba(212, 168, 83, 0.15);
   }
 }
 
-.animate-mystic-pulse {
-  animation: mystic-pulse 3s ease-in-out infinite;
+.animate-nature-pulse {
+  animation: nature-pulse 4s ease-in-out infinite;
+}
+
+/* ========== 新增自然风格工具类 ========== */
+
+/* 温暖背景渐变 */
+.bg-nature-gradient {
+  background: linear-gradient(135deg, rgba(91, 164, 164, 0.05) 0%, rgba(194, 112, 78, 0.03) 50%, rgba(212, 168, 83, 0.05) 100%);
+}
+
+/* 温暖边框 */
+.border-warm {
+  border-color: var(--border-warm);
+}
+
+/* 松石强调边框 */
+.border-primary {
+  border-color: var(--border);
+}
+
+/* 温暖文字 */
+.text-primary { color: var(--primary); }
+.text-secondary { color: var(--secondary); }
+.text-warm { color: var(--accent); }
+.text-muted { color: var(--muted-text); }
+.text-light { color: var(--light-text); }
+
+/* 光晕背景 */
+.glow-bg {
+  background: radial-gradient(circle, var(--glow) 0%, transparent 70%);
+}
+
+.warm-glow {
+  background: radial-gradient(circle, var(--warm-glow) 0%, transparent 70%);
+}
+
+.accent-glow {
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
 }

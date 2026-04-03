@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   viewport: 'width=device-width, initial-scale=1, maximum-scale=5',
-  themeColor: '#1c1b1e',
+  themeColor: '#0c0a1a',
   openGraph: {
     title: 'LingXiao Metaphysics | Chinese Metaphysics Platform',
     description:

@@ -1,4 +1,4 @@
-ï»¿'use client';
+'use client';
 
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
@@ -31,7 +31,7 @@ const Contact: React.FC = () => {
       service: '',
       message: '',
     });
-    alert(language === 'zh' ? 'å’¨è¯¢æäº¤æˆåŠŸï¼Œæˆ‘ä»¬ä¼šå°½å¿«ä¸æ‚¨è”ç³»ï¼' : 'Consultation submitted successfully, we will contact you soon!');
+    alert(language === 'zh' ? '×ÉÑ¯Ìá½»³É¹¦£¬ÎÒÃÇ»á¾¡¿ìÓëÄúÁªÏµ£¡' : 'Consultation submitted successfully, we will contact you soon!');
   };
 
   return (
@@ -39,19 +39,19 @@ const Contact: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-4">
-            {language === 'zh' ? 'è”ç³»æˆ‘ä»¬' : 'Contact Us'}
+            {language === 'zh' ? 'ÁªÏµÎÒÃÇ' : 'Contact Us'}
           </h2>
-          <div className="w-12 h-0.5 bg-[#7dd3fc] mx-auto opacity-50"></div>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto mt-4">
-            {language === 'zh' ? 'å¦‚æœ‰ä»»ä½•é—®é¢˜æˆ–éœ€æ±‚ï¼Œæ¬¢è¿éšæ—¶å’¨è¯¢æˆ‘ä»¬' : 'If you have any questions or needs, please feel free to consult us at any time'}
+          <div className="w-12 h-0.5 bg-[#5ba4a4] mx-auto opacity-50"></div>
+          <p className="text-lg text-[#c8c0b6] max-w-2xl mx-auto mt-4">
+            {language === 'zh' ? 'ÈçÓĞÈÎºÎÎÊÌâ»òĞèÇó£¬»¶Ó­ËæÊ±×ÉÑ¯ÎÒÃÇ' : 'If you have any questions or needs, please feel free to consult us at any time'}
           </p>
         </div>
-        <div className="max-w-3xl mx-auto glass-card">
+        <div className="max-w-3xl mx-auto organics">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="name" className="block text-gray-300 font-medium mb-2">
-                  {language === 'zh' ? 'å§“å' : 'Name'}
+                <label htmlFor="name" className="block text-[#c8c0b6] font-medium mb-2">
+                  {language === 'zh' ? 'ĞÕÃû' : 'Name'}
                 </label>
                 <input
                   type="text"
@@ -60,13 +60,13 @@ const Contact: React.FC = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  placeholder={language === 'zh' ? 'è¯·è¾“å…¥æ‚¨çš„å§“å' : 'Please enter your name'}
-                  className="w-full px-4 py-3 bg-black/30 border border-gray-700 rounded focus:outline-none focus:border-[#7dd3fc] transition-colors text-white"
+                  placeholder={language === 'zh' ? 'ÇëÊäÈëÄúµÄĞÕÃû' : 'Please enter your name'}
+                  className="w-full px-4 py-3 bg-black/30 border border-gray-700 rounded focus:outline-none focus:border-[#5ba4a4] transition-colors text-white"
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-gray-300 font-medium mb-2">
-                  {language === 'zh' ? 'é‚®ç®±' : 'Email'}
+                <label htmlFor="email" className="block text-[#c8c0b6] font-medium mb-2">
+                  {language === 'zh' ? 'ÓÊÏä' : 'Email'}
                 </label>
                 <input
                   type="email"
@@ -75,15 +75,15 @@ const Contact: React.FC = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  placeholder={language === 'zh' ? 'è¯·è¾“å…¥æ‚¨çš„é‚®ç®±' : 'Please enter your email'}
-                  className="w-full px-4 py-3 bg-black/30 border border-gray-700 rounded focus:outline-none focus:border-[#7dd3fc] transition-colors text-white"
+                  placeholder={language === 'zh' ? 'ÇëÊäÈëÄúµÄÓÊÏä' : 'Please enter your email'}
+                  className="w-full px-4 py-3 bg-black/30 border border-gray-700 rounded focus:outline-none focus:border-[#5ba4a4] transition-colors text-white"
                 />
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="phone" className="block text-gray-300 font-medium mb-2">
-                  {language === 'zh' ? 'ç”µè¯' : 'Phone'}
+                <label htmlFor="phone" className="block text-[#c8c0b6] font-medium mb-2">
+                  {language === 'zh' ? 'µç»°' : 'Phone'}
                 </label>
                 <input
                   type="tel"
@@ -92,13 +92,13 @@ const Contact: React.FC = () => {
                   value={formData.phone}
                   onChange={handleChange}
                   required
-                  placeholder={language === 'zh' ? 'è¯·è¾“å…¥æ‚¨çš„ç”µè¯' : 'Please enter your phone number'}
-                  className="w-full px-4 py-3 bg-black/30 border border-gray-700 rounded focus:outline-none focus:border-[#7dd3fc] transition-colors text-white"
+                  placeholder={language === 'zh' ? 'ÇëÊäÈëÄúµÄµç»°' : 'Please enter your phone number'}
+                  className="w-full px-4 py-3 bg-black/30 border border-gray-700 rounded focus:outline-none focus:border-[#5ba4a4] transition-colors text-white"
                 />
               </div>
               <div>
-                <label htmlFor="service" className="block text-gray-300 font-medium mb-2">
-                  {language === 'zh' ? 'å’¨è¯¢æœåŠ¡' : 'Consultation Service'}
+                <label htmlFor="service" className="block text-[#c8c0b6] font-medium mb-2">
+                  {language === 'zh' ? '×ÉÑ¯·şÎñ' : 'Consultation Service'}
                 </label>
                 <select
                   id="service"
@@ -106,38 +106,38 @@ const Contact: React.FC = () => {
                   value={formData.service}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-black/30 border border-gray-700 rounded focus:outline-none focus:border-[#7dd3fc] transition-colors text-white"
+                  className="w-full px-4 py-3 bg-black/30 border border-gray-700 rounded focus:outline-none focus:border-[#5ba4a4] transition-colors text-white"
                 >
                   <option value="">
-                    {language === 'zh' ? 'è¯·é€‰æ‹©æœåŠ¡ç±»å‹' : 'Please select service type'}
+                    {language === 'zh' ? 'ÇëÑ¡Ôñ·şÎñÀàĞÍ' : 'Please select service type'}
                   </option>
                   <option value="fengshui">
-                    {language === 'zh' ? 'é£æ°´å¸ƒå±€å’¨è¯¢' : 'Feng Shui Consultation'}
+                    {language === 'zh' ? '·çË®²¼¾Ö×ÉÑ¯' : 'Feng Shui Consultation'}
                   </option>
                   <option value="mingli">
-                    {language === 'zh' ? 'å‘½ç†åˆ†æ' : 'Numerology Analysis'}
+                    {language === 'zh' ? 'ÃüÀí·ÖÎö' : 'Numerology Analysis'}
                   </option>
                   <option value="tarot">
-                    {language === 'zh' ? 'å¡”ç½—ç‰Œå åœ' : 'Tarot Card Reading'}
+                    {language === 'zh' ? 'ËşÂŞÅÆÕ¼²·' : 'Tarot Card Reading'}
                   </option>
                   <option value="crystal">
-                    {language === 'zh' ? 'æ°´æ™¶èƒ½é‡ç–—æ„ˆ' : 'Crystal Energy Healing'}
+                    {language === 'zh' ? 'Ë®¾§ÄÜÁ¿ÁÆÓú' : 'Crystal Energy Healing'}
                   </option>
                   <option value="name">
-                    {language === 'zh' ? 'å§“ååˆ†æ' : 'Name Analysis'}
+                    {language === 'zh' ? 'ĞÕÃû·ÖÎö' : 'Name Analysis'}
                   </option>
                   <option value="date">
-                    {language === 'zh' ? 'æ‹©å‰æ—¥' : 'Auspicious Date Selection'}
+                    {language === 'zh' ? 'Ôñ¼ªÈÕ' : 'Auspicious Date Selection'}
                   </option>
                   <option value="other">
-                    {language === 'zh' ? 'å…¶ä»–å’¨è¯¢' : 'Other Consultation'}
+                    {language === 'zh' ? 'ÆäËû×ÉÑ¯' : 'Other Consultation'}
                   </option>
                 </select>
               </div>
             </div>
             <div>
-              <label htmlFor="message" className="block text-gray-300 font-medium mb-2">
-                {language === 'zh' ? 'å’¨è¯¢å†…å®¹' : 'Consultation Content'}
+              <label htmlFor="message" className="block text-[#c8c0b6] font-medium mb-2">
+                {language === 'zh' ? '×ÉÑ¯ÄÚÈİ' : 'Consultation Content'}
               </label>
               <textarea
                 id="message"
@@ -145,7 +145,7 @@ const Contact: React.FC = () => {
                 value={formData.message}
                 onChange={handleChange}
                 required
-                placeholder={language === 'zh' ? 'è¯·è¯¦ç»†æè¿°æ‚¨çš„é—®é¢˜æˆ–éœ€æ±‚' : 'Please describe your question or need in detail'}
+                placeholder={language === 'zh' ? 'ÇëÏêÏ¸ÃèÊöÄúµÄÎÊÌâ»òĞèÇó' : 'Please describe your question or need in detail'}
                 rows={5}
                 className="w-full px-4 py-3 bg-black/30 border border-gray-700 rounded focus:outline-none focus:border-[#e5c185] transition-colors text-white"
               ></textarea>
@@ -154,7 +154,7 @@ const Contact: React.FC = () => {
               type="submit"
               className="w-full btn-primary"
             >
-              {language === 'zh' ? 'æäº¤å’¨è¯¢' : 'Submit Consultation'}
+              {language === 'zh' ? 'Ìá½»×ÉÑ¯' : 'Submit Consultation'}
             </button>
           </form>
         </div>

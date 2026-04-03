@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
@@ -25,7 +25,7 @@ const CaseCard: React.FC<CaseProps> = ({ title, description, image, result }) =>
 
   return (
     <div 
-      className="glass-card relative overflow-hidden transition-all duration-700"
+      className="organics relative overflow-hidden transition-all duration-700"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{ transform: isHovered ? 'translateY(-10px)' : 'translateY(0)', boxShadow: isHovered ? '0 25px 50px -12px rgba(229, 193, 133, 0.25)' : '0 1px 3px 0 rgba(0, 0, 0, 0.1)' }}
@@ -44,18 +44,18 @@ const CaseCard: React.FC<CaseProps> = ({ title, description, image, result }) =>
           <div className={`absolute inset-0 bg-gradient-to-t from-black/70 to-transparent transition-opacity duration-500 ${isHovered ? 'opacity-100' : 'opacity-0'}`}></div>
         </div>
       </div>
-      <h3 className="text-xl font-serif font-bold text-white mb-3 transition-colors duration-300" style={{ color: isHovered ? '#7dd3fc' : '#ffffff' }}>
+      <h3 className="text-xl font-serif font-bold text-white mb-3 transition-colors duration-300" style={{ color: isHovered ? '#5ba4a4' : '#ffffff' }}>
         {title[language]}
       </h3>
-      <p className="text-gray-400 mb-6">{description[language]}</p>
-      <div className="bg-gradient-to-br from-[#7dd3fc]/10 to-[#a78bfa]/5 p-6 rounded-xl border border-[#7dd3fc]/20 transition-all duration-300" style={{ borderColor: isHovered ? 'rgba(125, 211, 252, 0.4)' : 'rgba(125, 211, 252, 0.2)' }}>
-        <h4 className="font-bold text-[#7dd3fc] mb-3 flex items-center">
+      <p className="text-[var\(--light-text\)\] mb-6">{description[language]}</p>
+      <div className="bg-gradient-to-br from-[#5ba4a4]/10 to-[#c2704e]/5 p-6 rounded-xl border border-[#5ba4a4]/20 transition-all duration-300" style={{ borderColor: isHovered ? 'rgba(125, 211, 252, 0.4)' : 'rgba(125, 211, 252, 0.2)' }}>
+        <h4 className="font-bold text-[#5ba4a4] mb-3 flex items-center">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
           {language === 'zh' ? '调理结果：' : 'Results:'}
         </h4>
-        <p className="text-gray-300">{result[language]}</p>
+        <p className="text-[var\(--light-text\)\]">{result[language]}</p>
       </div>
     </div>
   );
@@ -167,14 +167,14 @@ const Cases: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className={`text-center mb-20 transition-all duration-1000 ease-out ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <div className="inline-block mb-8">
-            <span className="px-6 py-2 bg-[#7dd3fc]/10 backdrop-blur-sm border border-[#7dd3fc]/30 rounded-full">
-              <span className="text-[#7dd3fc] text-xs tracking-widest uppercase">
+            <span className="px-6 py-2 bg-[#5ba4a4]/10 backdrop-blur-sm border border-[#5ba4a4]/30 rounded-full">
+              <span className="text-[#5ba4a4] text-xs tracking-widest uppercase">
                 {language === 'zh' ? '真实见证 • 成功案例' : 'Real Testimonials • Success Stories'}
               </span>
             </span>
           </div>
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">{language === 'zh' ? '成功案例' : 'Success Cases'}</h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-12">
+          <p className="text-xl text-[var\(--light-text\)\] max-w-3xl mx-auto mb-12">
             {language === 'zh' ? 
               '真实客户案例，展示玄学服务如何帮助人们改善生活和运势' : 
               'Real customer cases showing how mysticism services help people improve their lives and fortune'
