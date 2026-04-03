@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
                 {language === 'zh' ? '内容 + 工具 + 个性化解读' : 'Content + Tools + Personalized Insights'}
               </span>
             </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold mb-8 leading-tight tracking-tight text-primary">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold mb-8 leading-tight tracking-tight" style={{ color: 'var(--text)' }}>
               {language === 'zh' ? '用现代方式' : 'Explore Chinese'}
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#5ba4a4] to-[#c2704e]">
@@ -66,7 +66,7 @@ const Hero: React.FC = () => {
                 language === 'zh' ? '关系匹配解读' : 'Compatibility Insights',
               ].map((item) => (
                 <div key={item} className="organics p-4">
-                  <p className="text-sm text-primary">{item}</p>
+                  <p className="text-sm" style={{ color: 'var(--text-light)' }}>{item}</p>
                 </div>
               ))}
             </div>
@@ -81,7 +81,7 @@ const Hero: React.FC = () => {
                       <p className="text-sm text-[#5ba4a4] uppercase tracking-widest">
                         {language === 'zh' ? '如何开始' : 'How to Begin'}
                       </p>
-                      <h3 className="text-xl font-serif text-primary mt-2">
+                      <h3 className="text-xl font-serif mt-2" style={{ color: 'var(--text)' }}>
                         {language === 'zh' ? '从学习、工具或深度解读开始' : 'Start with learning, tools, or deeper readings'}
                       </h3>
                     </div>
@@ -111,7 +111,7 @@ const Hero: React.FC = () => {
                       },
                     ].map((card) => (
                       <div key={card.title} className="rounded-xl border border-[rgba(160,148,136,0.25)] bg-[rgba(0,0,0,0.05)] p-4">
-                        <p className="text-primary font-medium">{card.title}</p>
+                        <p className="font-medium" style={{ color: 'var(--text)' }}>{card.title}</p>
                         <p className="text-sm text-light mt-2">{card.desc}</p>
                       </div>
                     ))}

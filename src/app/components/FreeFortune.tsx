@@ -63,7 +63,7 @@ const FreeFortune: React.FC = () => {
               </span>
             </span>
           </div>
-          <h2 className="text-primaryxl md:text-5xl font-serif font-bold text-primary mb-6">
+          <h2 className="text-primaryxl md:text-5xl font-serif font-bold" style={{ color: "var(--text)" }} className="font-bold mb-6">
             {language === 'zh' ? '先从免费工具开始' : 'Start with Free Tools'}
           </h2>
           <p className="text-xl text-[#c8c0b6] max-w-3xl mx-auto">
@@ -75,7 +75,7 @@ const FreeFortune: React.FC = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
           <div className="lg:col-span-3 organics rounded-2xl p-8 md:p-10">
-            <h3 className="text-mutedxl font-serif text-primary mb-6">
+            <h3 className="text-xl font-serif text-primary mb-6">
               {language === 'zh' ? 'Free BaZi / Five Elements Starter' : 'Free BaZi / Five Elements Starter'}
             </h3>
 

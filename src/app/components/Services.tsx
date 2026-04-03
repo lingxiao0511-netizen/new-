@@ -53,7 +53,7 @@ const Services: React.FC = () => {
               </span>
             </span>
           </div>
-          <h2 className="text-primaryxl md:text-5xl font-serif font-bold text-primary mb-6">
+          <h2 className="text-primaryxl md:text-5xl font-serif font-bold" style={{ color: "var(--text)" }} className="font-bold mb-6">
             {language === 'zh' ? '你可以从哪里开始' : 'Different ways to explore'}
           </h2>
           <p className="text-xl text-[#c8c0b6] max-w-3xl mx-auto mb-12">
@@ -68,7 +68,7 @@ const Services: React.FC = () => {
             const href = card.title === 'Learn / Blog' ? '/learn' : card.title === 'Tools' ? '/tools' : '/reports';
             return (
               <a key={card.title} href={href} className="organics rounded-2xl block">
-                <h3 className="text-mutedxl font-serif font-bold text-primary mb-4">{card.title}</h3>
+                <h3 className="text-xl font-serif font-bold" style={{ color: "var(--text)" }} className="font-bold mb-4">{card.title}</h3>
                 <p className="text-[#c8c0b6] mb-6 leading-relaxed">{card.desc}</p>
                 <ul className="space-y-3">
                   {card.points.map((point) => (
@@ -86,7 +86,7 @@ const Services: React.FC = () => {
         <div className="organics rounded-2xl p-8 md:p-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             <div>
-              <h3 className="text-mutedxl font-serif font-bold text-primary mb-6">
+              <h3 className="text-xl font-serif font-bold" style={{ color: "var(--text)" }} className="font-bold mb-6">
                 {language === 'zh' ? '为什么这样安排' : 'Why this approach helps'}
               </h3>
               <div className="space-y-4 text-[#c8c0b6] leading-relaxed">

@@ -56,7 +56,7 @@ const Pricing: React.FC = () => {
               </span>
             </span>
           </div>
-          <h2 className="text-primaryxl md:text-5xl font-serif font-bold text-primary mb-6">
+          <h2 className="text-primaryxl md:text-5xl font-serif font-bold" style={{ color: "var(--text)" }} className="font-bold mb-6">
             {language === 'zh' ? '选择适合你的方案' : 'Choose Your Plan'}
           </h2>
           <p className="text-xl text-[#c8c0b6] max-w-3xl mx-auto">
@@ -70,8 +70,8 @@ const Pricing: React.FC = () => {
           {tiers.map((tier) => (
             <div key={tier.name} className="organics rounded-2xl p-8">
               <div className="flex items-center justify-between mb-6">
-                <h3 className="text-mutedxl font-serif font-bold text-primary">{tier.name}</h3>
-                <span className="text-mutedxl font-bold text-[#5ba4a4]">{tier.price}</span>
+                <h3 className="text-xl font-serif font-bold" style={{ color: "var(--text)" }} className="font-bold">{tier.name}</h3>
+                <span className="text-xl font-bold text-[#5ba4a4]">{tier.price}</span>
               </div>
               <p className="text-[#c8c0b6] mb-6 leading-relaxed">{tier.desc}</p>
               <ul className="space-y-3 text-[#c8c0b6] text-sm leading-relaxed">

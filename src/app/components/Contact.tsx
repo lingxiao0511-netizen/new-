@@ -38,7 +38,7 @@ const Contact: React.FC = () => {
     <section id="contact" className="py-24 relative z-10">
       <div className="container mx-auto px-4">
         <div className="text-lightenter mb-12">
-          <h2 className="text-3xl md:text-primaryxl font-serif font-bold text-primary mb-4">
+          <h2 className="text-3xl md:text-5xl font-serif font-bold" style={{ color: "var(--text)" }} className="font-bold mb-4">
             {language === 'zh' ? '��ϵ����' : 'Contact Us'}
           </h2>
           <div className="w-12 h-0.5 bg-[#5ba4a4] mx-auto opacity-50"></div>

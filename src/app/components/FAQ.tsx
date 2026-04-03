@@ -47,7 +47,7 @@ const FAQ: React.FC = () => {
               <span className="text-[#5ba4a4] text-xs tracking-widest uppercase">FAQ</span>
             </span>
           </div>
-          <h2 className="text-primaryxl md:text-5xl font-serif font-bold text-primary mb-6">
+          <h2 className="text-primaryxl md:text-5xl font-serif font-bold" style={{ color: "var(--text)" }} className="font-bold mb-6">
             {language === 'zh' ? '常见问题' : 'Frequently Asked Questions'}
           </h2>
           <p className="text-xl text-[#c8c0b6] max-w-3xl mx-auto">
