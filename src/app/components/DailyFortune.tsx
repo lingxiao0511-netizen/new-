@@ -34,7 +34,7 @@ const DailyFortune: React.FC = () => {
   return (
     <section id="daily-fortune" className="py-24 relative z-10">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+        <div className="text-lightenter mb-12">
           <div className="inline-block mb-6">
             <span className="px-6 py-2 bg-[#5ba4a4]/10 backdrop-blur-sm border border-[#5ba4a4]/30 rounded-full">
               <span className="text-[#5ba4a4] text-xs tracking-widest uppercase">
@@ -42,7 +42,7 @@ const DailyFortune: React.FC = () => {
               </span>
             </span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-primaryxl font-serif font-bold text-primary mb-4">
             {language === 'zh' ? '��Ľ���ָ��' : 'Your Daily Guidance'}
           </h2>
           <p className="text-[#c8c0b6] max-w-2xl mx-auto">
@@ -58,17 +58,17 @@ const DailyFortune: React.FC = () => {
             
             <div className="flex items-center justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-r from-[#5ba4a4]/20 to-[#c2704e]/20 rounded-full flex items-center justify-center breathing border border-[#5ba4a4]/30">
-                <span className="text-4xl">?</span>
+                <span className="text-primaryxl">?</span>
               </div>
             </div>
 
-            <div className="text-center">
-              <p className="text-xl md:text-2xl text-[#c8c0b6] leading-relaxed font-serif">
+            <div className="text-lightenter">
+              <p className="text-xl md:text-mutedxl text-[#c8c0b6] leading-relaxed font-serif">
                 "{fortune}"
               </p>
             </div>
 
-            <div className="mt-10 text-center">
+            <div className="mt-10 text-lightenter">
               <a href="#contact" className="btn-secondary inline-block">
                 {language === 'zh' ? '��ȡ��ϸ���' : 'Get Detailed Reading'}
               </a>

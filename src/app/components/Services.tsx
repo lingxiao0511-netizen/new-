@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
@@ -45,7 +45,7 @@ const Services: React.FC = () => {
   return (
     <section id="method" className="py-24 relative z-10">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-20">
+        <div className="text-lightenter mb-20">
           <div className="inline-block mb-8">
             <span className="px-6 py-2 bg-[#5ba4a4]/10 backdrop-blur-sm border border-[#5ba4a4]/30 rounded-full">
               <span className="text-[#5ba4a4] text-xs tracking-widest uppercase">
@@ -53,7 +53,7 @@ const Services: React.FC = () => {
               </span>
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">
+          <h2 className="text-primaryxl md:text-5xl font-serif font-bold text-primary mb-6">
             {language === 'zh' ? '你可以从哪里开始' : 'Different ways to explore'}
           </h2>
           <p className="text-xl text-[#c8c0b6] max-w-3xl mx-auto mb-12">
@@ -68,7 +68,7 @@ const Services: React.FC = () => {
             const href = card.title === 'Learn / Blog' ? '/learn' : card.title === 'Tools' ? '/tools' : '/reports';
             return (
               <a key={card.title} href={href} className="organics rounded-2xl block">
-                <h3 className="text-2xl font-serif font-bold text-white mb-4">{card.title}</h3>
+                <h3 className="text-mutedxl font-serif font-bold text-primary mb-4">{card.title}</h3>
                 <p className="text-[#c8c0b6] mb-6 leading-relaxed">{card.desc}</p>
                 <ul className="space-y-3">
                   {card.points.map((point) => (
@@ -86,7 +86,7 @@ const Services: React.FC = () => {
         <div className="organics rounded-2xl p-8 md:p-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             <div>
-              <h3 className="text-2xl font-serif font-bold text-white mb-6">
+              <h3 className="text-mutedxl font-serif font-bold text-primary mb-6">
                 {language === 'zh' ? '为什么这样安排' : 'Why this approach helps'}
               </h3>
               <div className="space-y-4 text-[#c8c0b6] leading-relaxed">
@@ -103,7 +103,7 @@ const Services: React.FC = () => {
               </div>
             </div>
 
-            <div className="rounded-2xl border border-white/10 bg-black/20 p-6">
+            <div className="rounded-2xl border border-[rgba(160,148,136,0.25)] bg-[rgba(0,0,0,0.05)] p-6">
               <p className="text-sm uppercase tracking-widest text-[#5ba4a4] mb-4">
                 {language === 'zh' ? '平台体验' : 'Platform Experience'}
               </p>
@@ -118,7 +118,7 @@ const Services: React.FC = () => {
                   'Plausible / PostHog',
                   'Vercel',
                 ].map((item) => (
-                  <div key={item} className="rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-[#f0ebe4]">
+                  <div key={item} className="rounded-lg border border-[rgba(160,148,136,0.25)] bg-white/5 px-4 py-3 text-[#f0ebe4]">
                     {item}
                   </div>
                 ))}

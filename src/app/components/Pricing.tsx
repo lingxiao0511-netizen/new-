@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
@@ -48,7 +48,7 @@ const Pricing: React.FC = () => {
   return (
     <section id="pricing" className="py-24 relative z-10 bg-gradient-to-b from-[#0f3460]/50 to-[#1a1a2e]">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-lightenter mb-16">
           <div className="inline-block mb-8">
             <span className="px-6 py-2 bg-[#5ba4a4]/10 backdrop-blur-sm border border-[#5ba4a4]/30 rounded-full">
               <span className="text-[#5ba4a4] text-xs tracking-widest uppercase">
@@ -56,7 +56,7 @@ const Pricing: React.FC = () => {
               </span>
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">
+          <h2 className="text-primaryxl md:text-5xl font-serif font-bold text-primary mb-6">
             {language === 'zh' ? '选择适合你的方案' : 'Choose Your Plan'}
           </h2>
           <p className="text-xl text-[#c8c0b6] max-w-3xl mx-auto">
@@ -70,8 +70,8 @@ const Pricing: React.FC = () => {
           {tiers.map((tier) => (
             <div key={tier.name} className="organics rounded-2xl p-8">
               <div className="flex items-center justify-between mb-6">
-                <h3 className="text-2xl font-serif font-bold text-white">{tier.name}</h3>
-                <span className="text-2xl font-bold text-[#5ba4a4]">{tier.price}</span>
+                <h3 className="text-mutedxl font-serif font-bold text-primary">{tier.name}</h3>
+                <span className="text-mutedxl font-bold text-[#5ba4a4]">{tier.price}</span>
               </div>
               <p className="text-[#c8c0b6] mb-6 leading-relaxed">{tier.desc}</p>
               <ul className="space-y-3 text-[#c8c0b6] text-sm leading-relaxed">
@@ -79,7 +79,7 @@ const Pricing: React.FC = () => {
                   <li key={feature}><span className="text-[#5ba4a4] mr-2">■</span>{feature}</li>
                 ))}
               </ul>
-              <button className="mt-8 w-full py-3 rounded-lg bg-gradient-to-r from-[#5ba4a4] to-[#c2704e] text-black font-semibold hover:from-[#c2704e] hover:to-[#5ba4a4] transition-all">
+              <button className="mt-8 w-full py-3 rounded-lg bg-gradient-to-r from-[#5ba4a4] to-[#c2704e] text-primarylack font-semibold hover:from-[#c2704e] hover:to-[#5ba4a4] transition-all">
                 {language === 'zh' ? '选择此方案' : 'Choose This Plan'}
               </button>
             </div>

@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-2xl font-serif font-bold text-white mb-4">
+            <h3 className="text-mutedxl font-serif font-bold text-primary mb-4">
               {language === 'zh' ? '灵霄命理' : 'LingXiao Metaphysics'}
             </h3>
             <p className="text-[var\(--light-text\)\] mb-4 leading-relaxed">
@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <h4 className="text-lg font-serif font-bold text-white mb-4">
+            <h4 className="text-lg font-serif font-bold text-primary mb-4">
               {language === 'zh' ? '站点导航' : 'Navigation'}
             </h4>
             <ul className="space-y-2 text-[var\(--light-text\)\]">
@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <h4 className="text-lg font-serif font-bold text-white mb-4">
+            <h4 className="text-lg font-serif font-bold text-primary mb-4">
               {language === 'zh' ? '法务与说明' : 'Legal & Trust'}
             </h4>
             <ul className="space-y-2 text-[var\(--light-text\)\]">
@@ -50,7 +50,7 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <h4 className="text-lg font-serif font-bold text-white mb-4">
+            <h4 className="text-lg font-serif font-bold text-primary mb-4">
               {language === 'zh' ? '使用说明' : 'Helpful Notes'}
             </h4>
             <div className="space-y-3 text-[var\(--light-text\)\] text-sm leading-relaxed">
@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="border-t border-[var\(--border\)\] mt-12 pt-8 text-center">
+        <div className="border-t border-[var\(--border\)\] mt-12 pt-8 text-lightenter">
           <p className="text-[var\(--muted-text\)\] text-xs">
             © 2026 LingXiao Metaphysics. All Rights Reserved.
           </p>

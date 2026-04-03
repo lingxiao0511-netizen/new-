@@ -37,8 +37,8 @@ const Contact: React.FC = () => {
   return (
     <section id="contact" className="py-24 relative z-10">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-4">
+        <div className="text-lightenter mb-12">
+          <h2 className="text-3xl md:text-primaryxl font-serif font-bold text-primary mb-4">
             {language === 'zh' ? '��ϵ����' : 'Contact Us'}
           </h2>
           <div className="w-12 h-0.5 bg-[#5ba4a4] mx-auto opacity-50"></div>
@@ -61,7 +61,7 @@ const Contact: React.FC = () => {
                   onChange={handleChange}
                   required
                   placeholder={language === 'zh' ? '��������������' : 'Please enter your name'}
-                  className="w-full px-4 py-3 bg-black/30 border border-gray-700 rounded focus:outline-none focus:border-[#5ba4a4] transition-colors text-white"
+                  className="w-full px-4 py-3 bg-[rgba(0,0,0,0.03)] border border-[rgba(160,148,136,0.3)] rounded focus:outline-none focus:border-[#5ba4a4] transition-colors text-primary"
                 />
               </div>
               <div>
@@ -76,7 +76,7 @@ const Contact: React.FC = () => {
                   onChange={handleChange}
                   required
                   placeholder={language === 'zh' ? '��������������' : 'Please enter your email'}
-                  className="w-full px-4 py-3 bg-black/30 border border-gray-700 rounded focus:outline-none focus:border-[#5ba4a4] transition-colors text-white"
+                  className="w-full px-4 py-3 bg-[rgba(0,0,0,0.03)] border border-[rgba(160,148,136,0.3)] rounded focus:outline-none focus:border-[#5ba4a4] transition-colors text-primary"
                 />
               </div>
             </div>
@@ -93,7 +93,7 @@ const Contact: React.FC = () => {
                   onChange={handleChange}
                   required
                   placeholder={language === 'zh' ? '���������ĵ绰' : 'Please enter your phone number'}
-                  className="w-full px-4 py-3 bg-black/30 border border-gray-700 rounded focus:outline-none focus:border-[#5ba4a4] transition-colors text-white"
+                  className="w-full px-4 py-3 bg-[rgba(0,0,0,0.03)] border border-[rgba(160,148,136,0.3)] rounded focus:outline-none focus:border-[#5ba4a4] transition-colors text-primary"
                 />
               </div>
               <div>
@@ -106,7 +106,7 @@ const Contact: React.FC = () => {
                   value={formData.service}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-black/30 border border-gray-700 rounded focus:outline-none focus:border-[#5ba4a4] transition-colors text-white"
+                  className="w-full px-4 py-3 bg-[rgba(0,0,0,0.03)] border border-[rgba(160,148,136,0.3)] rounded focus:outline-none focus:border-[#5ba4a4] transition-colors text-primary"
                 >
                   <option value="">
                     {language === 'zh' ? '��ѡ���������' : 'Please select service type'}
@@ -147,7 +147,7 @@ const Contact: React.FC = () => {
                 required
                 placeholder={language === 'zh' ? '����ϸ�����������������' : 'Please describe your question or need in detail'}
                 rows={5}
-                className="w-full px-4 py-3 bg-black/30 border border-gray-700 rounded focus:outline-none focus:border-[#e5c185] transition-colors text-white"
+                className="w-full px-4 py-3 bg-[rgba(0,0,0,0.03)] border border-[rgba(160,148,136,0.3)] rounded focus:outline-none focus:border-[#e5c185] transition-colors text-primary"
               ></textarea>
             </div>
             <button

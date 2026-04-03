@@ -44,7 +44,7 @@ const CaseCard: React.FC<CaseProps> = ({ title, description, image, result }) =>
           <div className={`absolute inset-0 bg-gradient-to-t from-black/70 to-transparent transition-opacity duration-500 ${isHovered ? 'opacity-100' : 'opacity-0'}`}></div>
         </div>
       </div>
-      <h3 className="text-xl font-serif font-bold text-white mb-3 transition-colors duration-300" style={{ color: isHovered ? '#5ba4a4' : '#ffffff' }}>
+      <h3 className="text-xl font-serif font-bold text-primary mb-3 transition-colors duration-300" style={{ color: isHovered ? '#5ba4a4' : '#ffffff' }}>
         {title[language]}
       </h3>
       <p className="text-[var\(--light-text\)\] mb-6">{description[language]}</p>
@@ -165,7 +165,7 @@ const Cases: React.FC = () => {
   return (
     <section id="cases" className="py-24 relative z-10">
       <div className="container mx-auto px-4">
-        <div className={`text-center mb-20 transition-all duration-1000 ease-out ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+        <div className={`text-lightenter mb-20 transition-all duration-1000 ease-out ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <div className="inline-block mb-8">
             <span className="px-6 py-2 bg-[#5ba4a4]/10 backdrop-blur-sm border border-[#5ba4a4]/30 rounded-full">
               <span className="text-[#5ba4a4] text-xs tracking-widest uppercase">
@@ -173,7 +173,7 @@ const Cases: React.FC = () => {
               </span>
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">{language === 'zh' ? '成功案例' : 'Success Cases'}</h2>
+          <h2 className="text-primaryxl md:text-5xl font-serif font-bold text-primary mb-6">{language === 'zh' ? '成功案例' : 'Success Cases'}</h2>
           <p className="text-xl text-[var\(--light-text\)\] max-w-3xl mx-auto mb-12">
             {language === 'zh' ? 
               '真实客户案例，展示玄学服务如何帮助人们改善生活和运势' : 

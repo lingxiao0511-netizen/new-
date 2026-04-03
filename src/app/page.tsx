@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Hero from './components/Hero';
 import FreeFortune from './components/FreeFortune';
 import Services from './components/Services';
@@ -63,29 +63,29 @@ export default function HomePage() {
         }}
       />
 
-      <main className="min-h-screen bg-gradient-to-br from-[#1c1b1e] via-[#2c2624] to-[#1c1b1e]">
+      <main className="min-h-screen bg-gradient-to-br from-\[var(--bg)\] via-\[var(--bg-warm)\] to-\[var(--bg)\]">
         <Hero />
 
         <section className="px-4 pb-8">
-          <div className="max-w-6xl mx-auto organics text-[#f0ebe4]">
+          <div className="max-w-6xl mx-auto organics text-primary">
             <div className="max-w-3xl">
               <p className="text-[#5ba4a4] uppercase tracking-[0.3em] text-xs">Start here</p>
-              <h2 className="text-4xl font-serif font-bold mt-4">Choose the path that fits you best</h2>
-              <p className="text-[#c8c0b6] mt-4 text-lg leading-relaxed">
+              <h2 className="text-primaryxl font-serif font-bold mt-4">Choose the path that fits you best</h2>
+              <p className="text-light mt-4 text-lg leading-relaxed">
                 Whether you are completely new, curious to explore, or ready for a deeper reading, this site is designed to help you start in a way that feels simple and clear.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 text-sm text-[#c8c0b6]">
-              <a href="/getting-started" className="rounded-2xl border border-white/10 bg-white/5 p-6 hover:border-[#5ba4a4]/20 transition-colors">
-                <h3 className="text-[#f0ebe4] text-xl font-serif font-bold">I am new</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 text-sm text-light">
+              <a href="/getting-started" className="rounded-2xl border border-[rgba(160,148,136,0.25)] bg-white/5 p-6 hover:border-[#5ba4a4]/20 transition-colors">
+                <h3 className="text-primary text-xl font-serif font-bold">I am new</h3>
                 <p className="mt-3 leading-relaxed">Start with the beginner guide and foundational explanations before using tools.</p>
               </a>
-              <a href="/tools" className="rounded-2xl border border-white/10 bg-white/5 p-6 hover:border-[#5ba4a4]/20 transition-colors">
-                <h3 className="text-[#f0ebe4] text-xl font-serif font-bold">I want to try something</h3>
+              <a href="/tools" className="rounded-2xl border border-[rgba(160,148,136,0.25)] bg-white/5 p-6 hover:border-[#5ba4a4]/20 transition-colors">
+                <h3 className="text-primary text-xl font-serif font-bold">I want to try something</h3>
                 <p className="mt-3 leading-relaxed">Use a free tool if you want practical interaction and a low-friction first experience.</p>
               </a>
-              <a href="/reports" className="rounded-2xl border border-white/10 bg-white/5 p-6 hover:border-[#5ba4a4]/20 transition-colors">
-                <h3 className="text-[#f0ebe4] text-xl font-serif font-bold">I want depth</h3>
+              <a href="/reports" className="rounded-2xl border border-[rgba(160,148,136,0.25)] bg-white/5 p-6 hover:border-[#5ba4a4]/20 transition-colors">
+                <h3 className="text-primary text-xl font-serif font-bold">I want depth</h3>
                 <p className="mt-3 leading-relaxed">Explore reports if you already understand the basics and want a deeper reading.</p>
               </a>
             </div>

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
@@ -55,7 +55,7 @@ const FreeFortune: React.FC = () => {
   return (
     <section id="tools" className="py-24 relative z-10 bg-gradient-to-b from-[#0f3460]/50 to-[#1a1a2e]">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-lightenter mb-16">
           <div className="inline-block mb-6">
             <span className="px-6 py-2 bg-[#5ba4a4]/10 backdrop-blur-sm border border-[#5ba4a4]/30 rounded-full">
               <span className="text-[#5ba4a4] text-xs tracking-widest uppercase">
@@ -63,7 +63,7 @@ const FreeFortune: React.FC = () => {
               </span>
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">
+          <h2 className="text-primaryxl md:text-5xl font-serif font-bold text-primary mb-6">
             {language === 'zh' ? '先从免费工具开始' : 'Start with Free Tools'}
           </h2>
           <p className="text-xl text-[#c8c0b6] max-w-3xl mx-auto">
@@ -75,37 +75,37 @@ const FreeFortune: React.FC = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
           <div className="lg:col-span-3 organics rounded-2xl p-8 md:p-10">
-            <h3 className="text-2xl font-serif text-white mb-6">
+            <h3 className="text-mutedxl font-serif text-primary mb-6">
               {language === 'zh' ? 'Free BaZi / Five Elements Starter' : 'Free BaZi / Five Elements Starter'}
             </h3>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="block text-white font-medium mb-3">
+                <label className="block text-primary font-medium mb-3">
                   {language === 'zh' ? '出生日期' : 'Birth Date'}
                 </label>
                 <input
                   type="date"
                   value={birthDate}
                   onChange={(e) => setBirthDate(e.target.value)}
-                  className="w-full px-4 py-3 bg-black/30 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5ba4a4] text-white"
+                  className="w-full px-4 py-3 bg-[rgba(0,0,0,0.03)] border border-[rgba(160,148,136,0.3)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5ba4a4] text-primary"
                 />
               </div>
 
               <div>
-                <label className="block text-white font-medium mb-3">
+                <label className="block text-primary font-medium mb-3">
                   {language === 'zh' ? '出生时间（可选）' : 'Birth Time (Optional)'}
                 </label>
                 <input
                   type="time"
                   value={birthTime}
                   onChange={(e) => setBirthTime(e.target.value)}
-                  className="w-full px-4 py-3 bg-black/30 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5ba4a4] text-white"
+                  className="w-full px-4 py-3 bg-[rgba(0,0,0,0.03)] border border-[rgba(160,148,136,0.3)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5ba4a4] text-primary"
                 />
               </div>
 
               <div className="md:col-span-2">
-                <label className="block text-white font-medium mb-3">
+                <label className="block text-primary font-medium mb-3">
                   {language === 'zh' ? '性别（可选）' : 'Gender (Optional)'}
                 </label>
                 <div className="flex gap-4">
@@ -118,7 +118,7 @@ const FreeFortune: React.FC = () => {
                       key={item.value}
                       type="button"
                       onClick={() => setGender(item.value)}
-                      className={`px-4 py-2 rounded-lg border ${gender === item.value ? 'bg-[#5ba4a4] text-black border-[#5ba4a4]' : 'bg-black/30 text-[#c8c0b6] border-gray-700'}`}
+                      className={`px-4 py-2 rounded-lg border ${gender === item.value ? 'bg-[#5ba4a4] text-primarylack border-[#5ba4a4]' : 'bg-[rgba(0,0,0,0.03)] text-[#c8c0b6] border-[rgba(160,148,136,0.3)]'}`}
                     >
                       {language === 'zh' ? item.labelZh : item.labelEn}
                     </button>
@@ -132,7 +132,7 @@ const FreeFortune: React.FC = () => {
             <button
               onClick={handleCalculate}
               disabled={isCalculating}
-              className="mt-8 w-full py-4 px-6 rounded-lg bg-gradient-to-r from-[#5ba4a4] to-[#c2704e] text-black font-semibold hover:from-[#c2704e] hover:to-[#5ba4a4] transition-all"
+              className="mt-8 w-full py-4 px-6 rounded-lg bg-gradient-to-r from-[#5ba4a4] to-[#c2704e] text-primarylack font-semibold hover:from-[#c2704e] hover:to-[#5ba4a4] transition-all"
             >
               {isCalculating
                 ? language === 'zh'
@@ -144,7 +144,7 @@ const FreeFortune: React.FC = () => {
             </button>
 
             {result && (
-              <div className="mt-8 rounded-2xl border border-white/10 bg-black/20 p-6">
+              <div className="mt-8 rounded-2xl border border-[rgba(160,148,136,0.25)] bg-[rgba(0,0,0,0.05)] p-6">
                 <div className="flex items-center justify-between flex-wrap gap-4">
                   <div>
                     <p className="text-sm text-[#c8c0b6]">{language === 'zh' ? '主元素' : 'Main Element'}</p>
@@ -155,7 +155,7 @@ const FreeFortune: React.FC = () => {
 
                 <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
                   {result.traits.map((item) => (
-                    <div key={item} className="rounded-xl border border-white/10 bg-white/5 p-4 text-[#f0ebe4] text-sm">
+                    <div key={item} className="rounded-xl border border-[rgba(160,148,136,0.25)] bg-white/5 p-4 text-[#f0ebe4] text-sm">
                       {item}
                     </div>
                   ))}
@@ -163,14 +163,14 @@ const FreeFortune: React.FC = () => {
 
                 <div className="mt-6 rounded-xl border border-[#5ba4a4]/20 bg-[#5ba4a4]/5 p-4 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                   <div>
-                    <p className="text-white font-medium">{result.upgradeTitle}</p>
+                    <p className="text-primary font-medium">{result.upgradeTitle}</p>
                     <p className="text-sm text-[#c8c0b6] mt-1">
                       {language === 'zh'
                         ? '下一步可以升级到完整报告、年度运势或关系匹配。'
                         : 'If you would like more depth, you can continue with a fuller report, an annual reading, or a compatibility analysis.'}
                     </p>
                   </div>
-                  <a href="/reports" className="btn-primary inline-block text-center">
+                  <a href="/reports" className="btn-primary inline-block text-lightenter">
                     {language === 'zh' ? '查看报告' : 'View Reports'}
                   </a>
                 </div>
@@ -194,7 +194,7 @@ const FreeFortune: React.FC = () => {
               },
             ].map((tool) => (
               <div key={tool.title} className="organics">
-                <h4 className="text-white font-semibold text-lg">{tool.title}</h4>
+                <h4 className="text-primary font-semibold text-lg">{tool.title}</h4>
                 <p className="text-[#c8c0b6] mt-2 text-sm leading-relaxed">{tool.desc}</p>
               </div>
             ))}

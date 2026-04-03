@@ -46,10 +46,10 @@ const ParticleStars: React.FC = () => {
       particlesRef.current = [];
 
       const colors = [
-        'rgba(125, 211, 252, ',  // 天蓝色
-        'rgba(167, 139, 250, ',  // 紫色
-        'rgba(255, 255, 255, ',  // 白色
-        'rgba(100, 200, 255, ',  // 浅蓝
+        'rgba(91, 164, 164, ',   // 松石绿
+        'rgba(212, 168, 83, ',   // 琥珀金
+        'rgba(194, 112, 78, ',   // 陶土
+        'rgba(240, 235, 228, ',  // 暖米白
       ];
 
       for (let i = 0; i < particleCount; i++) {
@@ -74,9 +74,9 @@ const ParticleStars: React.FC = () => {
       
       // 绘制渐变背景
       const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
-      gradient.addColorStop(0, 'rgba(26, 26, 46, 0.1)');
-      gradient.addColorStop(0.5, 'rgba(22, 33, 62, 0.1)');
-      gradient.addColorStop(1, 'rgba(15, 52, 96, 0.1)');
+      gradient.addColorStop(0, 'rgba(91, 164, 164, 0.1)');
+      gradient.addColorStop(0.5, 'rgba(212, 168, 83, 0.1)');
+      gradient.addColorStop(1, 'rgba(194, 112, 78, 0.1)');
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -136,7 +136,7 @@ const ParticleStars: React.FC = () => {
       });
 
       // 绘制星座连线（当粒子距离较近时）
-      ctx.strokeStyle = 'rgba(125, 211, 252, 0.05)';
+      ctx.strokeStyle = 'rgba(91, 164, 164, 0.05)';
       ctx.lineWidth = 0.5;
       for (let i = 0; i < particlesRef.current.length; i++) {
         for (let j = i + 1; j < particlesRef.current.length; j++) {
@@ -146,7 +146,7 @@ const ParticleStars: React.FC = () => {
 
           if (distance < 120) {
             const opacity = (1 - distance / 120) * 0.15;
-            ctx.strokeStyle = `rgba(125, 211, 252, ${opacity})`;
+            ctx.strokeStyle = `rgba(91, 164, 164, ${opacity})`;
             ctx.beginPath();
             ctx.moveTo(particlesRef.current[i].x, particlesRef.current[i].y);
             ctx.lineTo(particlesRef.current[j].x, particlesRef.current[j].y);

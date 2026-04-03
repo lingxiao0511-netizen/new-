@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
@@ -18,7 +18,7 @@ const Blog: React.FC = () => {
   return (
     <section id="learn" className="py-24 relative z-10">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-20">
+        <div className="text-lightenter mb-20">
           <div className="inline-block mb-8">
             <span className="px-6 py-2 bg-[#5ba4a4]/10 backdrop-blur-sm border border-[#5ba4a4]/30 rounded-full">
               <span className="text-[#5ba4a4] text-xs tracking-widest uppercase">
@@ -26,7 +26,7 @@ const Blog: React.FC = () => {
               </span>
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">
+          <h2 className="text-primaryxl md:text-5xl font-serif font-bold text-primary mb-6">
             {language === 'zh' ? '从这些主题开始了解' : 'A few good places to begin'}
           </h2>
           <p className="text-xl text-[#c8c0b6] max-w-3xl mx-auto mb-12">
@@ -42,7 +42,7 @@ const Blog: React.FC = () => {
               <div className="mb-4 inline-flex px-3 py-1 rounded-full bg-[#5ba4a4]/10 text-[#5ba4a4] text-xs tracking-widest uppercase">
                 Learn
               </div>
-              <h3 className="text-xl font-serif font-bold text-white mb-4">{title}</h3>
+              <h3 className="text-xl font-serif font-bold text-primary mb-4">{title}</h3>
               <p className="text-[#c8c0b6] text-sm leading-relaxed">
                 {language === 'zh'
                   ? '如果某个主题正好是你关心的问题，可以从这里读起，再决定是否继续看工具或更深入的解读。'

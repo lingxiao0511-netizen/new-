@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
@@ -41,13 +41,13 @@ const FAQ: React.FC = () => {
   return (
     <section id="faq" className="py-24 relative z-10">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-lightenter mb-16">
           <div className="inline-block mb-8">
             <span className="px-6 py-2 bg-[#5ba4a4]/10 backdrop-blur-sm border border-[#5ba4a4]/30 rounded-full">
               <span className="text-[#5ba4a4] text-xs tracking-widest uppercase">FAQ</span>
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">
+          <h2 className="text-primaryxl md:text-5xl font-serif font-bold text-primary mb-6">
             {language === 'zh' ? '常见问题' : 'Frequently Asked Questions'}
           </h2>
           <p className="text-xl text-[#c8c0b6] max-w-3xl mx-auto">
@@ -64,7 +64,7 @@ const FAQ: React.FC = () => {
                 className="w-full px-6 py-5 text-left flex items-center justify-between"
                 onClick={() => setOpen(open === index ? null : index)}
               >
-                <span className="text-white font-medium pr-6">{item.q}</span>
+                <span className="text-primary font-medium pr-6">{item.q}</span>
                 <span className="text-[#5ba4a4] text-xl">{open === index ? '−' : '+'}</span>
               </button>
               {open === index && <div className="px-6 pb-5 text-[#c8c0b6] leading-relaxed">{item.a}</div>}
