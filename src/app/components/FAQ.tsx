@@ -47,10 +47,10 @@ const FAQ: React.FC = () => {
               <span className="text-[#5ba4a4] text-xs tracking-widest uppercase">FAQ</span>
             </span>
           </div>
-          <h2 className="text-primaryxl md:text-5xl font-serif font-bold" style={{ color: "var(--text)" }} className="font-bold mb-6">
+          <h2 style={{ color: "var(--text)" }} className="text-primaryxl md:text-5xl font-serif font-bold font-bold mb-6">
             {language === 'zh' ? '常见问题' : 'Frequently Asked Questions'}
           </h2>
-          <p className="text-xl text-[#c8c0b6] max-w-3xl mx-auto">
+          <p className="text-xl text-light max-w-3xl mx-auto">
             {language === 'zh'
               ? '先把用户最容易犹豫的点解释清楚，能明显提高首页信任感。'
               : 'Clarifying these concerns early makes the homepage feel much more trustworthy.'}
@@ -67,7 +67,7 @@ const FAQ: React.FC = () => {
                 <span className="text-primary font-medium pr-6">{item.q}</span>
                 <span className="text-[#5ba4a4] text-xl">{open === index ? '−' : '+'}</span>
               </button>
-              {open === index && <div className="px-6 pb-5 text-[#c8c0b6] leading-relaxed">{item.a}</div>}
+              {open === index && <div className="px-6 pb-5 text-light leading-relaxed">{item.a}</div>}
             </div>
           ))}
         </div>

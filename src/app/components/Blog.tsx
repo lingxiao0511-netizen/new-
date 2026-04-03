@@ -26,10 +26,10 @@ const Blog: React.FC = () => {
               </span>
             </span>
           </div>
-          <h2 className="text-primaryxl md:text-5xl font-serif font-bold" style={{ color: "var(--text)" }} className="font-bold mb-6">
+          <h2 style={{ color: "var(--text)" }} className="text-primaryxl md:text-5xl font-serif font-bold font-bold mb-6">
             {language === 'zh' ? '从这些主题开始了解' : 'A few good places to begin'}
           </h2>
-          <p className="text-xl text-[#c8c0b6] max-w-3xl mx-auto mb-12">
+          <p className="text-xl text-light max-w-3xl mx-auto mb-12">
             {language === 'zh'
               ? '如果你想先通过阅读来了解这个体系，这些主题会是很自然的起点。'
               : 'If you prefer to start by reading, these topics are a natural way to become familiar with the system.'}
@@ -42,8 +42,8 @@ const Blog: React.FC = () => {
               <div className="mb-4 inline-flex px-3 py-1 rounded-full bg-[#5ba4a4]/10 text-[#5ba4a4] text-xs tracking-widest uppercase">
                 Learn
               </div>
-              <h3 className="text-xl font-serif font-bold" style={{ color: "var(--text)" }} className="font-bold mb-4">{title}</h3>
-              <p className="text-[#c8c0b6] text-sm leading-relaxed">
+              <h3 style={{ color: "var(--text)" }} className="text-xl font-serif font-bold font-bold mb-4">{title}</h3>
+              <p className="text-light text-sm leading-relaxed">
                 {language === 'zh'
                   ? '如果某个主题正好是你关心的问题，可以从这里读起，再决定是否继续看工具或更深入的解读。'
                   : 'If one of these topics matches what you are curious about, it can be a natural place to begin before moving into tools or more detailed readings.'}

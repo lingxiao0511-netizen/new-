@@ -63,10 +63,10 @@ const FreeFortune: React.FC = () => {
               </span>
             </span>
           </div>
-          <h2 className="text-primaryxl md:text-5xl font-serif font-bold" style={{ color: "var(--text)" }} className="font-bold mb-6">
+          <h2 style={{ color: "var(--text)" }} className="text-primaryxl md:text-5xl font-serif font-bold font-bold mb-6">
             {language === 'zh' ? '先从免费工具开始' : 'Start with Free Tools'}
           </h2>
-          <p className="text-xl text-[#c8c0b6] max-w-3xl mx-auto">
+          <p className="text-xl text-light max-w-3xl mx-auto">
             {language === 'zh'
               ? '你可以从 3 类最容易理解的工具开始：BaZi Chart、Five Elements Profile 和 Compatibility Checker。当前这里展示的是一个简化起点。'
               : 'A practical place to begin is with three easy entry points: a BaZi chart, a Five Elements profile, and a compatibility checker. This homepage section shows a simplified starting version.'}
@@ -118,7 +118,7 @@ const FreeFortune: React.FC = () => {
                       key={item.value}
                       type="button"
                       onClick={() => setGender(item.value)}
-                      className={`px-4 py-2 rounded-lg border ${gender === item.value ? 'bg-[#5ba4a4] text-primarylack border-[#5ba4a4]' : 'bg-[rgba(0,0,0,0.03)] text-[#c8c0b6] border-[rgba(160,148,136,0.3)]'}`}
+                      className={`px-4 py-2 rounded-lg border ${gender === item.value ? 'bg-[#5ba4a4] text-primarylack border-[#5ba4a4]' : 'bg-[rgba(0,0,0,0.03)] text-light border-[rgba(160,148,136,0.3)]'}`}
                     >
                       {language === 'zh' ? item.labelZh : item.labelEn}
                     </button>
@@ -147,10 +147,10 @@ const FreeFortune: React.FC = () => {
               <div className="mt-8 rounded-2xl border border-[rgba(160,148,136,0.25)] bg-[rgba(0,0,0,0.05)] p-6">
                 <div className="flex items-center justify-between flex-wrap gap-4">
                   <div>
-                    <p className="text-sm text-[#c8c0b6]">{language === 'zh' ? '主元素' : 'Main Element'}</p>
+                    <p className="text-sm text-light">{language === 'zh' ? '主元素' : 'Main Element'}</p>
                     <p className="text-3xl text-[#5ba4a4] font-bold mt-1">{result.mainElement}</p>
                   </div>
-                  <div className="text-sm text-[#c8c0b6] max-w-md">{result.summary}</div>
+                  <div className="text-sm text-light max-w-md">{result.summary}</div>
                 </div>
 
                 <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -164,7 +164,7 @@ const FreeFortune: React.FC = () => {
                 <div className="mt-6 rounded-xl border border-[#5ba4a4]/20 bg-[#5ba4a4]/5 p-4 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                   <div>
                     <p className="text-primary font-medium">{result.upgradeTitle}</p>
-                    <p className="text-sm text-[#c8c0b6] mt-1">
+                    <p className="text-sm text-light mt-1">
                       {language === 'zh'
                         ? '下一步可以升级到完整报告、年度运势或关系匹配。'
                         : 'If you would like more depth, you can continue with a fuller report, an annual reading, or a compatibility analysis.'}
@@ -195,7 +195,7 @@ const FreeFortune: React.FC = () => {
             ].map((tool) => (
               <div key={tool.title} className="organics">
                 <h4 className="text-primary font-semibold text-lg">{tool.title}</h4>
-                <p className="text-[#c8c0b6] mt-2 text-sm leading-relaxed">{tool.desc}</p>
+                <p className="text-light mt-2 text-sm leading-relaxed">{tool.desc}</p>
               </div>
             ))}
           </div>

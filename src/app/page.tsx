@@ -69,7 +69,7 @@ export default function HomePage() {
         <section className="px-4 pb-8">
           <div className="max-w-6xl mx-auto organics text-primary">
             <div className="max-w-3xl">
-              <p className="text-[#5ba4a4] uppercase tracking-[0.3em] text-xs">Start here</p>
+              <p className="text-primary uppercase tracking-[0.3em] text-xs">Start here</p>
               <h2 className="text-primaryxl font-serif font-bold mt-4">Choose the path that fits you best</h2>
               <p className="text-light mt-4 text-lg leading-relaxed">
                 Whether you are completely new, curious to explore, or ready for a deeper reading, this site is designed to help you start in a way that feels simple and clear.

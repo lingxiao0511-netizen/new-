@@ -53,10 +53,10 @@ const Services: React.FC = () => {
               </span>
             </span>
           </div>
-          <h2 className="text-primaryxl md:text-5xl font-serif font-bold" style={{ color: "var(--text)" }} className="font-bold mb-6">
+          <h2 style={{ color: "var(--text)" }} className="text-primaryxl md:text-5xl font-serif font-bold font-bold mb-6">
             {language === 'zh' ? '你可以从哪里开始' : 'Different ways to explore'}
           </h2>
-          <p className="text-xl text-[#c8c0b6] max-w-3xl mx-auto mb-12">
+          <p className="text-xl text-light max-w-3xl mx-auto mb-12">
             {language === 'zh'
               ? '你可以先学习基础，再试用工具，最后在需要时查看更深入的个性化解读。'
               : 'You can begin with learning, continue with tools, and explore more detailed readings whenever you want to go deeper.'}
@@ -68,11 +68,11 @@ const Services: React.FC = () => {
             const href = card.title === 'Learn / Blog' ? '/learn' : card.title === 'Tools' ? '/tools' : '/reports';
             return (
               <a key={card.title} href={href} className="organics rounded-2xl block">
-                <h3 className="text-xl font-serif font-bold" style={{ color: "var(--text)" }} className="font-bold mb-4">{card.title}</h3>
-                <p className="text-[#c8c0b6] mb-6 leading-relaxed">{card.desc}</p>
+                <h3 style={{ color: "var(--text)" }} className="text-xl font-serif font-bold font-bold mb-4">{card.title}</h3>
+                <p className="text-light mb-6 leading-relaxed">{card.desc}</p>
                 <ul className="space-y-3">
                   {card.points.map((point) => (
-                    <li key={point} className="flex items-start text-[#c8c0b6] text-sm">
+                    <li key={point} className="flex items-start text-light text-sm">
                       <span className="text-[#5ba4a4] mr-3">◆</span>
                       {point}
                     </li>
@@ -86,10 +86,10 @@ const Services: React.FC = () => {
         <div className="organics rounded-2xl p-8 md:p-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             <div>
-              <h3 className="text-xl font-serif font-bold" style={{ color: "var(--text)" }} className="font-bold mb-6">
+              <h3 style={{ color: "var(--text)" }} className="text-xl font-serif font-bold font-bold mb-6">
                 {language === 'zh' ? '为什么这样安排' : 'Why this approach helps'}
               </h3>
-              <div className="space-y-4 text-[#c8c0b6] leading-relaxed">
+              <div className="space-y-4 text-light leading-relaxed">
                 <p>
                   {language === 'zh'
                     ? '复杂的命理概念如果表达得太随意，会让人更困惑。更好的做法是先把结构算清楚，再用更容易理解的语言解释它。'

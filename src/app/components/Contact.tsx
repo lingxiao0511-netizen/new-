@@ -38,11 +38,11 @@ const Contact: React.FC = () => {
     <section id="contact" className="py-24 relative z-10">
       <div className="container mx-auto px-4">
         <div className="text-lightenter mb-12">
-          <h2 className="text-3xl md:text-5xl font-serif font-bold" style={{ color: "var(--text)" }} className="font-bold mb-4">
+          <h2 style={{ color: "var(--text)" }} className="text-3xl md:text-5xl font-serif font-bold font-bold mb-4">
             {language === 'zh' ? '��ϵ����' : 'Contact Us'}
           </h2>
           <div className="w-12 h-0.5 bg-[#5ba4a4] mx-auto opacity-50"></div>
-          <p className="text-lg text-[#c8c0b6] max-w-2xl mx-auto mt-4">
+          <p className="text-lg text-light max-w-2xl mx-auto mt-4">
             {language === 'zh' ? '�����κ���������󣬻�ӭ��ʱ��ѯ����' : 'If you have any questions or needs, please feel free to consult us at any time'}
           </p>
         </div>
@@ -50,7 +50,7 @@ const Contact: React.FC = () => {
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="name" className="block text-[#c8c0b6] font-medium mb-2">
+                <label htmlFor="name" className="block text-light font-medium mb-2">
                   {language === 'zh' ? '����' : 'Name'}
                 </label>
                 <input
@@ -65,7 +65,7 @@ const Contact: React.FC = () => {
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-[#c8c0b6] font-medium mb-2">
+                <label htmlFor="email" className="block text-light font-medium mb-2">
                   {language === 'zh' ? '����' : 'Email'}
                 </label>
                 <input
@@ -82,7 +82,7 @@ const Contact: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="phone" className="block text-[#c8c0b6] font-medium mb-2">
+                <label htmlFor="phone" className="block text-light font-medium mb-2">
                   {language === 'zh' ? '�绰' : 'Phone'}
                 </label>
                 <input
@@ -97,7 +97,7 @@ const Contact: React.FC = () => {
                 />
               </div>
               <div>
-                <label htmlFor="service" className="block text-[#c8c0b6] font-medium mb-2">
+                <label htmlFor="service" className="block text-light font-medium mb-2">
                   {language === 'zh' ? '��ѯ����' : 'Consultation Service'}
                 </label>
                 <select
@@ -136,7 +136,7 @@ const Contact: React.FC = () => {
               </div>
             </div>
             <div>
-              <label htmlFor="message" className="block text-[#c8c0b6] font-medium mb-2">
+              <label htmlFor="message" className="block text-light font-medium mb-2">
                 {language === 'zh' ? '��ѯ����' : 'Consultation Content'}
               </label>
               <textarea

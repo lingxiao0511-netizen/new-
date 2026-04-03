@@ -45,7 +45,7 @@ const DailyFortune: React.FC = () => {
           <h2 className="text-3xl md:text-primaryxl font-serif font-bold text-primary mb-4">
             {language === 'zh' ? '��Ľ���ָ��' : 'Your Daily Guidance'}
           </h2>
-          <p className="text-[#c8c0b6] max-w-2xl mx-auto">
+          <p className="text-light max-w-2xl mx-auto">
             {language === 'zh' ? '���ڽ�������Ϊ���ṩר������ָ��' : 'Based on today\'s astrology, providing you with exclusive fortune guidance'}
           </p>
         </div>
@@ -63,7 +63,7 @@ const DailyFortune: React.FC = () => {
             </div>
 
             <div className="text-lightenter">
-              <p className="text-xl md:text-mutedxl text-[#c8c0b6] leading-relaxed font-serif">
+              <p className="text-xl md:text-mutedxl text-light leading-relaxed font-serif">
                 "{fortune}"
               </p>
             </div>
