@@ -36,34 +36,34 @@ const steps = [
 
 export default function GettingStartedPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f3460] text-white pt-32 pb-20">
+    <main className="min-h-screen bg-gradient-to-br from-[#faf6f0] via-[#f5f0e8] to-[#ece3d5] text-[#231a14] pt-32 pb-20">
       <div className="max-w-5xl mx-auto px-4">
         <div className="max-w-3xl mb-14">
-          <p className="text-[#7dd3fc] uppercase tracking-[0.3em] text-xs">Getting Started</p>
+          <p className="text-[#5ba4a4] uppercase tracking-[0.3em] text-xs">Getting Started</p>
           <h1 className="text-5xl font-serif font-bold mt-4">New Here? Start Here.</h1>
-          <p className="text-gray-400 text-lg mt-6 leading-relaxed">If you are new to Chinese metaphysics, there is no need to learn everything at once. Start with the foundations, understand what your birth data affects, and then continue into tools or reports when you feel ready.</p>
+          <p className="text-[#7a6d60] text-lg mt-6 leading-relaxed">If you are new to Chinese metaphysics, there is no need to learn everything at once. Start with the foundations, understand what your birth data affects, and then continue into tools or reports when you feel ready.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
           {steps.map((step) => (
-            <Link key={step.title} href={step.link} className="glass-card rounded-2xl block hover:border-[#7dd3fc]/30 transition-colors">
+            <Link key={step.title} href={step.link} className="organics rounded-2xl block hover:border-[#5ba4a4]/30 transition-colors">
               <h2 className="text-2xl font-serif font-bold">{step.title}</h2>
-              <p className="text-gray-400 mt-4 leading-relaxed">{step.text}</p>
-              <div className="mt-6 text-sm text-white">Open →</div>
+              <p className="text-[#7a6d60] mt-4 leading-relaxed">{step.text}</p>
+              <div className="mt-6 text-sm text-[#231a14]">Open →</div>
             </Link>
           ))}
         </div>
-        <div className="glass-card rounded-2xl p-8 md:p-10">
+        <div className="organics rounded-2xl p-8 md:p-10">
           <h2 className="text-3xl font-serif font-bold">What to expect from this site</h2>
-          <div className="mt-6 space-y-4 text-gray-300 leading-relaxed">
+          <div className="mt-6 space-y-4 text-[#504035] leading-relaxed">
             <p>• Clear explanations before technical overload</p>
             <p>• Tools that help you interact before you pay</p>
             <p>• Report products that go deeper than free outputs</p>
             <p>• No certainty-heavy promises about fate control or guaranteed predictions</p>
           </div>
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-300">
-            <Link href="/learn/how-accurate-is-bazi" className="rounded-xl border border-white/10 bg-white/5 p-4">How accurate is BaZi?</Link>
-            <Link href="/learn/how-we-use-ai" className="rounded-xl border border-white/10 bg-white/5 p-4">How we use AI</Link>
-            <Link href="/learn/what-does-a-bazi-report-include" className="rounded-xl border border-white/10 bg-white/5 p-4">What a report includes</Link>
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-[#504035]">
+            <Link href="/learn/how-accurate-is-bazi" className="rounded-xl border border-[rgba(160,148,136,0.3)] bg-[rgba(255,253,248,0.9)] p-4">How accurate is BaZi?</Link>
+            <Link href="/learn/how-we-use-ai" className="rounded-xl border border-[rgba(160,148,136,0.3)] bg-[rgba(255,253,248,0.9)] p-4">How we use AI</Link>
+            <Link href="/learn/what-does-a-bazi-report-include" className="rounded-xl border border-[rgba(160,148,136,0.3)] bg-[rgba(255,253,248,0.9)] p-4">What a report includes</Link>
           </div>
         </div>
       </div>

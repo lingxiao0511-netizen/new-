@@ -22,19 +22,19 @@ const principles = [
 
 export default function EditorialPolicyPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f3460] text-white pt-32 pb-20">
+    <main className="min-h-screen bg-gradient-to-br from-[#faf6f0] via-[#f5f0e8] to-[#ece3d5] text-[#231a14] pt-32 pb-20">
       <div className="max-w-5xl mx-auto px-4">
         <div className="max-w-3xl mb-14">
-          <p className="text-[#7dd3fc] uppercase tracking-[0.3em] text-xs">Editorial Policy</p>
+          <p className="text-[#5ba4a4] uppercase tracking-[0.3em] text-xs">Editorial Policy</p>
           <h1 className="text-5xl font-serif font-bold mt-4">How We Write and Review Content</h1>
-          <p className="text-gray-400 text-lg mt-6 leading-relaxed">
+          <p className="text-[#7a6d60] text-lg mt-6 leading-relaxed">
             Public trust depends on more than design. It depends on how a site explains what it is doing. This editorial policy outlines how LingXiao Metaphysics approaches educational content, public communication, and cultural responsibility.
           </p>
         </div>
 
-        <div className="glass-card rounded-2xl p-8 md:p-10 mb-16">
+        <div className="organics rounded-2xl p-8 md:p-10 mb-16">
           <h2 className="text-3xl font-serif font-bold">Core editorial principles</h2>
-          <div className="mt-6 space-y-4 text-gray-300 leading-relaxed">
+          <div className="mt-6 space-y-4 text-[#504035] leading-relaxed">
             {principles.map((item) => (
               <p key={item}>• {item}</p>
             ))}
@@ -42,18 +42,18 @@ export default function EditorialPolicyPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="glass-card rounded-2xl p-8">
+          <div className="organics rounded-2xl p-8">
             <h2 className="text-2xl font-serif font-bold">What we avoid</h2>
-            <div className="mt-4 space-y-3 text-gray-300 leading-relaxed">
+            <div className="mt-4 space-y-3 text-[#504035] leading-relaxed">
               <p>• Guaranteed prediction language</p>
               <p>• “100% accurate” style claims</p>
               <p>• Emotional manipulation designed to force urgency</p>
               <p>• Treating educational content as if it were absolute certainty</p>
             </div>
           </div>
-          <div className="glass-card rounded-2xl p-8">
+          <div className="organics rounded-2xl p-8">
             <h2 className="text-2xl font-serif font-bold">What we want content to do</h2>
-            <div className="mt-4 space-y-3 text-gray-300 leading-relaxed">
+            <div className="mt-4 space-y-3 text-[#504035] leading-relaxed">
               <p>• Help readers understand the system step by step</p>
               <p>• Lower confusion for first-time users</p>
               <p>• Build trust before asking for a purchase</p>

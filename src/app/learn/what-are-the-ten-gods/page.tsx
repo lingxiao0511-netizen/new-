@@ -14,35 +14,35 @@ export const metadata: Metadata = {
 
 export default function WhatAreTheTenGodsPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f3460] text-white pt-32 pb-20">
+    <main className="min-h-screen bg-gradient-to-br from-[#faf6f0] via-[#f5f0e8] to-[#ece3d5] text-[#231a14] pt-32 pb-20">
       <article className="max-w-4xl mx-auto px-4">
-        <p className="text-[#7dd3fc] uppercase tracking-[0.3em] text-xs">Intermediate Concepts</p>
+        <p className="text-[#5ba4a4] uppercase tracking-[0.3em] text-xs">Intermediate Concepts</p>
         <h1 className="text-5xl font-serif font-bold mt-4">What Are the Ten Gods in BaZi?</h1>
-        <p className="text-gray-400 text-lg mt-6 leading-relaxed">
+        <p className="text-[#7a6d60] text-lg mt-6 leading-relaxed">
           The Ten Gods are one of the most discussed parts of BaZi because they turn chart relationships into recognizable categories. For beginners, they can feel abstract at first, but the underlying idea is actually simple: each one describes how another element relates to the Day Master.
         </p>
-        <div className="glass-card rounded-2xl p-8 md:p-10 mt-10 space-y-6 text-gray-300 leading-relaxed">
+        <div className="organics rounded-2xl p-8 md:p-10 mt-10 space-y-6 text-[#504035] leading-relaxed">
           <p>
             The system combines two things: the Five Element relationship and yin-yang polarity. That creates ten relationship types. These categories are often used to discuss themes like support, authority, expression, resources, wealth, peers, and pressure.
           </p>
           <p>
             The important point is that the Ten Gods are not literal deities. They are labels for relationship dynamics inside the chart. When beginners hear names like Direct Wealth or Hurting Officer, the terms can sound dramatic, but they are technical categories rather than direct life verdicts.
           </p>
-          <h2 className="text-3xl font-serif font-bold text-white">Why they matter</h2>
+          <h2 className="text-3xl font-serif font-bold text-[#231a14]">Why they matter</h2>
           <p>
             The Ten Gods help translate chart mechanics into interpretive language. They are one of the bridges between technical calculation and human-readable analysis.
           </p>
-          <h2 className="text-3xl font-serif font-bold text-white">Why beginners should go slowly</h2>
+          <h2 className="text-3xl font-serif font-bold text-[#231a14]">Why beginners should go slowly</h2>
           <p>
             It is easy to over-identify with one term and ignore context. Real reading depends on the whole chart, including strength, placement, timing, combinations, and interaction with branches.
           </p>
         </div>
-        <div className="glass-card rounded-2xl p-8 md:p-10 mt-10">
+        <div className="organics rounded-2xl p-8 md:p-10 mt-10">
           <h2 className="text-3xl font-serif font-bold">Where to go next</h2>
-          <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-300">
-            <Link href="/learn/what-is-a-day-master" className="rounded-xl border border-white/10 bg-white/5 p-4 hover:border-[#7dd3fc]/30 transition-colors">Read next: What is a Day Master?</Link>
-            <Link href="/learn/five-elements-explained" className="rounded-xl border border-white/10 bg-white/5 p-4 hover:border-[#7dd3fc]/30 transition-colors">Read next: Five Elements explained</Link>
-            <Link href="/reports" className="rounded-xl border border-white/10 bg-white/5 p-4 hover:border-[#7dd3fc]/30 transition-colors">Explore report products</Link>
+          <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-[#504035]">
+            <Link href="/learn/what-is-a-day-master" className="rounded-xl border border-[rgba(160,148,136,0.3)] bg-[rgba(255,253,248,0.9)] p-4 hover:border-[#5ba4a4]/30 transition-colors">Read next: What is a Day Master?</Link>
+            <Link href="/learn/five-elements-explained" className="rounded-xl border border-[rgba(160,148,136,0.3)] bg-[rgba(255,253,248,0.9)] p-4 hover:border-[#5ba4a4]/30 transition-colors">Read next: Five Elements explained</Link>
+            <Link href="/reports" className="rounded-xl border border-[rgba(160,148,136,0.3)] bg-[rgba(255,253,248,0.9)] p-4 hover:border-[#5ba4a4]/30 transition-colors">Explore report products</Link>
           </div>
         </div>
       </article>

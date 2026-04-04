@@ -76,15 +76,15 @@ export default function HomePage() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 text-sm text-light">
-              <a href="/getting-started" className="rounded-2xl border border-[rgba(160,148,136,0.25)] bg-white/5 p-6 hover:border-[#5ba4a4]/20 transition-colors">
+              <a href="/getting-started" className="rounded-2xl border border-[rgba(160,148,136,0.25)] bg-[rgba(255,253,248,0.9)] p-6 hover:border-[#5ba4a4]/20 transition-colors">
                 <h3 className="text-primary text-xl font-serif font-bold">I am new</h3>
                 <p className="mt-3 leading-relaxed">Start with the beginner guide and foundational explanations before using tools.</p>
               </a>
-              <a href="/tools" className="rounded-2xl border border-[rgba(160,148,136,0.25)] bg-white/5 p-6 hover:border-[#5ba4a4]/20 transition-colors">
+              <a href="/tools" className="rounded-2xl border border-[rgba(160,148,136,0.25)] bg-[rgba(255,253,248,0.9)] p-6 hover:border-[#5ba4a4]/20 transition-colors">
                 <h3 className="text-primary text-xl font-serif font-bold">I want to try something</h3>
                 <p className="mt-3 leading-relaxed">Use a free tool if you want practical interaction and a low-friction first experience.</p>
               </a>
-              <a href="/reports" className="rounded-2xl border border-[rgba(160,148,136,0.25)] bg-white/5 p-6 hover:border-[#5ba4a4]/20 transition-colors">
+              <a href="/reports" className="rounded-2xl border border-[rgba(160,148,136,0.25)] bg-[rgba(255,253,248,0.9)] p-6 hover:border-[#5ba4a4]/20 transition-colors">
                 <h3 className="text-primary text-xl font-serif font-bold">I want depth</h3>
                 <p className="mt-3 leading-relaxed">Explore reports if you already understand the basics and want a deeper reading.</p>
               </a>
