@@ -46,8 +46,8 @@ export default function ContactPage() {
             </div>
 
             <div className="organics rounded-2xl p-8">
-              <h2 className="text-2xl font-serif font-bold">Response time</h2>
-              <p className="text-[#7a6d60] mt-4 leading-relaxed">A reply is typically sent within 1–2 business days.</p>
+              <h2 className="text-2xl font-serif font-bold">Current contact status</h2>
+              <p className="text-[#7a6d60] mt-4 leading-relaxed">The website contact form is being stabilized for production deployment. If submission is temporarily unavailable, please retry shortly after email delivery is configured.</p>
             </div>
 
             <div className="organics rounded-2xl p-8">
