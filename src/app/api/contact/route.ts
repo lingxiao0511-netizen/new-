@@ -1,18 +1,8 @@
 import { NextResponse } from 'next/server';
-import { promises as fs } from 'fs';
-import path from 'path';
 import { Resend } from 'resend';
-
-const STORAGE_DIR = path.join(process.cwd(), 'data');
-const STORAGE_FILE = path.join(STORAGE_DIR, 'contact-submissions.jsonl');
 
 function isValidEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-}
-
-async function saveSubmission(entry: Record<string, unknown>) {
-  await fs.mkdir(STORAGE_DIR, { recursive: true });
-  await fs.appendFile(STORAGE_FILE, `${JSON.stringify(entry)}\n`, 'utf8');
 }
 
 async function sendNotificationEmail(entry: {
@@ -29,7 +19,11 @@ async function sendNotificationEmail(entry: {
   const from = process.env.CONTACT_FROM_EMAIL || 'onboarding@resend.dev';
 
   if (!apiKey || !to) {
-    return { sent: false, reason: 'missing_env' as const };
+    return {
+      ok: false,
+      code: 'missing_email_config' as const,
+      message: 'Email notification is not configured yet.',
+    };
   }
 
   const resend = new Resend(apiKey);
@@ -53,7 +47,10 @@ async function sendNotificationEmail(entry: {
     ].join('\n'),
   });
 
-  return { sent: true };
+  return {
+    ok: true,
+    code: 'email_sent' as const,
+  };
 }
 
 export async function POST(request: Request) {
@@ -89,38 +86,24 @@ export async function POST(request: Request) {
       subject,
       message,
       source,
-      userAgent: request.headers.get('user-agent') || '',
-      forwardedFor: request.headers.get('x-forwarded-for') || '',
     };
 
-    await saveSubmission(entry);
+    const result = await sendNotificationEmail(entry);
 
-    let emailStatus: 'sent' | 'skipped' | 'failed' = 'skipped';
-    let emailReason = '';
-
-    try {
-      const result = await sendNotificationEmail({
-        createdAt: entry.createdAt,
-        name: entry.name,
-        email: entry.email,
-        inquiryType: entry.inquiryType,
-        subject: entry.subject,
-        message: entry.message,
-        source: entry.source,
-      });
-
-      emailStatus = result.sent ? 'sent' : 'skipped';
-      if (!result.sent) emailReason = result.reason;
-    } catch (emailError) {
-      emailStatus = 'failed';
-      emailReason = emailError instanceof Error ? emailError.message : 'unknown_email_error';
-      console.error('Contact notification email failed:', emailError);
+    if (!result.ok) {
+      return NextResponse.json(
+        {
+          ok: false,
+          error: 'Contact form is temporarily unavailable. Please try again shortly or contact us by email once configured.',
+          code: result.code,
+        },
+        { status: 503 }
+      );
     }
 
     return NextResponse.json({
       ok: true,
-      emailStatus,
-      emailReason,
+      code: result.code,
     });
   } catch (error) {
     console.error('Contact form submission failed:', error);
