@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Tools',
@@ -17,18 +18,21 @@ export default function ToolsPage() {
       desc: 'Generate a Four Pillars overview and understand the basic structure of your chart.',
       outputs: ['Four Pillars overview', 'Day Master starter insight', 'Beginner-friendly explanation'],
       cta: 'A strong place to begin if you are new to BaZi',
+      actionLabel: 'Start Free BaZi Chart',
     },
     {
       title: 'Five Elements Profile',
       desc: 'A lighter, faster tool for beginners who want a simple explanation of elemental balance and personality tendency.',
       outputs: ['Dominant element', 'Balance snapshot', 'Beginner-friendly personality framing'],
       cta: 'Ideal for social sharing and low-friction entry',
+      actionLabel: 'Try Five Elements Profile',
     },
     {
       title: 'Compatibility Checker',
       desc: 'Compare two symbolic structures and explore strengths, tension points, and relationship patterns.',
       outputs: ['Match pattern summary', 'Strengths and friction points', 'Next-step reading suggestions'],
       cta: 'A good choice for relationship-focused questions',
+      actionLabel: 'Check Compatibility',
     },
   ];
 
@@ -70,6 +74,10 @@ export default function ToolsPage() {
                 <p><span className="text-[#231a14]">Output:</span> Instant symbolic summary with suggestions for what to explore next</p>
                 <p><span className="text-[#231a14]">Best for:</span> A first step into exploring your chart and symbolic patterns</p>
               </div>
+              <div className="mt-8 flex flex-col gap-3">
+                <Link href="/contact" className="btn-primary inline-block text-center">{tool.actionLabel}</Link>
+                <Link href="/getting-started" className="btn-secondary inline-block text-center">See how to prepare</Link>
+              </div>
             </div>
           ))}
         </div>
@@ -93,7 +101,7 @@ export default function ToolsPage() {
           </div>
         </div>
 
-        <div className="organics rounded-2xl p-8 md:p-10">
+        <div className="organics rounded-2xl p-8 md:p-10 mb-16">
           <h2 className="text-3xl font-serif font-bold">What these tools are designed to do</h2>
           <p className="text-[#7a6d60] mt-4 max-w-3xl leading-relaxed">
             A good tool should help you get oriented without making things feel overwhelming. It should give you something useful right away, while also leaving room to keep learning if you want to go deeper.
@@ -104,8 +112,19 @@ export default function ToolsPage() {
             <div className="rounded-xl border border-[rgba(160,148,136,0.3)] bg-[rgba(255,253,248,0.9)] p-4">They can also help you decide whether you want a more detailed reading later on.</div>
           </div>
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
-            <a href="/reports" className="btn-primary inline-block text-center">Explore reports</a>
-            <a href="/learn" className="btn-secondary inline-block text-center">Read guides</a>
+            <Link href="/reports" className="btn-primary inline-block text-center">Explore reports</Link>
+            <Link href="/learn" className="btn-secondary inline-block text-center">Read guides</Link>
+          </div>
+        </div>
+
+        <div className="organics rounded-2xl p-8 md:p-10">
+          <h2 className="text-3xl font-serif font-bold">Need help choosing?</h2>
+          <p className="text-[#7a6d60] mt-4 max-w-3xl leading-relaxed">
+            If you are not sure which tool or report fits your situation, contact us first. We can help you decide on the right starting point before you go deeper.
+          </p>
+          <div className="mt-8 flex flex-col sm:flex-row gap-4">
+            <Link href="/contact" className="btn-primary inline-block text-center">Contact us first</Link>
+            <Link href="/faq" className="btn-secondary inline-block text-center">Read FAQ</Link>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Reports',
@@ -18,6 +19,7 @@ export default function ReportsPage() {
       audience: 'For readers who want a simple first report',
       desc: 'A lighter report that offers more structure and detail without feeling overwhelming.',
       features: ['Core chart summary', 'Five Elements interpretation', 'Introductory guidance'],
+      actionLabel: 'Request Basic Report',
     },
     {
       title: 'Compatibility Report',
@@ -25,6 +27,7 @@ export default function ReportsPage() {
       audience: 'For people exploring relationship questions',
       desc: 'A natural next step when your main interest is compatibility, dynamics, and relationship patterns.',
       features: ['Two-chart comparison', 'Strength and friction mapping', 'Trend-oriented relationship guidance'],
+      actionLabel: 'Request Compatibility Report',
     },
     {
       title: 'Deep Insight Reading',
@@ -32,6 +35,7 @@ export default function ReportsPage() {
       audience: 'For readers seeking a fuller interpretation',
       desc: 'A deeper report focused on life direction, career, relationship, and timing across several areas of life.',
       features: ['Expanded chart reading', 'Career / relationship / timing focus', 'More complete recommendations'],
+      actionLabel: 'Request Deep Reading',
     },
   ];
 
@@ -68,10 +72,14 @@ export default function ReportsPage() {
                 ))}
               </ul>
               <div className="mt-8 space-y-3 text-sm text-[#7a6d60]">
-                <p><span className="text-[#231a14]">Delivery:</span> Digital report delivered online</p>
-                <p><span className="text-[#231a14]">Turnaround:</span> Delivery details will be shown clearly before checkout</p>
+                <p><span className="text-[#231a14]">Delivery:</span> Digital report delivered online or by email follow-up</p>
+                <p><span className="text-[#231a14]">Turnaround:</span> The expected timeline should be confirmed before payment</p>
                 <p><span className="text-[#231a14]">Best fit:</span> Readers who already know what they want to explore in more depth</p>
                 <p><span className="text-[#231a14]">Helpful to read first:</span> What the report includes + our approach</p>
+              </div>
+              <div className="mt-8 flex flex-col gap-3">
+                <Link href="/contact" className="btn-primary inline-block text-center">{report.actionLabel}</Link>
+                <Link href="/faq" className="btn-secondary inline-block text-center">Read before ordering</Link>
               </div>
             </div>
           ))}
@@ -119,14 +127,15 @@ export default function ReportsPage() {
           <div className="mt-8 rounded-2xl border border-[#5ba4a4]/20 bg-[#5ba4a4]/5 p-6 text-sm text-[#504035]">
             <h3 className="text-[#231a14] font-semibold mb-3">Common report questions</h3>
             <div className="space-y-3">
-              <p><span className="text-[#231a14]">How is the report delivered?</span> As a digital report, usually through the website workflow or email delivery.</p>
+              <p><span className="text-[#231a14]">How is the report delivered?</span> As a digital report, usually through a website workflow or email delivery.</p>
               <p><span className="text-[#231a14]">Is this a prediction guarantee?</span> No. It is a structured symbolic interpretation for reflection and guidance.</p>
-              <p><span className="text-[#231a14]">Can the user ask for revisions?</span> Revision details should be stated clearly before checkout.</p>
+              <p><span className="text-[#231a14]">Can the user ask for revisions?</span> Revision details should be stated clearly before purchase.</p>
             </div>
           </div>
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
-            <a href="/tools" className="btn-secondary inline-block text-center">Try free tools first</a>
-            <a href="/learn" className="btn-primary inline-block text-center">Read guides first</a>
+            <Link href="/tools" className="btn-secondary inline-block text-center">Try free tools first</Link>
+            <Link href="/learn" className="btn-primary inline-block text-center">Read guides first</Link>
+            <Link href="/contact" className="btn-primary inline-block text-center">Contact us to order</Link>
           </div>
         </div>
       </div>

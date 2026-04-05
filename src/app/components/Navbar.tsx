@@ -24,8 +24,9 @@ const Navbar: React.FC = () => {
     { href: '/learn', label: language === 'zh' ? '学习' : 'Learn' },
     { href: '/getting-started', label: language === 'zh' ? '开始' : 'Start Here' },
     { href: '/reports', label: language === 'zh' ? '报告' : 'Reports' },
-    { href: '/disclaimer', label: language === 'zh' ? '声明' : 'Disclaimer' },
-    { href: '/privacy', label: language === 'zh' ? '隐私' : 'Privacy' },
+    { href: '/about', label: language === 'zh' ? '关于' : 'About' },
+    { href: '/faq', label: language === 'zh' ? '常见问题' : 'FAQ' },
+    { href: '/contact', label: language === 'zh' ? '联系' : 'Contact' },
   ];
 
   return (

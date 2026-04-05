@@ -7,6 +7,25 @@ import { useLanguage } from '../context/LanguageContext';
 const Footer: React.FC = () => {
   const { language } = useLanguage();
 
+  const navigation = [
+    { href: '/', label: language === 'zh' ? '首页' : 'Home' },
+    { href: '/tools', label: language === 'zh' ? '工具' : 'Tools' },
+    { href: '/learn', label: language === 'zh' ? '学习' : 'Learn' },
+    { href: '/getting-started', label: language === 'zh' ? '开始' : 'Getting Started' },
+    { href: '/reports', label: language === 'zh' ? '报告' : 'Reports' },
+    { href: '/methodology', label: language === 'zh' ? '方法' : 'Our Approach' },
+    { href: '/editorial-policy', label: language === 'zh' ? '编辑政策' : 'Editorial Policy' },
+    { href: '/sources', label: language === 'zh' ? '来源' : 'Sources' },
+  ];
+
+  const legal = [
+    { href: '/privacy', label: language === 'zh' ? '隐私政策' : 'Privacy Policy' },
+    { href: '/disclaimer', label: language === 'zh' ? '免责声明' : 'Disclaimer' },
+    { href: '/terms', label: language === 'zh' ? '服务条款' : 'Terms of Service' },
+    { href: '/faq', label: language === 'zh' ? '常见问题' : 'FAQ' },
+    { href: '/contact', label: language === 'zh' ? '联系' : 'Contact' },
+  ];
+
   return (
     <footer className="py-16 z-10 border-t border-[var(--border)]" style={{ background: 'var(--bg-warm)' }}>
       <div className="container mx-auto px-4">
@@ -27,8 +46,8 @@ const Footer: React.FC = () => {
               {language === 'zh' ? '站点导航' : 'Navigation'}
             </h4>
             <ul className="space-y-2">
-              {['Home', 'Tools', 'Learn', 'Getting Started', 'Reports', 'Our Approach', 'Editorial Policy', 'Sources'].map((item) => (
-                <li key={item}><Link href="/" className="text-light hover:text-[#5ba4a4] transition-colors">{item}</Link></li>
+              {navigation.map((item) => (
+                <li key={item.href}><Link href={item.href} className="text-light hover:text-[#5ba4a4] transition-colors">{item.label}</Link></li>
               ))}
             </ul>
           </div>
@@ -38,8 +57,8 @@ const Footer: React.FC = () => {
               {language === 'zh' ? '法务与说明' : 'Legal & Trust'}
             </h4>
             <ul className="space-y-2">
-              {['Privacy Policy', 'Disclaimer', 'Terms of Service'].map((item) => (
-                <li key={item}><Link href="/" className="text-light hover:text-[#5ba4a4] transition-colors">{item}</Link></li>
+              {legal.map((item) => (
+                <li key={item.href}><Link href={item.href} className="text-light hover:text-[#5ba4a4] transition-colors">{item.label}</Link></li>
               ))}
             </ul>
           </div>
